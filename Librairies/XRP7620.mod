@@ -1,0 +1,81 @@
+PCBNEW-LibModule-V1  Wed 02 Oct 2013 19:11:43 EST
+# encoding utf-8
+Units mm
+$INDEX
+XRP7620
+$EndINDEX
+$MODULE XRP7620
+Po 0 0 0 15 524BE333 00000000 ~~
+Li XRP7620
+Sc 0
+AR 
+Op 0 0 0
+.LocalClearance 0.1
+T0 3 -0.4 0.5 0.5 0 0.125 N V 21 N "XRP7620"
+T1 2.5 1.4 0.5 0.5 0 0.125 N V 21 N "VAL**"
+DC -1.4 1.4 -1.2 1.4 0.15 21
+$PAD
+Sh "1" R 0.25 0.6 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.75 1.4
+$EndPAD
+$PAD
+Sh "2" R 0.25 0.6 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.25 1.4
+$EndPAD
+$PAD
+Sh "3" R 0.25 0.6 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.25 1.4
+$EndPAD
+$PAD
+Sh "4" R 0.25 0.6 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.75 1.4
+$EndPAD
+$PAD
+Sh "5" R 0.25 0.6 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.75 -1.4
+$EndPAD
+$PAD
+Sh "6" R 0.25 0.6 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.25 -1.4
+$EndPAD
+$PAD
+Sh "7" R 0.25 0.6 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.25 -1.4
+$EndPAD
+$PAD
+Sh "8" R 0.25 0.6 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.75 -1.4
+$EndPAD
+$PAD
+Sh "4" R 1.6 1.6 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 0
+$EndPAD
+$EndMODULE XRP7620
+$EndLIBRARY

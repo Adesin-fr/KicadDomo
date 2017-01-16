@@ -1,0 +1,78 @@
+PCBNEW-LibModule-V1  Thu 02 Apr 2015 12:19:48 AEDT
+# encoding utf-8
+Units mm
+$INDEX
+bnc_5-1634503-1
+$EndINDEX
+$MODULE bnc_5-1634503-1
+Po 0 0 0 15 551C9921 00000000 ~~
+Li bnc_5-1634503-1
+Cd BNC connector, STR
+Sc 0
+AR 
+Op 0 0 0
+T0 0 -8.6 1 1 0 0.2 N V 21 N "bnc_straight_1-1337541-0"
+T1 0 8.5 1 1 0 0.2 N V 21 N "VAL**"
+DC 0 0 -0.9 0 0.3 21
+DC 0 0 -2.3 0 0.3 21
+DC 0 0 -4.6 0 0.3 21
+DS -1 5.5 -1 4.7 0.3 21
+DS -1 5.5 1 5.5 0.3 21
+DS 1 5.5 1 4.7 0.3 21
+DS 1 -5.5 1 -4.7 0.3 21
+DS -1 -5.5 -1 -4.7 0.3 21
+DA 0 0 3.31 -5.49 900 0.3 21
+DA 0 0 -5.48 3.31 900 0.3 21
+DA 0 0 6.4 0 900 0.3 21
+DA 0 0 0 6.4 900 0.3 21
+DS -3.2 -5.5 3.2 -5.5 0.3 21
+DC 0 0 -4.8 0 0.3 21
+DS 5.4 -7.5 -5.4 -7.5 0.3 21
+DS 7.4 7.5 7.4 -5.5 0.3 21
+DS -7.4 -5.5 -7.4 7.5 0.3 21
+DA 5.4 -5.5 5.4 -7.5 900 0.3 21
+DA -5.4 -5.5 -7.4 -5.5 900 0.3 21
+DS -7.4 7.5 7.4 7.5 0.3 21
+$PAD
+Sh "1" C 2 2 0 0 0
+Dr 1.1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 0
+$EndPAD
+$PAD
+Sh "2" C 2.5 2.5 0 0 0
+Dr 1.6 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 3.13 -3.13
+$EndPAD
+$PAD
+Sh "2" C 2.5 2.5 0 0 0
+Dr 1.6 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -3.13 3.13
+$EndPAD
+$PAD
+Sh "2" C 2.5 2.5 0 0 0
+Dr 1.6 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 3.13 3.13
+$EndPAD
+$PAD
+Sh "2" C 2.5 2.5 0 0 0
+Dr 1.6 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -3.13 -3.13
+$EndPAD
+$SHAPE3D
+Na "walter/conn_rf/bnc_straight_1-1337541-0.wrl"
+Sc 1 1 1
+Of 0 0 0
+Ro 0 0 0
+$EndSHAPE3D
+$EndMODULE bnc_5-1634503-1
+$EndLIBRARY

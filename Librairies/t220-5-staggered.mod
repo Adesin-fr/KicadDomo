@@ -1,0 +1,134 @@
+PCBNEW-LibModule-V1  Tue 25 Mar 2014 14:39:08 EST
+# encoding utf-8
+Units mm
+$INDEX
+Pentawatt
+to220-5-staggered
+$EndINDEX
+$MODULE Pentawatt
+Po 0 0 0 15 5330F9E0 00000000 ~~
+Li Pentawatt
+Cd Pentawatt 5 pins
+Sc 0
+AR 
+Op 0 0 0
+T0 0 -7.80034 1.524 1.524 0 0.3048 N V 21 N "U***"
+T1 0 -5.4991 1.524 1.524 0 0.3048 N V 21 N "TO-220-5-STAGGERED"
+DS 1.7 -1.9 1.7 0 0.3048 21
+DS -1.7 -1.9 -1.7 0 0.3048 21
+DS -3.4 -1.9 -3.4 4 0.3048 21
+DS 3.4 -1.9 3.4 4 0.3048 21
+DS 0 -1.9 0 4 0.3048 21
+DS 5.2 0.3 -5.2 0.3 0.3048 21
+DS -5.2 -4.5 5.2 -4.5 0.3048 21
+DS 5.2 -4.5 5.2 0.3 0.3048 21
+DS 1.9 -4.5 1.9 -3.2 0.3048 21
+DS -1.9 -3.2 -1.9 -4.5 0.3048 21
+DS -5.2 -3.2 5.1 -3.2 0.3048 21
+DS -5.2 0.3 -5.2 -4.5 0.3048 21
+$PAD
+Sh "1" O 1.80086 2.70002 0 0 0
+Dr 1.24968 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -3.4 4
+$EndPAD
+$PAD
+Sh "2" O 1.80086 2.70002 0 0 0
+Dr 1.24968 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -1.7 0
+$EndPAD
+$PAD
+Sh "3" O 1.80086 2.70002 0 0 0
+Dr 1.24968 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 4
+$EndPAD
+$PAD
+Sh "4" O 1.80086 2.70002 0 0 0
+Dr 1.24968 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 1.7 0
+$EndPAD
+$PAD
+Sh "5" O 1.80086 2.70002 0 0 0
+Dr 1.24968 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 3.4 4
+$EndPAD
+$SHAPE3D
+Na "walter/to/pentawatt.wrl"
+Sc 1 1 1
+Of 0 0 0
+Ro 0 0 0
+$EndSHAPE3D
+$EndMODULE Pentawatt
+$MODULE to220-5-staggered
+Po 0 0 0 15 5330F9E0 00000000 ~~
+Li to220-5-staggered
+Cd to220-5-staggered
+Sc 0
+AR 
+Op 0 0 0
+T0 0 -7.80034 1.524 1.524 0 0.3048 N V 21 N "U***"
+T1 0 -5.4991 1.524 1.524 0 0.3048 N V 21 N "to220-5-staggered"
+DS 1.7 -1.9 1.7 0 0.3048 21
+DS -1.7 -1.9 -1.7 0 0.3048 21
+DS -3.4 -1.9 -3.4 4 0.3048 21
+DS 3.4 -1.9 3.4 4 0.3048 21
+DS 0 -1.9 0 4 0.3048 21
+DS 5.2 0.3 -5.2 0.3 0.3048 21
+DS -5.2 -4.5 5.2 -4.5 0.3048 21
+DS 5.2 -4.5 5.2 0.3 0.3048 21
+DS 1.9 -4.5 1.9 -3.2 0.3048 21
+DS -1.9 -3.2 -1.9 -4.5 0.3048 21
+DS -5.2 -3.2 5.1 -3.2 0.3048 21
+DS -5.2 0.3 -5.2 -4.5 0.3048 21
+$PAD
+Sh "1" O 1.80086 2.70002 0 0 0
+Dr 1.24968 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -3.4 4
+$EndPAD
+$PAD
+Sh "2" O 1.80086 2.70002 0 0 0
+Dr 1.24968 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -1.7 0
+$EndPAD
+$PAD
+Sh "3" O 1.80086 2.70002 0 0 0
+Dr 1.24968 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 4
+$EndPAD
+$PAD
+Sh "4" O 1.80086 2.70002 0 0 0
+Dr 1.24968 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 1.7 0
+$EndPAD
+$PAD
+Sh "5" O 1.80086 2.70002 0 0 0
+Dr 1.24968 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 3.4 4
+$EndPAD
+$SHAPE3D
+Na "walter/to/pentawatt.wrl"
+Sc 1 1 1
+Of 0 0 0
+Ro 0 0 0
+$EndSHAPE3D
+$EndMODULE to220-5-staggered
+$EndLIBRARY

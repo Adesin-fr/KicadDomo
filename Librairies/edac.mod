@@ -1,0 +1,132 @@
+PCBNEW-LibModule-V1  Mon 28 Jul 2014 15:13:39 EST
+# encoding utf-8
+Units mm
+$INDEX
+A63-113-431P112
+$EndINDEX
+$MODULE A63-113-431P112
+Po 0 0 0 15 53D5DBFE 00000000 ~~
+Li A63-113-431P112
+Sc 0
+AR 
+Op 0 0 0
+T0 0 -16 1.5 1.5 0 0.15 N I 21 N "A63-113-431P112"
+T1 0 -2 1.5 1.5 0 0.15 N V 21 N "VAL**"
+DS -8.05 -14.8 8.05 -14.8 0.15 21
+DS -8.05 3 -8.05 -14.8 0.15 21
+DS 8.05 3 -8.05 3 0.15 21
+DS 8.05 3 8.05 -14.8 0.15 21
+$PAD
+Sh "8" C 1.5 1.5 0 0 1800
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 4.44 -12.98
+$EndPAD
+$PAD
+Sh "7" C 1.5 1.5 0 0 1800
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 3.17 -10.44
+$EndPAD
+$PAD
+Sh "6" C 1.5 1.5 0 0 1800
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 1.9 -12.98
+$EndPAD
+$PAD
+Sh "4" C 1.5 1.5 0 0 1800
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -0.64 -12.98
+$EndPAD
+$PAD
+Sh "2" C 1.5 1.5 0 0 1800
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -3.18 -12.98
+$EndPAD
+$PAD
+Sh "5" C 1.5 1.5 0 0 1800
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0.63 -10.44
+$EndPAD
+$PAD
+Sh "3" C 1.5 1.5 0 0 1800
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -1.91 -10.44
+$EndPAD
+$PAD
+Sh "1" C 1.5 1.5 0 0 1800
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -4.45 -10.44
+$EndPAD
+$PAD
+Sh "~" C 4 4 0 0 1800
+Dr 3.3 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -5.715 -4.13
+$EndPAD
+$PAD
+Sh "~" C 4 4 0 0 1800
+Dr 3.3 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 5.715 -4.13
+$EndPAD
+$PAD
+Sh "~" C 2 2 0 0 1800
+Dr 1.7 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -7.955 -8.03
+$EndPAD
+$PAD
+Sh "~" C 2 2 0 0 1800
+Dr 1.7 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 7.945 -8.03
+$EndPAD
+$PAD
+Sh "9" C 1.5 1.5 0 0 1800
+Dr 1.1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -6.33 -0.01
+$EndPAD
+$PAD
+Sh "10" C 1.5 1.5 0 0 1800
+Dr 1.1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -3.79 -0.01
+$EndPAD
+$PAD
+Sh "11" C 1.5 1.5 0 0 1800
+Dr 1.1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 3.78 -0.01
+$EndPAD
+$PAD
+Sh "12" C 1.5 1.5 0 0 1800
+Dr 1.1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 6.32 -0.02
+$EndPAD
+$EndMODULE A63-113-431P112
+$EndLIBRARY

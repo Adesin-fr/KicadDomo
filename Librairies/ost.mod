@@ -1,0 +1,76 @@
+PCBNEW-LibModule-V1  Tue 13 Jan 2015 11:36:48 AEDT
+# encoding utf-8
+Units mm
+$INDEX
+USB-BIKSXX
+$EndINDEX
+$MODULE USB-BIKSXX
+Po 0 0 0 15 54B4688D 00000000 ~~
+Li USB-BIKSXX
+Sc 0
+AR 
+Op 0 0 0
+T0 -0.9 5.1 1 1 0 0.15 N V 21 N "USB-BIKSXX"
+T1 2.7 -2.9 1 1 0 0.15 N V 21 N "VAL**"
+DS -7.3 -3.8 4.8 -3.8 0.15 21
+DS 4.8 -3.8 4.8 7.5 0.15 21
+DS 4.8 7.5 -7.3 7.5 0.15 21
+DS -7.3 7.5 -7.3 -3.8 0.15 21
+$PAD
+Sh "1" C 2 2 0 0 0
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 0
+$EndPAD
+$PAD
+Sh "2" C 2 2 0 0 0
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -2.5 0
+$EndPAD
+$PAD
+Sh "3" C 2 2 0 0 0
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -2.5 3.2
+$EndPAD
+$PAD
+Sh "4" C 2 2 0 0 0
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 3.2
+$EndPAD
+$PAD
+Sh "~" C 3 3 0 0 0
+Dr 2.5 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -1.25 7.43
+$EndPAD
+$PAD
+Sh "~" C 3 3 0 0 0
+Dr 2.5 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -7.27 2.71
+$EndPAD
+$PAD
+Sh "~" C 3 3 0 0 0
+Dr 2.5 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 4.77 2.71
+$EndPAD
+$PAD
+Sh "~" C 3 3 0 0 0
+Dr 2.5 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -1.25 -3.87
+$EndPAD
+$EndMODULE USB-BIKSXX
+$EndLIBRARY

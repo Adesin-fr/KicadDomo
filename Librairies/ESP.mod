@@ -1,0 +1,174 @@
+PCBNEW-LibModule-V1  Wed 05 Aug 2015 08:59:28 AEST
+# encoding utf-8
+Units mm
+$INDEX
+ESP-12E
+$EndINDEX
+$MODULE ESP-12E
+Po 0 0 0 15 55C143CB 00000000 ~~
+Li ESP-12E
+Sc 0
+AR 
+Op 0 0 0
+T0 8 5 1 1 0 0.15 N V 21 N "ESP-12E"
+T1 12 13 1 1 0 0.15 N V 21 N "VAL**"
+DS 16 16 16 -8 0.15 21
+DS 16 -8 0 -8 0.15 21
+DS 0 -8 0 16 0.15 21
+DS 0 16 16 16 0.15 21
+$PAD
+Sh "1" R 2.2 1 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 0
+$EndPAD
+$PAD
+Sh "2" R 2.2 1 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 2
+$EndPAD
+$PAD
+Sh "3" R 2.2 1 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 4
+$EndPAD
+$PAD
+Sh "4" R 2.2 1 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 6
+$EndPAD
+$PAD
+Sh "5" R 2.2 1 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 8
+$EndPAD
+$PAD
+Sh "6" R 2.2 1 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 10
+$EndPAD
+$PAD
+Sh "7" R 2.2 1 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 12
+$EndPAD
+$PAD
+Sh "22" R 2.2 1 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 16 0
+$EndPAD
+$PAD
+Sh "21" R 2.2 1 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 16 2
+$EndPAD
+$PAD
+Sh "20" R 2.2 1 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 16 4
+$EndPAD
+$PAD
+Sh "19" R 2.2 1 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 16 6
+$EndPAD
+$PAD
+Sh "18" R 2.2 1 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 16 8
+$EndPAD
+$PAD
+Sh "17" R 2.2 1 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 16 10
+$EndPAD
+$PAD
+Sh "16" R 2.2 1 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 16 12
+$EndPAD
+$PAD
+Sh "11" R 1 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 7 16
+$EndPAD
+$PAD
+Sh "10" R 1 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 5 16
+$EndPAD
+$PAD
+Sh "9" R 1 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3 16
+$EndPAD
+$PAD
+Sh "12" R 1 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 9 16
+$EndPAD
+$PAD
+Sh "13" R 1 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 11 16
+$EndPAD
+$PAD
+Sh "14" R 1 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 13 16
+$EndPAD
+$PAD
+Sh "8" R 2.2 1 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 14
+$EndPAD
+$PAD
+Sh "15" R 2.2 1 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 16 14
+$EndPAD
+$EndMODULE ESP-12E
+$EndLIBRARY

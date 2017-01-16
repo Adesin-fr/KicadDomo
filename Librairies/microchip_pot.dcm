@@ -1,0 +1,7 @@
+EESchema-DOCLIB  Version 2.0  Date: Mon 15 Apr 2013 18:05:31 EST
+#
+$CMP MCP41100
+D MCP41100 - Digital Pot 100k
+$ENDCMP
+#
+#End Doc Library

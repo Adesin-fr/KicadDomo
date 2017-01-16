@@ -1,0 +1,16 @@
+EESchema-LIBRARY Version 2.3  Date: Fri 01 Aug 2014 15:36:20 EST
+#encoding utf-8
+#
+# HEATSINK
+#
+DEF HEATSINK HS 0 40 Y Y 1 F N
+F0 "HS" 150 -150 60 H V C CNN
+F1 "HEATSINK" 0 200 60 H V C CNN
+F2 "~" 0 0 60 H V C CNN
+F3 "~" 0 0 60 H V C CNN
+DRAW
+S -200 250 250 -200 0 1 0 N
+ENDDRAW
+ENDDEF
+#
+#End Library

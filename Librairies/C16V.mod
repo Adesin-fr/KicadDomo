@@ -1,0 +1,33 @@
+PCBNEW-LibModule-V1  Wed 22 May 2013 15:47:19 EST
+# encoding utf-8
+Units mm
+$INDEX
+C16V
+$EndINDEX
+$MODULE C16V
+Po 0 0 0 15 519C5BD9 00000000 ~~
+Li C16V
+Sc 0
+AR 
+Op 0 0 0
+T0 0 -5.1 1 1 0 0.15 N I 21 N "C16V"
+T1 0 5.3 1 1 0 0.15 N V 21 N "VAL**"
+DS 2.1 -1 2.1 -1.6 0.15 21
+DS 2.4 -1.3 1.8 -1.3 0.15 21
+DC 0 0 4 -0.1 0.15 21
+$PAD
+Sh "1" C 1 1 0 0 0
+Dr 0.5 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 2 0
+$EndPAD
+$PAD
+Sh "2" C 1 1 0 0 0
+Dr 0.5 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -2 0
+$EndPAD
+$EndMODULE C16V
+$EndLIBRARY

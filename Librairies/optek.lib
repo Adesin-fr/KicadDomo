@@ -1,0 +1,27 @@
+EESchema-LIBRARY Version 2.3  Date: Thu 30 Apr 2015 16:14:19 AEST
+#encoding utf-8
+#
+# OPB704
+#
+DEF OPB704 U 0 0 Y N 1 F N
+F0 "U" 0 90 50 H V C CNN
+F1 "OPB704" 0 -140 50 H V C CNN
+F2 "~" 0 0 60 H V C CNN
+F3 "~" 0 0 60 H V C CNN
+DRAW
+S 100 60 -100 -60 0 1 0 N
+P 3 0 1 0  30 0  80 -50  80 -50 F
+P 3 0 1 0  30 0  80 50  80 50 F
+P 3 0 1 0  30 50  30 -50  30 -50 F
+P 4 0 1 0  -30 20  -50 -20  -70 20  -70 20 F
+P 4 0 1 0  80 -50  70 -10  40 -40  40 -40 F
+P 5 0 1 0  -85 50  -50 50  -50 -50  -85 -50  -85 -50 N
+P 5 0 1 0  -70 -20  -70 -25  -30 -25  -30 -20  -30 -20 F
+X IN_1 1 -150 50 70 R 30 30 1 1 P
+X IN_2 2 -150 -50 70 R 30 30 1 1 P
+X E 3 150 -50 70 L 30 30 1 1 P
+X C 4 150 50 70 L 30 30 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library

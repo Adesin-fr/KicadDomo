@@ -1,0 +1,34 @@
+PCBNEW-LibModule-V1  Fri 14 Aug 2015 16:49:29 AEST
+# encoding utf-8
+Units mm
+$INDEX
+WE-TPC
+$EndINDEX
+$MODULE WE-TPC
+Po 0 0 0 15 55CD8F6F 00000000 ~~
+Li WE-TPC
+Sc 0
+AR 
+Op 0 0 0
+T0 0 -2.2 1 1 0 0.15 N I 21 N "WE-TPC"
+T1 0.3 4.9 1 1 0 0.15 N V 21 N "VAL**"
+DS -2.4 -1.2 -2.4 3.6 0.15 21
+DS -2.4 3.6 2.4 3.6 0.15 21
+DS 2.4 3.6 2.4 -1.2 0.15 21
+DS 2.4 -1.2 -2.4 -1.2 0.15 21
+$PAD
+Sh "1" R 5.3 2 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 0
+$EndPAD
+$PAD
+Sh "2" R 5.3 2 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 2.5
+$EndPAD
+$EndMODULE WE-TPC
+$EndLIBRARY

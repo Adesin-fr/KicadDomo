@@ -1,0 +1,58 @@
+PCBNEW-LibModule-V1  Thu 02 Oct 2014 11:50:25 EST
+# encoding utf-8
+Units mm
+$INDEX
+ABMM
+$EndINDEX
+$MODULE ABMM
+Po 0 0 0 15 542CAF5F 00000000 ~~
+Li ABMM
+Sc 0
+AR 
+Op 0 0 0
+T0 1.5 -4.6 1 1 0 0.15 N V 21 N "ABMM"
+T1 4.8 2.1 1 1 0 0.15 N V 21 N "VAL**"
+DS -0.5 -3.9 -0.5 1.3 0.1 21
+DS -0.5 -3.9 6.7 -3.9 0.1 21
+DS 6.7 1.3 6.7 -3.9 0.1 21
+DS -0.5 1.3 6.7 1.3 0.1 21
+DS 3.2 -1 3.2 0 0.1 21
+DS 3.2 0 1.3 0 0.1 21
+DS 3.2 -1.8 3.2 -2.5 0.1 21
+DS 3.2 -2.5 5 -2.5 0.1 21
+DS 2.9 -1.8 3.6 -1.8 0.1 21
+DS 3.6 -1.2 2.9 -1.2 0.1 21
+DS 2.9 -1.2 2.9 -1.6 0.1 21
+DS 2.9 -1.6 3.6 -1.6 0.1 21
+DS 3.6 -1.6 3.6 -1.2 0.1 21
+DS 2.9 -1 3.6 -1 0.1 21
+$PAD
+Sh "1" R 2.2 1.4 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 0
+$EndPAD
+$PAD
+Sh "2" R 2.2 1.4 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 6.3 -2.54
+$EndPAD
+$PAD
+Sh "3" R 2.2 1.4 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 -2.54
+$EndPAD
+$PAD
+Sh "4" R 2.2 1.4 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 6.3 0
+$EndPAD
+$EndMODULE ABMM
+$EndLIBRARY

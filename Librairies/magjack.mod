@@ -1,0 +1,142 @@
+PCBNEW-LibModule-V1  Tue 28 Jan 2014 18:59:41 EST
+# encoding utf-8
+Units mm
+$INDEX
+MAGJACK
+$EndINDEX
+$MODULE MAGJACK
+Po 0 0 0 15 52E76362 00000000 ~~
+Li MAGJACK
+Sc 0
+AR 
+Op 0 0 0
+T0 0 -5.3 1 1 0 0.15 N V 21 N "MAGJACK"
+T1 0 -7.3 1 1 0 0.15 N V 21 N "VAL**"
+$PAD
+Sh "6" C 1.5 1.5 0 0 0
+Dr 0.89 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0.62 0
+$EndPAD
+$PAD
+Sh "8" C 1.5 1.5 0 0 0
+Dr 0.89 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 3.16 0
+$EndPAD
+$PAD
+Sh "9" C 1.5 1.5 0 0 0
+Dr 0.89 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 5.7 0
+$EndPAD
+$PAD
+Sh "4" C 1.5 1.5 0 0 0
+Dr 0.89 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -1.92 0
+$EndPAD
+$PAD
+Sh "2" C 1.5 1.5 0 0 0
+Dr 0.89 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -4.46 0
+$EndPAD
+$PAD
+Sh "1" C 1.5 1.5 0 0 0
+Dr 0.89 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -5.715 -2.54
+$EndPAD
+$PAD
+Sh "3" C 1.5 1.5 0 0 0
+Dr 0.89 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -3.175 -2.54
+$EndPAD
+$PAD
+Sh "5" C 1.5 1.5 0 0 0
+Dr 0.89 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -0.635 -2.54
+$EndPAD
+$PAD
+Sh "7" C 1.5 1.5 0 0 0
+Dr 0.89 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 1.905 -2.54
+$EndPAD
+$PAD
+Sh "8" C 1.5 1.5 0 0 0
+Dr 0.89 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 4.445 -2.54
+$EndPAD
+$PAD
+Sh "" C 2 2 0 0 0
+Dr 1.57 0 0
+At HOLE N 00E0FFFF
+Ne 0 ""
+Po -7.745 3.3
+$EndPAD
+$PAD
+Sh "" C 2 2 0 0 0
+Dr 1.57 0 0
+At HOLE N 00E0FFFF
+Ne 0 ""
+Po 7.745 3.3
+$EndPAD
+$PAD
+Sh "" C 4 4 0 0 0
+Dr 3.25 0 0
+At HOLE N 00E0FFFF
+Ne 0 ""
+Po -5.715 6.35
+$EndPAD
+$PAD
+Sh "" C 4 4 0 0 0
+Dr 3.25 0 0
+At HOLE N 00E0FFFF
+Ne 0 ""
+Po 5.715 6.35
+$EndPAD
+$PAD
+Sh "11" C 1.5 1.5 0 0 0
+Dr 1.02 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -6.63 10.42
+$EndPAD
+$PAD
+Sh "12" C 1.5 1.5 0 0 0
+Dr 1.02 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -4.09 10.42
+$EndPAD
+$PAD
+Sh "13" C 1.5 1.5 0 0 0
+Dr 1.02 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 4.09 10.42
+$EndPAD
+$PAD
+Sh "14" C 1.5 1.5 0 0 0
+Dr 1.02 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 6.63 10.4
+$EndPAD
+$EndMODULE MAGJACK
+$EndLIBRARY

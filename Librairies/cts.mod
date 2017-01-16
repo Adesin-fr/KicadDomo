@@ -1,0 +1,49 @@
+PCBNEW-LibModule-V1  Fri 25 Jul 2014 18:42:46 EST
+# encoding utf-8
+Units mm
+$INDEX
+CB3
+$EndINDEX
+$MODULE CB3
+Po 0 0 0 15 53D21880 00000000 ~~
+Li CB3
+Sc 0
+AR 
+Op 0 0 0
+T0 0 -2 1 1 0 0.15 N V 21 N "CB3"
+T1 0 2.2 1 1 0 0.15 N V 21 N "VAL**"
+DS -3.5 0 -3.5 -2.5 0.15 21
+DS -3.5 -2.5 3.5 -2.5 0.15 21
+DS 3.5 -2.5 3.5 2.5 0.15 21
+DS 3.5 2.5 -3.5 2.5 0.15 21
+DS -3.5 2.5 -3.5 0 0.15 21
+$PAD
+Sh "2" R 1.8 2 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.54 2.1
+$EndPAD
+$PAD
+Sh "1" R 1.8 2 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -2.54 2.1
+$EndPAD
+$PAD
+Sh "4" R 1.8 2 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -2.54 -2.1
+$EndPAD
+$PAD
+Sh "3" R 1.8 2 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.54 -2.1
+$EndPAD
+$EndMODULE CB3
+$EndLIBRARY

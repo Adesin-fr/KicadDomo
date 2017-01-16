@@ -1,0 +1,565 @@
+PCBNEW-LibModule-V1  Wed 30 Apr 2014 21:41:24 EST
+# encoding utf-8
+Units mm
+$INDEX
+PVQFN-N16
+QFN_16
+QFN_16_1P5_MM_PAD
+SON_10_1P5_MM_PAD
+$EndINDEX
+$MODULE PVQFN-N16
+Po 0 0 0 15 5360E15B 00000000 ~~
+Li PVQFN-N16
+Sc 0
+AR 
+Op 0 0 0
+T0 0 -4.1 1 1 0 0.15 N V 21 N "PVQFN-N16"
+T1 0 4.3 1 1 0 0.15 N V 21 N "VAL**"
+DC -1.9 -1.8 -1.8 -1.6 0.1 21
+DS -1.6 -1.6 1.6 -1.6 0.1 21
+DS 1.6 -1.6 1.6 1.6 0.1 21
+DS 1.6 1.6 -1.6 1.6 0.1 21
+DS -1.6 1.6 -1.6 -1.6 0.1 21
+$PAD
+Sh "7" R 0.3 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.25 1.8
+$EndPAD
+$PAD
+Sh "8" R 0.3 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.75 1.8
+$EndPAD
+$PAD
+Sh "6" R 0.3 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.25 1.8
+$EndPAD
+$PAD
+Sh "5" R 0.3 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.75 1.8
+$EndPAD
+$PAD
+Sh "16" R 0.3 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.75 -1.8
+$EndPAD
+$PAD
+Sh "15" R 0.3 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.25 -1.8
+$EndPAD
+$PAD
+Sh "14" R 0.3 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.25 -1.8
+$EndPAD
+$PAD
+Sh "13" R 0.3 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.75 -1.8
+$EndPAD
+$PAD
+Sh "11" R 1.5 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.8 -0.25
+$EndPAD
+$PAD
+Sh "12" R 1.5 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.8 -0.75
+$EndPAD
+$PAD
+Sh "10" R 1.5 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.8 0.25
+$EndPAD
+$PAD
+Sh "9" R 1.5 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.8 0.75
+$EndPAD
+$PAD
+Sh "4" R 1.5 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.8 0.75
+$EndPAD
+$PAD
+Sh "3" R 1.5 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.8 0.25
+$EndPAD
+$PAD
+Sh "2" R 1.5 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.8 -0.25
+$EndPAD
+$PAD
+Sh "1" R 1.5 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.8 -0.75
+$EndPAD
+$PAD
+Sh "17" R 0.85 0.85 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.425 0.425
+$EndPAD
+$PAD
+Sh "17" R 0.85 0.85 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.425 -0.425
+$EndPAD
+$PAD
+Sh "17" R 0.85 0.85 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.425 -0.425
+$EndPAD
+$PAD
+Sh "17" R 0.85 0.85 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.425 0.425
+$EndPAD
+$SHAPE3D
+Na "walter/smd_qfn/r-pvqfn-n16.wrl"
+Sc 0.9 0.9 0.9
+Of 0 0 0
+Ro 0 0 90
+$EndSHAPE3D
+$EndMODULE PVQFN-N16
+$MODULE QFN_16
+Po 0 0 0 15 52490AB2 00000000 ~~
+Li QFN_16
+Sc 0
+AR /518C26A3
+Op 0 0 0
+.LocalClearance 0.025
+T0 0 -3 1.5 1.5 0 0.15 N I 21 N "U1"
+T1 -5.72 -1.7 1 1 900 0.15 N I 21 N "MMA8452Q_LARGE_PADS"
+DS -1.5 -1.5 1.5 -1.5 0.15 21
+DS 1.5 -1.5 1.5 1.5 0.15 21
+DS 1.5 1.5 -1.5 1.5 0.15 21
+DS -1.5 1.5 -1.5 -1.5 0.15 21
+$PAD
+Sh "11" R 0.767 0.3 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.3165 0
+.LocalClearance 0.025
+$EndPAD
+$PAD
+Sh "10" R 0.767 0.3 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.3165 0.5
+.LocalClearance 0.025
+$EndPAD
+$PAD
+Sh "9" R 0.767 0.3 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.3165 1
+$EndPAD
+$PAD
+Sh "12" R 0.767 0.3 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.3165 -0.5
+$EndPAD
+$PAD
+Sh "13" R 0.767 0.3 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.3165 -1
+$EndPAD
+$PAD
+Sh "5" R 0.767 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.3165 1
+$EndPAD
+$PAD
+Sh "4" R 0.767 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.3165 0.5
+$EndPAD
+$PAD
+Sh "3" R 0.767 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.3165 0
+$EndPAD
+$PAD
+Sh "2" R 0.767 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.3165 -0.5
+$EndPAD
+$PAD
+Sh "1" R 0.767 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.3165 -1
+$EndPAD
+$PAD
+Sh "7" R 0.3 0.767 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 1.2165
+$EndPAD
+$PAD
+Sh "16" R 0.3 0.767 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.5 -1.2165
+$EndPAD
+$PAD
+Sh "14" R 0.3 0.767 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.5 -1.2165
+$EndPAD
+$PAD
+Sh "15" R 0.3 0.767 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 -1.2165
+$EndPAD
+$PAD
+Sh "8" R 0.3 0.767 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.5 1.2165
+$EndPAD
+$PAD
+Sh "6" R 0.3 0.767 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.5 1.2165
+$EndPAD
+$SHAPE3D
+Na "/home/djpeake/Work_Programming/kicad_libraries/3D/MMA8452.wrl"
+Sc 0.4 0.4 0.4
+Of 0 0 0
+Ro -90 0 0
+$EndSHAPE3D
+$EndMODULE QFN_16
+$MODULE QFN_16_1P5_MM_PAD
+Po 0 0 0 15 52FA9BFD 00000000 ~~
+Li QFN_16_1P5_MM_PAD
+Sc 0
+AR /518C26A3
+Op 0 0 0
+.LocalClearance 0.025
+T0 0 -3 1.5 1.5 0 0.15 N I 21 N "U1"
+T1 -5.72 -1.7 1 1 900 0.15 N I 21 N "MMA8452Q_1P5_MM_PAD"
+DS -1.5 -1.5 1.5 -1.5 0.15 21
+DS 1.5 -1.5 1.5 1.5 0.15 21
+DS 1.5 1.5 -1.5 1.5 0.15 21
+DS -1.5 1.5 -1.5 -1.5 0.15 21
+$PAD
+Sh "11" R 1.5 0.3 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.683 0
+.LocalClearance 0.025
+$EndPAD
+$PAD
+Sh "10" R 1.5 0.3 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.683 0.5
+.LocalClearance 0.025
+$EndPAD
+$PAD
+Sh "9" R 1.5 0.3 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.683 1
+$EndPAD
+$PAD
+Sh "12" R 1.5 0.3 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.683 -0.5
+$EndPAD
+$PAD
+Sh "13" R 1.5 0.3 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.683 -1
+$EndPAD
+$PAD
+Sh "5" R 1.5 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.683 1
+$EndPAD
+$PAD
+Sh "4" R 1.5 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.683 0.5
+$EndPAD
+$PAD
+Sh "3" R 1.5 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.683 0
+$EndPAD
+$PAD
+Sh "2" R 1.5 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.683 -0.5
+$EndPAD
+$PAD
+Sh "1" R 1.5 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.683 -1
+$EndPAD
+$PAD
+Sh "7" R 0.3 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 1.583
+$EndPAD
+$PAD
+Sh "16" R 0.3 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.5 -1.583
+$EndPAD
+$PAD
+Sh "14" R 0.3 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.5 -1.583
+$EndPAD
+$PAD
+Sh "15" R 0.3 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 -1.583
+$EndPAD
+$PAD
+Sh "8" R 0.3 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.5 1.583
+$EndPAD
+$PAD
+Sh "6" R 0.3 1.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.5 1.583
+$EndPAD
+$SHAPE3D
+Na "/home/djpeake/Work_Programming/kicad_libraries/3D/MMA8452.wrl"
+Sc 0.4 0.4 0.4
+Of 0 0 0
+Ro -90 0 0
+$EndSHAPE3D
+$EndMODULE QFN_16_1P5_MM_PAD
+$MODULE SON_10_1P5_MM_PAD
+Po 0 0 0 15 531F7D06 00000000 ~~
+Li SON_10_1P5_MM_PAD
+Sc 0
+AR /518C26A3
+Op 0 0 0
+.LocalClearance 0.025
+T0 0 -3 1.5 1.5 0 0.15 N I 21 N "U1"
+T1 -5.72 -1.7 1 1 900 0.15 N I 21 N "SON10_1P5_MM_PAD"
+DS -1.5 -1.5 1.5 -1.5 0.15 21
+DS 1.5 -1.5 1.5 1.5 0.15 21
+DS 1.5 1.5 -1.5 1.5 0.15 21
+DS -1.5 1.5 -1.5 -1.5 0.15 21
+$PAD
+Sh "8" R 1.5 0.3 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.683 0
+.LocalClearance 0.025
+$EndPAD
+$PAD
+Sh "7" R 1.5 0.3 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.683 0.5
+.LocalClearance 0.025
+$EndPAD
+$PAD
+Sh "6" R 1.5 0.3 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.683 1
+$EndPAD
+$PAD
+Sh "9" R 1.5 0.3 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.683 -0.5
+$EndPAD
+$PAD
+Sh "10" R 1.5 0.3 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.683 -1
+$EndPAD
+$PAD
+Sh "5" R 1.5 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.683 1
+$EndPAD
+$PAD
+Sh "4" R 1.5 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.683 0.5
+$EndPAD
+$PAD
+Sh "3" R 1.5 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.683 0
+$EndPAD
+$PAD
+Sh "2" R 1.5 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.683 -0.5
+$EndPAD
+$PAD
+Sh "1" R 1.5 0.3 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.683 -1
+$EndPAD
+$PAD
+Sh "11" R 1.65 2.4 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 0
+$EndPAD
+$PAD
+Sh "11" R 0.23 1.3 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.25 -1.85
+$EndPAD
+$PAD
+Sh "11" R 0.23 1.3 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.25 -1.85
+$EndPAD
+$PAD
+Sh "11" R 0.23 1.3 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.25 1.85
+$EndPAD
+$PAD
+Sh "11" R 0.23 1.3 0 0 1800
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -0.25 1.85
+$EndPAD
+$SHAPE3D
+Na "/home/djpeake/Work_Programming/kicad_libraries/3D/MMA8452.wrl"
+Sc 0.4 0.4 0.4
+Of 0 0 0
+Ro -90 0 0
+$EndSHAPE3D
+$EndMODULE SON_10_1P5_MM_PAD
+$EndLIBRARY

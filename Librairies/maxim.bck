@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0  Date: Tue 10 Sep 2013 19:02:28 EST
+#
+$CMP MAX323
+D MAX323 - DPDT Switch
+K switch max323
+$ENDCMP
+#
+#End Doc Library

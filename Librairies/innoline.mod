@@ -1,0 +1,110 @@
+PCBNEW-LibModule-V1  Wed 27 May 2015 08:54:46 AEST
+# encoding utf-8
+Units mm
+$INDEX
+R12-100B
+$EndINDEX
+$MODULE R12-100B
+Po 0 0 0 15 5546AE0B 00000000 ~~
+Li R12-100B
+Sc 0
+AR 
+Op 0 0 0
+T0 -4.4 5.9 1 1 0 0.15 N V 21 N "R12-100B"
+T1 -4.4 9.7 1 1 0 0.15 N V 21 N "VAL**"
+DS -29.2 17.9 2.6 17.9 0.15 21
+DS 2.6 17.9 2.6 -2.4 0.15 21
+DS 2.6 -2.4 -29.2 -2.4 0.15 21
+DS -29.2 -2.4 -29.2 17.9 0.15 21
+$PAD
+Sh "13" C 2.5 2.5 0 0 0
+Dr 1.2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 0
+$EndPAD
+$PAD
+Sh "15" O 1.5 2.5 0 0 1800
+Dr 1.2 0 0.5
+At STD N 00E0FFFF
+Ne 0 ""
+Po -5.08 0
+$EndPAD
+$PAD
+Sh "16" O 1.5 2.5 0 0 1800
+Dr 1.2 0 0.5
+At STD N 00E0FFFF
+Ne 0 ""
+Po -7.62 0
+$EndPAD
+$PAD
+Sh "17" O 1.5 2.5 0 0 1800
+Dr 1.2 0 0.5
+At STD N 00E0FFFF
+Ne 0 ""
+Po -10.16 0
+$EndPAD
+$PAD
+Sh "22" O 1.5 2.5 0 0 1800
+Dr 1.2 0 0.5
+At STD N 00E0FFFF
+Ne 0 ""
+Po -22.86 0
+$EndPAD
+$PAD
+Sh "23" O 1.5 2.5 0 0 1800
+Dr 1.2 0 0.5
+At STD N 00E0FFFF
+Ne 0 ""
+Po -25.4 0
+$EndPAD
+$PAD
+Sh "10" O 1.5 2.5 0 0 0
+Dr 1.2 0 0.5
+At STD N 00E0FFFF
+Ne 0 ""
+Po -5.08 15.24
+$EndPAD
+$PAD
+Sh "9" O 1.5 2.5 0 0 0
+Dr 1.2 0 0.5
+At STD N 00E0FFFF
+Ne 0 ""
+Po -7.62 15.24
+$EndPAD
+$PAD
+Sh "8" O 1.5 2.5 0 0 0
+Dr 1.2 0 0.5
+At STD N 00E0FFFF
+Ne 0 ""
+Po -10.16 15.24
+$EndPAD
+$PAD
+Sh "3" O 1.5 2.5 0 0 0
+Dr 1.2 0 0.5
+At STD N 00E0FFFF
+Ne 0 ""
+Po -22.86 15.24
+$EndPAD
+$PAD
+Sh "2" O 1.5 2.5 0 0 0
+Dr 1.2 0 0.5
+At STD N 00E0FFFF
+Ne 0 ""
+Po -25.4 15.24
+$EndPAD
+$PAD
+Sh "12" C 2.5 2.5 0 0 0
+Dr 1.2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 15.24
+$EndPAD
+$SHAPE3D
+Na "/home/djpeake/Work_Programming/kicad_libraries/3D/R12-100B.wrl"
+Sc 0.4 0.4 0.4
+Of -0.53 -0.3 0.19
+Ro 90 0 0
+$EndSHAPE3D
+$EndMODULE R12-100B
+$EndLIBRARY

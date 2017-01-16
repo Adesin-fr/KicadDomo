@@ -1,0 +1,79 @@
+PCBNEW-LibModule-V1  Thu 18 Sep 2014 21:04:58 EST
+# encoding utf-8
+Units mm
+$INDEX
+GW12LJVCF
+$EndINDEX
+$MODULE GW12LJVCF
+Po 0 0 0 15 541ABC49 00000000 ~~
+Li GW12LJVCF
+Sc 0
+AR 
+Op 0 0 0
+T0 0 -6 1.5 1.5 0 0.15 N V 21 N "GW12LJVCF"
+T1 0 -4 1.5 1.5 0 0.15 N V 21 N "VAL**"
+DS 3 12.8 3 16.6 0.15 21
+DS 3 16.6 -0.4 16.6 0.15 21
+DS -0.4 12.8 -0.4 16.6 0.15 21
+DS 3.5 12.76 -1 12.76 0.15 21
+DS 3.5 0 3.5 12.76 0.15 21
+DS -1 0 -1 12.76 0.15 21
+DS -1 0 3.5 0 0.15 21
+$PAD
+Sh "4" C 2 2 0 0 0
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 0
+$EndPAD
+$PAD
+Sh "1" C 2 2 0 0 0
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 2.54 0
+$EndPAD
+$PAD
+Sh "2" C 2 2 0 0 0
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 2.54 2.54
+$EndPAD
+$PAD
+Sh "3" C 2 2 0 0 0
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 2.54 5.08
+$EndPAD
+$PAD
+Sh "~" C 2 2 0 0 0
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 2.54 10.16
+$EndPAD
+$PAD
+Sh "5" C 2 2 0 0 0
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 2.54
+$EndPAD
+$PAD
+Sh "6" C 2 2 0 0 0
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 5.08
+$EndPAD
+$PAD
+Sh "~" C 2 2 0 0 0
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 10.16
+$EndPAD
+$EndMODULE GW12LJVCF
+$EndLIBRARY

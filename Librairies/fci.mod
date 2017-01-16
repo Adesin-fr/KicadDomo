@@ -1,0 +1,76 @@
+PCBNEW-LibModule-V1  Wed 18 Feb 2015 07:56:34 AEDT
+# encoding utf-8
+Units mm
+$INDEX
+71918-106
+$EndINDEX
+$MODULE 71918-106
+Po 0 0 0 15 54E3AAF8 00000000 ~~
+Li 71918-106
+Sc 0
+AR 
+Op 0 0 0
+T0 20.2 3.4 1 1 0 0.15 N V 21 N "71918-106"
+T1 0.5 -3 1 1 0 0.15 N V 21 N "VAL**"
+DS 24.97 4.4 -1.95 4.4 0.381 21
+DS -2 -4.2 -2 4.4 0.381 21
+DS 25 -4.2 25 4.4 0.381 21
+DS -1.97 -4.2 24.95 -4.2 0.381 21
+$PAD
+Sh "~" C 3 3 0 0 0
+Dr 2.8 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 0
+$EndPAD
+$PAD
+Sh "2" O 1.5 3 0 0 0
+Dr 1.1 0 -0.75
+At STD N 00E0FFFF
+Ne 0 ""
+Po 8.89 -1.52
+$EndPAD
+$PAD
+Sh "1" O 1.5 3 0 0 0
+Dr 1.1 0 0.75
+At STD N 00E0FFFF
+Ne 0 ""
+Po 8.89 1.02
+$EndPAD
+$PAD
+Sh "4" O 1.5 3 0 0 0
+Dr 1.1 0 -0.75
+At STD N 00E0FFFF
+Ne 0 ""
+Po 11.43 -1.52
+$EndPAD
+$PAD
+Sh "3" O 1.5 3 0 0 0
+Dr 1.1 0 0.75
+At STD N 00E0FFFF
+Ne 0 ""
+Po 11.43 1.02
+$EndPAD
+$PAD
+Sh "6" O 1.5 3 0 0 0
+Dr 1.1 0 -0.75
+At STD N 00E0FFFF
+Ne 0 ""
+Po 13.97 -1.52
+$EndPAD
+$PAD
+Sh "5" O 1.5 3 0 0 0
+Dr 1.1 0 0.75
+At STD N 00E0FFFF
+Ne 0 ""
+Po 13.97 1.02
+$EndPAD
+$PAD
+Sh "~" C 3 3 0 0 0
+Dr 2.8 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 22.82 0
+$EndPAD
+$EndMODULE 71918-106
+$EndLIBRARY

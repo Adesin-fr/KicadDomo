@@ -1,0 +1,34 @@
+PCBNEW-LibModule-V1  Mon 15 Jul 2013 18:34:14 EST
+# encoding utf-8
+Units mm
+$INDEX
+JST-2WAY
+$EndINDEX
+$MODULE JST-2WAY
+Po 0 0 0 15 51E3B3F2 00000000 ~~
+Li JST-2WAY
+Sc 0
+AR 
+Op 0 0 0
+T0 0 -8.5 1.5 1.5 0 0.15 N V 21 N "JST-2WAY"
+T1 0 -3.5 1.5 1.5 0 0.15 N V 21 N "VAL**"
+DS 3 1.5 3 -7 0.15 21
+DS 3 -7 -3 -7 0.15 21
+DS -3 -7 -3 1.5 0.15 21
+DS -3 1.5 3 1.5 0.15 21
+$PAD
+Sh "1" C 1.5 1.5 0 0 0
+Dr 0.8 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 2.25 0
+$EndPAD
+$PAD
+Sh "2" C 1.5 1.5 0 0 0
+Dr 0.8 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -2.25 0
+$EndPAD
+$EndMODULE JST-2WAY
+$EndLIBRARY

@@ -1,0 +1,63 @@
+PCBNEW-LibModule-V1  Mon 13 Jan 2014 15:32:38 EST
+# encoding utf-8
+Units mm
+$INDEX
+ANT-433-SP
+$EndINDEX
+$MODULE ANT-433-SP
+Po 0 0 0 15 52D36C5B 00000000 ~~
+Li ANT-433-SP
+Sc 0
+AR 
+Op 0 0 0
+T0 4.2 -12.6 1 1 0 0.15 N V 21 N "ANT-433-SP"
+T1 1.2 -11 1 1 0 0.15 N V 21 N "VAL**"
+DS 27 -14 -1.4 -14 0.15 21
+DS -1.4 -14 -1.4 0 0.15 21
+DS -1.4 0 -1 0 0.15 21
+DS 27 -14 27 -0.3 0.15 21
+DS -1 0 26.94 0 0.15 21
+$PAD
+Sh "1" R 2 2.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 0
+$EndPAD
+$PAD
+Sh "2" R 2 2.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 5.1 0
+$EndPAD
+$PAD
+Sh "3" R 2 2.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 10.2 0
+$EndPAD
+$PAD
+Sh "4" R 2 2.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 15.3 0
+$EndPAD
+$PAD
+Sh "5" R 2 2.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 20.4 0
+$EndPAD
+$PAD
+Sh "6" R 2 2.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 25.5 0
+$EndPAD
+$EndMODULE ANT-433-SP
+$EndLIBRARY

@@ -1,0 +1,57 @@
+PCBNEW-LibModule-V1  Thu 14 Aug 2014 15:25:13 EST
+# encoding utf-8
+Units mm
+$INDEX
+NL4MD-H
+$EndINDEX
+$MODULE NL4MD-H
+Po 0 0 0 15 53EC4836 00000000 ~~
+Li NL4MD-H
+Sc 0
+AR 
+Op 0 0 0
+T0 0 6 1.5 1.5 0 0.15 N V 21 N "NL4MD-H"
+T1 0 10 1.5 1.5 0 0.15 N V 21 N "VAL**"
+DS 13 20 -13 20 0.15 21
+DS 13 0 13 -7 0.15 21
+DS 13 -7 -13 -7 0.15 21
+DS -13 -7 -13 0 0.15 21
+DS -13 0 -13 25 0.15 21
+DS -13 25 13 25 0.15 21
+DS 13 25 13 0 0.15 21
+$PAD
+Sh "3" C 2 2 0 0 0
+Dr 1.3 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 0
+$EndPAD
+$PAD
+Sh "1" C 2 2 0 0 0
+Dr 1.3 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 3.18 -4.44
+$EndPAD
+$PAD
+Sh "2" C 2 2 0 0 0
+Dr 1.3 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -6.35 0
+$EndPAD
+$PAD
+Sh "4" C 2 2 0 0 0
+Dr 1.3 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 6.35 0
+$EndPAD
+$SHAPE3D
+Na "/home/djpeake/Dropbox/FOFB/Datasheets/Connectors/neutrik/4 pole/test.wrl"
+Sc 0.4 0.4 0.4
+Of 0 -0.8 0.6
+Ro 90 180 180
+$EndSHAPE3D
+$EndMODULE NL4MD-H
+$EndLIBRARY

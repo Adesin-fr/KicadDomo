@@ -1,0 +1,49 @@
+PCBNEW-LibModule-V1  Tue 25 Mar 2014 15:59:58 EST
+# encoding utf-8
+Units mm
+$INDEX
+PD15-22C
+$EndINDEX
+$MODULE PD15-22C
+Po 0 0 0 15 53310D42 00000000 ~~
+Li PD15-22C
+Sc 0
+AR 
+Op 0 0 0
+T0 1.7 -2 1.5 1.5 0 0.15 N V 21 N "PD15-22C"
+T1 5.9 3.6 1.5 1.5 0 0.15 N V 21 N "VAL**"
+DS 2.4 -0.7 2.4 2.1 0.15 21
+DS 3.3 2.1 3.3 -0.7 0.15 21
+DS 3.3 -0.7 0 -0.7 0.15 21
+DS 0 -0.7 0 2.1 0.15 21
+DS 0 2.1 3.3 2.1 0.15 21
+$PAD
+Sh "1" R 1.2 1 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 0
+$EndPAD
+$PAD
+Sh "1" R 1.2 1 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 1.4
+$EndPAD
+$PAD
+Sh "2" R 1.2 1 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3.3 0
+$EndPAD
+$PAD
+Sh "2" R 1.2 1 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3.3 1.4
+$EndPAD
+$EndMODULE PD15-22C
+$EndLIBRARY

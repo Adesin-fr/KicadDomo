@@ -1,0 +1,149 @@
+PCBNEW-LibModule-V1  Fri 05 Dec 2014 08:30:46 AEDT
+# encoding utf-8
+Units mm
+$INDEX
+MNR14
+MNR14_OPP_PIN
+$EndINDEX
+$MODULE MNR14
+Po 0 0 0 15 531E7275 00000000 ~~
+Li MNR14
+Sc 0
+AR 
+Op 0 0 0
+T0 1.3 -3.1 1 1 0 0.15 N V 21 N "MNR14"
+T1 1.3 1.5 1 1 0 0.15 N V 21 N "VAL**"
+$PAD
+Sh "1" R 0.6 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 0
+$EndPAD
+$PAD
+Sh "2" R 0.4 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.9 0
+$EndPAD
+$PAD
+Sh "3" R 0.4 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.7 0
+$EndPAD
+$PAD
+Sh "4" R 0.6 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.6 0
+$EndPAD
+$PAD
+Sh "5" R 0.6 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.6 -1.8
+$EndPAD
+$PAD
+Sh "6" R 0.6 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 -1.8
+$EndPAD
+$PAD
+Sh "3" R 0.4 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.9 -1.8
+$EndPAD
+$PAD
+Sh "4" R 0.4 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.7 -1.8
+$EndPAD
+$EndMODULE MNR14
+$MODULE MNR14_OPP_PIN
+Po 0 0 0 15 5360D839 00000000 ~~
+Li MNR14_OPP_PIN
+Sc 0
+AR 
+Op 0 0 0
+T0 1.3 -3.1 1 1 0 0.15 N V 21 N "MNR14"
+T1 1.3 1.5 1 1 0 0.15 N V 21 N "VAL**"
+DS 2.9 -0.9 2.9 -1.7 0.1 21
+DS 2.9 -1.7 -0.3 -1.7 0.1 21
+DS -0.3 -1.7 -0.3 -0.1 0.1 21
+DS -0.3 -0.1 2.9 -0.1 0.1 21
+DS 2.9 -0.1 2.9 -0.9 0.1 21
+$PAD
+Sh "1" R 0.6 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 0
+$EndPAD
+$PAD
+Sh "3" R 0.4 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.9 0
+$EndPAD
+$PAD
+Sh "5" R 0.4 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.7 0
+$EndPAD
+$PAD
+Sh "7" R 0.6 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.6 0
+$EndPAD
+$PAD
+Sh "8" R 0.6 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.6 -1.8
+$EndPAD
+$PAD
+Sh "2" R 0.6 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 -1.8
+$EndPAD
+$PAD
+Sh "4" R 0.4 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.9 -1.8
+$EndPAD
+$PAD
+Sh "6" R 0.4 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.7 -1.8
+$EndPAD
+$SHAPE3D
+Na "walter/smd_resistors/r_cat16-4.wrl"
+Sc 1.01 1.01 1
+Of 0.051 0.034 0
+Ro 0 0 90
+$EndSHAPE3D
+$EndMODULE MNR14_OPP_PIN
+$EndLIBRARY

@@ -1,0 +1,7 @@
+EESchema-DOCLIB  Version 2.0  Date: Mon 15 Apr 2013 18:43:53 EST
+#
+$CMP SN74LV8154
+D SN74LV8154 16/32 bit counter
+$ENDCMP
+#
+#End Doc Library

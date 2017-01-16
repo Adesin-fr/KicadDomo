@@ -1,0 +1,70 @@
+PCBNEW-LibModule-V1  Tue 14 Jul 2015 08:57:06 AEST
+# encoding utf-8
+Units mm
+$INDEX
+PTA2043
+$EndINDEX
+$MODULE PTA2043
+Po 0 0 0 15 55A441CD 00000000 ~~
+Li PTA2043
+Kw Slide Potentiometer
+Sc 0
+AR 
+Op 0 0 0
+T0 0 2.9 1 1 0 0.15 N V 21 N "PTA2043"
+T1 0.1 -1.1 1 1 0 0.15 N V 21 N "VAL**"
+DS -18 -4.5 18 -4.5 0.15 21
+DS 18 -4.5 18 4.5 0.15 21
+DS 18 4.5 -18 4.5 0.15 21
+DS -18 4.5 -18 -4.5 0.15 21
+$PAD
+Sh "1" C 2.5 2.5 0 0 0
+Dr 1.5 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -16.5 -1.75
+$EndPAD
+$PAD
+Sh "2" C 2.5 2.5 0 0 0
+Dr 1.5 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -16.5 1.75
+$EndPAD
+$PAD
+Sh "3" C 2.5 2.5 0 0 0
+Dr 1.5 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 16.5 -1.75
+$EndPAD
+$PAD
+Sh "~" C 3 3 0 0 0
+Dr 2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -11.4 -4.2
+$EndPAD
+$PAD
+Sh "~" C 3 3 0 0 0
+Dr 2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 11.4 -4.2
+$EndPAD
+$PAD
+Sh "~" C 3 3 0 0 0
+Dr 2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -12.6 4.2
+$EndPAD
+$PAD
+Sh "~" C 3 3 0 0 0
+Dr 2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 12.6 4.2
+$EndPAD
+$EndMODULE PTA2043
+$EndLIBRARY

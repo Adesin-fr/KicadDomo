@@ -1,0 +1,266 @@
+PCBNEW-LibModule-V1  Fri 05 Dec 2014 08:27:17 AEDT
+# encoding utf-8
+Units mm
+$INDEX
+MNR18
+MNR18_OPP_PINS
+$EndINDEX
+$MODULE MNR18
+Po 0 0 0 15 531E738B 00000000 ~~
+Li MNR18
+Sc 0
+AR 
+Op 0 0 0
+T0 2 -3.1 1 1 0 0.15 N V 21 N "MNR18"
+T1 1.6 1.5 1 1 0 0.15 N V 21 N "VAL**"
+DS 3.7 -2 -0.2 -2 0.15 21
+DS -0.2 -2 -0.2 0.2 0.15 21
+DS -0.2 0.2 3.7 0.2 0.15 21
+DS 3.7 0.2 3.7 -1.9 0.15 21
+DS 3.7 -1.9 3.7 -2 0.15 21
+$PAD
+Sh "1" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 0
+$EndPAD
+$PAD
+Sh "2" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.5 0
+$EndPAD
+$PAD
+Sh "3" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1 0
+$EndPAD
+$PAD
+Sh "4" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.5 0
+$EndPAD
+$PAD
+Sh "5" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2 0
+$EndPAD
+$PAD
+Sh "6" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.5 0
+$EndPAD
+$PAD
+Sh "7" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3 0
+$EndPAD
+$PAD
+Sh "8" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3.5 0
+$EndPAD
+$PAD
+Sh "9" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3.5 -1.8
+$EndPAD
+$PAD
+Sh "10" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3 -1.8
+$EndPAD
+$PAD
+Sh "11" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.5 -1.8
+$EndPAD
+$PAD
+Sh "12" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2 -1.8
+$EndPAD
+$PAD
+Sh "13" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.5 -1.8
+$EndPAD
+$PAD
+Sh "14" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1 -1.8
+$EndPAD
+$PAD
+Sh "15" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.5 -1.8
+$EndPAD
+$PAD
+Sh "16" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 -1.8
+$EndPAD
+$EndMODULE MNR18
+$MODULE MNR18_OPP_PINS
+Po 0 0 0 15 53A004C0 00000000 ~~
+Li MNR18_OPP_PINS
+Sc 0
+AR 
+Op 0 0 0
+T0 2 -3.1 1 1 0 0.15 N V 21 N "MNR18_OPP_PINS"
+T1 1.6 1.5 1 1 0 0.15 N V 21 N "VAL**"
+DS 3.7 -2 -0.2 -2 0.15 21
+DS -0.2 -2 -0.2 0.2 0.15 21
+DS -0.2 0.2 3.7 0.2 0.15 21
+DS 3.7 0.2 3.7 -1.9 0.15 21
+DS 3.7 -1.9 3.7 -2 0.15 21
+$PAD
+Sh "1" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 0
+$EndPAD
+$PAD
+Sh "3" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.5 0
+$EndPAD
+$PAD
+Sh "5" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1 0
+$EndPAD
+$PAD
+Sh "7" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.5 0
+$EndPAD
+$PAD
+Sh "9" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2 0
+$EndPAD
+$PAD
+Sh "11" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.5 0
+$EndPAD
+$PAD
+Sh "13" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3 0
+$EndPAD
+$PAD
+Sh "15" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3.5 0
+$EndPAD
+$PAD
+Sh "16" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3.5 -1.8
+$EndPAD
+$PAD
+Sh "14" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3 -1.8
+$EndPAD
+$PAD
+Sh "12" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2.5 -1.8
+$EndPAD
+$PAD
+Sh "10" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 2 -1.8
+$EndPAD
+$PAD
+Sh "8" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.5 -1.8
+$EndPAD
+$PAD
+Sh "6" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1 -1.8
+$EndPAD
+$PAD
+Sh "4" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0.5 -1.8
+$EndPAD
+$PAD
+Sh "2" R 0.3 0.8 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 -1.8
+$EndPAD
+$SHAPE3D
+Na "walter/smd_resistors/r_cat16-8.wrl"
+Sc 1.3 0.6 1
+Of 0.07 0.035 0
+Ro 0 0 90
+$EndSHAPE3D
+$EndMODULE MNR18_OPP_PINS
+$EndLIBRARY

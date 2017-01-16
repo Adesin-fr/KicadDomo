@@ -1,0 +1,43 @@
+PCBNEW-LibModule-V1  Tue 12 Aug 2014 08:17:01 EST
+# encoding utf-8
+Units mm
+$INDEX
+SM-3TW
+$EndINDEX
+$MODULE SM-3TW
+Po 0 0 0 15 53E940B5 00000000 ~~
+Li SM-3TW
+Sc 0
+AR 
+Op 0 0 0
+T0 0.1 -3.6 1.5 1.5 0 0.15 N I 21 N "SM-3TW"
+T1 0 4.2 1.5 1.5 0 0.15 N V 21 N "VAL**"
+DS -1.8 -1.8 -1.8 1.8 0.15 21
+DS -1.8 1.8 1.7 1.8 0.15 21
+DS 1.7 1.8 1.8 1.8 0.15 21
+DS 1.8 1.8 1.8 -1.8 0.15 21
+DS 1.8 -1.8 -1.8 -1.8 0.15 21
+DC 1.1 -1.2 1.1 -1.6 0.15 21
+$PAD
+Sh "2" R 1.3 1.6 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 0 -1.56
+$EndPAD
+$PAD
+Sh "1" R 0.9 1.6 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -1.4 1.56
+$EndPAD
+$PAD
+Sh "3" R 0.9 1.6 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 1.4 1.56
+$EndPAD
+$EndMODULE SM-3TW
+$EndLIBRARY

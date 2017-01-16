@@ -1,0 +1,98 @@
+PCBNEW-LibModule-V1  Fri 28 Nov 2014 15:19:00 AEDT
+# encoding utf-8
+Units mm
+$INDEX
+pin_strip_5x2_locking
+$EndINDEX
+$MODULE pin_strip_5x2_locking
+Po 0 0 0 15 5477F6D0 00000000 ~~
+Li pin_strip_5x2_locking
+Cd Pin socket 5x2pin
+Kw CONN DEV
+Sc 0
+AR pin_socket_5x2
+Op 0 0 0
+T0 0 -3.81 1.016 1.016 0 0.2032 N V 21 N "PIN_STRIP_5x2_LOCKING"
+T1 0 -5.08 1.016 0.889 0 0.2032 N I 21 N "Val**"
+DS 16 -2.5 16 2.5 0.15 21
+DS 16 2.5 -16 2.5 0.15 21
+DS -16 2.5 -16 -2.5 0.15 21
+DS -16 -2.5 16 -2.5 0.15 21
+$PAD
+Sh "1" R 1.524 1.99898 0 0 0
+Dr 1.00076 0 0.24892
+At STD N 00E0FFFF
+Ne 0 ""
+Po -5.08 1.27
+$EndPAD
+$PAD
+Sh "2" O 1.524 1.99898 0 0 0
+Dr 1.00076 0 -0.24892
+At STD N 00E0FFFF
+Ne 0 ""
+Po -5.08 -1.27
+$EndPAD
+$PAD
+Sh "3" O 1.524 1.99898 0 0 0
+Dr 1.00076 0 0.24892
+At STD N 00E0FFFF
+Ne 0 ""
+Po -2.54 1.27
+$EndPAD
+$PAD
+Sh "4" O 1.524 1.99898 0 0 0
+Dr 1.00076 0 -0.24892
+At STD N 00E0FFFF
+Ne 0 ""
+Po -2.54 -1.27
+$EndPAD
+$PAD
+Sh "5" O 1.524 1.99898 0 0 0
+Dr 1.00076 0 0.24892
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 1.27
+$EndPAD
+$PAD
+Sh "6" O 1.524 1.99898 0 0 0
+Dr 1.00076 0 -0.24892
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 -1.27
+$EndPAD
+$PAD
+Sh "7" O 1.524 1.99898 0 0 0
+Dr 1.00076 0 0.24892
+At STD N 00E0FFFF
+Ne 0 ""
+Po 2.54 1.27
+$EndPAD
+$PAD
+Sh "8" O 1.524 1.99898 0 0 0
+Dr 1.00076 0 -0.24892
+At STD N 00E0FFFF
+Ne 0 ""
+Po 2.54 -1.27
+$EndPAD
+$PAD
+Sh "9" O 1.524 1.99898 0 0 0
+Dr 1.00076 0 0.24892
+At STD N 00E0FFFF
+Ne 0 ""
+Po 5.08 1.27
+$EndPAD
+$PAD
+Sh "10" O 1.524 1.99898 0 0 0
+Dr 1.00076 0 -0.24892
+At STD N 00E0FFFF
+Ne 0 ""
+Po 5.08 -1.27
+$EndPAD
+$SHAPE3D
+Na "/home/djpeake/Programming/svn/kicad_libs/packages3d/walter/pin_strip/pin_socket_5x2.wrl"
+Sc 1 1 1
+Of 0 0 0
+Ro 0 0 0
+$EndSHAPE3D
+$EndMODULE pin_strip_5x2_locking
+$EndLIBRARY

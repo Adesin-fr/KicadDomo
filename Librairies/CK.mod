@@ -1,0 +1,212 @@
+PCBNEW-LibModule-V1  Mon 05 Jan 2015 16:44:49 AEDT
+# encoding utf-8
+Units mm
+$INDEX
+BD08AV
+JS202011CQN
+$EndINDEX
+$MODULE BD08AV
+Po 0 0 0 15 54AA24CD 00000000 ~~
+Li BD08AV
+Sc 0
+AR 
+Op 0 0 0
+T0 3 5 1.5 1.5 0 0.15 N V 21 N "BD08AV"
+T1 16 5 1.5 1.5 0 0.15 N V 21 N "VAL**"
+DS 10.9 -9 10.9 -8.2 0.15 21
+DS 9.5 -9 10.9 -9 0.15 21
+DS 9.5 -8.2 9.5 -9 0.15 21
+DS 12 -8.2 12 -9 0.15 21
+DS 12 -9 13.4 -9 0.15 21
+DS 13.4 -9 13.4 -8.2 0.15 21
+DS 18.4 -9 18.4 -8.2 0.15 21
+DS 17 -9 18.4 -9 0.15 21
+DS 17 -8.2 17 -9 0.15 21
+DS 14.5 -8.2 14.5 -9 0.15 21
+DS 14.5 -9 15.9 -9 0.15 21
+DS 15.9 -9 15.9 -8.2 0.15 21
+DS 5.7 -9 5.7 -8.2 0.15 21
+DS 4.3 -9 5.7 -9 0.15 21
+DS 4.3 -8.2 4.3 -9 0.15 21
+DS 6.8 -8.2 6.8 -9 0.15 21
+DS 6.8 -9 8.2 -9 0.15 21
+DS 8.2 -9 8.2 -8.2 0.15 21
+DS 3.2 -9 3.2 -8.2 0.15 21
+DS 1.8 -9 3.2 -9 0.15 21
+DS 1.8 -8.2 1.8 -9 0.15 21
+DS -0.7 -8.2 -0.7 -9 0.15 21
+DS -0.7 -9 0.7 -9 0.15 21
+DS 0.7 -9 0.7 -8.2 0.15 21
+DS 20.09 0 -2.26 0 0.15 21
+DS 20.09 0 20.09 -8.12 0.15 21
+DS -2.26 -8.12 20.09 -8.12 0.15 21
+DS -2.26 0 -2.26 -8.12 0.15 21
+$PAD
+Sh "1" C 2 2 0 0 0
+Dr 1.2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 0
+$EndPAD
+$PAD
+Sh "2" C 2 2 0 0 0
+Dr 1.2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 2.54 0
+$EndPAD
+$PAD
+Sh "3" C 2 2 0 0 0
+Dr 1.2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 5.08 0
+$EndPAD
+$PAD
+Sh "4" C 2 2 0 0 0
+Dr 1.2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 7.62 0
+$EndPAD
+$PAD
+Sh "5" C 2 2 0 0 0
+Dr 1.2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 10.16 0
+$EndPAD
+$PAD
+Sh "6" C 2 2 0 0 0
+Dr 1.2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 12.7 0
+$EndPAD
+$PAD
+Sh "7" C 2 2 0 0 0
+Dr 1.2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 15.24 0
+$EndPAD
+$PAD
+Sh "8" C 2 2 0 0 0
+Dr 1.2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 17.78 0
+$EndPAD
+$PAD
+Sh "9" C 2 2 0 0 0
+Dr 1.2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 17.78 2.54
+$EndPAD
+$PAD
+Sh "10" C 2 2 0 0 0
+Dr 1.2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 15.24 2.54
+$EndPAD
+$PAD
+Sh "11" C 2 2 0 0 0
+Dr 1.2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 12.7 2.54
+$EndPAD
+$PAD
+Sh "12" C 2 2 0 0 0
+Dr 1.2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 10.16 2.54
+$EndPAD
+$PAD
+Sh "13" C 2 2 0 0 0
+Dr 1.2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 7.62 2.54
+$EndPAD
+$PAD
+Sh "14" C 2 2 0 0 0
+Dr 1.2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 5.08 2.54
+$EndPAD
+$PAD
+Sh "15" C 2 2 0 0 0
+Dr 1.2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 2.54 2.54
+$EndPAD
+$PAD
+Sh "16" C 2 2 0 0 0
+Dr 1.2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 2.54
+$EndPAD
+$EndMODULE BD08AV
+$MODULE JS202011CQN
+Po 0 0 0 15 5452E246 00000000 ~~
+Li JS202011CQN
+Sc 0
+AR 
+Op 0 0 0
+T0 3 6 1 1 0 0.15 N V 21 N "JS202011CQN"
+T1 3 -3 1 1 0 0.15 N V 21 N "VAL**"
+DS 7 3.3 -2 3.3 0.15 21
+DS -2 3.3 -2 0 0.15 21
+DS 7 0 7 3.3 0.15 21
+DS -2 0 7 0 0.15 21
+$PAD
+Sh "1" O 2 3 0 0 0
+Dr 1 0 -0.5
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 0
+$EndPAD
+$PAD
+Sh "2" O 2 3 0 0 0
+Dr 1 0 -0.5
+At STD N 00E0FFFF
+Ne 0 ""
+Po 2.5 0
+$EndPAD
+$PAD
+Sh "3" O 2 3 0 0 0
+Dr 1 0 -0.5
+At STD N 00E0FFFF
+Ne 0 ""
+Po 5 0
+$EndPAD
+$PAD
+Sh "1" O 2 3 0 0 0
+Dr 1 0 0.5
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 3.3
+$EndPAD
+$PAD
+Sh "2" O 2 3 0 0 0
+Dr 1 0 0.5
+At STD N 00E0FFFF
+Ne 0 ""
+Po 2.5 3.3
+$EndPAD
+$PAD
+Sh "3" O 2 3 0 0 0
+Dr 1 0 0.5
+At STD N 00E0FFFF
+Ne 0 ""
+Po 5 3.3
+$EndPAD
+$EndMODULE JS202011CQN
+$EndLIBRARY

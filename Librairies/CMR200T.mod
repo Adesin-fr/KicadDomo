@@ -1,0 +1,37 @@
+PCBNEW-LibModule-V1  Mon 26 Aug 2013 12:19:37 EST
+# encoding utf-8
+Units mm
+$INDEX
+CMR200T
+$EndINDEX
+$MODULE CMR200T
+Po 0 0 0 15 521ABB31 00000000 ~~
+Li CMR200T
+Sc 0
+AR 
+Op 0 0 0
+T0 -0.5 -5 1.5 1.5 0 0.15 N I 21 N "CMR200T"
+T1 -3 3.5 1.5 1.5 0 0.15 N V 21 N "VAL**"
+$PAD
+Sh "1" R 2.5 1 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3 -2.54
+$EndPAD
+$PAD
+Sh "2" R 2.5 1 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3 2.54
+$EndPAD
+$PAD
+Sh "3" R 6 2.5 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -3 0
+$EndPAD
+$EndMODULE CMR200T
+$EndLIBRARY

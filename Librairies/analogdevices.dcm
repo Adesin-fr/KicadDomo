@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0  Date: Sun 14 Apr 2013 18:33:31 EST
+#
+$CMP AD9833
+D Signal Generator
+K siggen
+$ENDCMP
+#
+#End Doc Library
