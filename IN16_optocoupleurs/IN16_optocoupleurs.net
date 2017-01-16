@@ -1,0 +1,591 @@
+# EESchema Netlist Version 1.1 created  ven. 04 avril 2014 11:36:02 CEST
+(
+ ( /53358887 LED-5MM D1 LED
+  ( 1 /VCC )
+  ( 2 N-000031 )
+ )
+ ( /53358902 LED-5MM D2 LED
+  ( 1 /VCC )
+  ( 2 N-000038 )
+ )
+ ( /5335890C LED-5MM D3 LED
+  ( 1 /VCC )
+  ( 2 N-000044 )
+ )
+ ( /53358913 LED-5MM D4 LED
+  ( 1 /VCC )
+  ( 2 N-000012 )
+ )
+ ( /53358924 LED-5MM D5 LED
+  ( 1 /VCC )
+  ( 2 N-000015 )
+ )
+ ( /5335892C LED-5MM D6 LED
+  ( 1 /VCC )
+  ( 2 N-000003 )
+ )
+ ( /53358937 LED-5MM D7 LED
+  ( 1 /VCC )
+  ( 2 N-000028 )
+ )
+ ( /5335893F LED-5MM D8 LED
+  ( 1 /VCC )
+  ( 2 N-000023 )
+ )
+ ( /53358965 LED-5MM D9 LED
+  ( 1 /VCC )
+  ( 2 N-000051 )
+ )
+ ( /53358962 LED-5MM D10 LED
+  ( 1 /VCC )
+  ( 2 N-000052 )
+ )
+ ( /5335895D LED-5MM D11 LED
+  ( 1 /VCC )
+  ( 2 N-000063 )
+ )
+ ( /5335895A LED-5MM D12 LED
+  ( 1 /VCC )
+  ( 2 N-000090 )
+ )
+ ( /53358955 LED-5MM D13 LED
+  ( 1 /VCC )
+  ( 2 N-000096 )
+ )
+ ( /53358952 LED-5MM D14 LED
+  ( 1 /VCC )
+  ( 2 N-000085 )
+ )
+ ( /5335894D LED-5MM D15 LED
+  ( 1 /VCC )
+  ( 2 N-000080 )
+ )
+ ( /5335894A LED-5MM D16 LED
+  ( 1 /VCC )
+  ( 2 N-000025 )
+ )
+ ( /533587CD PIN_ARRAY_5x2 P0 CONN_10
+  ( 1 /IN15 )
+  ( 2 /IN14 )
+  ( 3 /VCC )
+  ( 4 /IN13 )
+  ( 5 /GND )
+  ( 6 /IN12 )
+  ( 7 /IN8 )
+  ( 8 /IN11 )
+  ( 9 /IN9 )
+  ( 10 /IN10 )
+ )
+ ( /53358968 PIN_ARRAY_5x2 P1 CONN_10
+  ( 1 /IN0 )
+  ( 2 /IN1 )
+  ( 3 /VCC )
+  ( 4 /IN2 )
+  ( 5 /GND )
+  ( 6 /IN3 )
+  ( 7 /IN7 )
+  ( 8 /IN4 )
+  ( 9 /IN6 )
+  ( 10 /IN5 )
+ )
+ ( /533587B3 bornier2 P2 BORN2
+  ( 1 /GND )
+  ( 2 N-000033 )
+ )
+ ( /53358903 bornier2 P3 BORN2
+  ( 1 /GND )
+  ( 2 N-000039 )
+ )
+ ( /5335890B bornier2 P4 BORN2
+  ( 1 /GND )
+  ( 2 N-000043 )
+ )
+ ( /53358914 bornier2 P5 BORN2
+  ( 1 /GND )
+  ( 2 N-000048 )
+ )
+ ( /53358923 bornier2 P6 BORN2
+  ( 1 /GND )
+  ( 2 N-000016 )
+ )
+ ( /5335892D bornier2 P7 BORN2
+  ( 1 /GND )
+  ( 2 N-000004 )
+ )
+ ( /53358936 bornier2 P8 BORN2
+  ( 1 /GND )
+  ( 2 N-000029 )
+ )
+ ( /53358940 bornier2 P9 BORN2
+  ( 1 /GND )
+  ( 2 N-000019 )
+ )
+ ( /53358966 bornier2 P10 BORN2
+  ( 1 /GND )
+  ( 2 N-000058 )
+ )
+ ( /53358961 bornier2 P11 BORN2
+  ( 1 /GND )
+  ( 2 N-000057 )
+ )
+ ( /5335895E bornier2 P12 BORN2
+  ( 1 /GND )
+  ( 2 N-000059 )
+ )
+ ( /53358959 bornier2 P13 BORN2
+  ( 1 /GND )
+  ( 2 N-000091 )
+ )
+ ( /53358956 bornier2 P14 BORN2
+  ( 1 /GND )
+  ( 2 N-000094 )
+ )
+ ( /53358951 bornier2 P15 BORN2
+  ( 1 /GND )
+  ( 2 N-000084 )
+ )
+ ( /5335894E bornier2 P16 BORN2
+  ( 1 /GND )
+  ( 2 N-000089 )
+ )
+ ( /53358949 bornier2 P17 BORN2
+  ( 1 /GND )
+  ( 2 N-000026 )
+ )
+ ( /533588B4 R4 R1 R
+  ( 1 N-000032 )
+  ( 2 N-000033 )
+ )
+ ( /53358901 R4 R2 R
+  ( 1 N-000037 )
+  ( 2 N-000039 )
+ )
+ ( /5335890D R4 R3 R
+  ( 1 N-000045 )
+  ( 2 N-000043 )
+ )
+ ( /53358912 R4 R4 R
+  ( 1 N-000011 )
+  ( 2 N-000048 )
+ )
+ ( /53358925 R4 R5 R
+  ( 1 N-000017 )
+  ( 2 N-000016 )
+ )
+ ( /5335892B R4 R6 R
+  ( 1 N-000002 )
+  ( 2 N-000004 )
+ )
+ ( /53358938 R4 R7 R
+  ( 1 N-000030 )
+  ( 2 N-000029 )
+ )
+ ( /5335893E R4 R8 R
+  ( 1 N-000022 )
+  ( 2 N-000019 )
+ )
+ ( /53358964 R4 R9 R
+  ( 1 N-000056 )
+  ( 2 N-000058 )
+ )
+ ( /53358963 R4 R10 R
+  ( 1 N-000053 )
+  ( 2 N-000057 )
+ )
+ ( /5335895C R4 R11 R
+  ( 1 N-000062 )
+  ( 2 N-000059 )
+ )
+ ( /5335895B R4 R12 R
+  ( 1 N-000092 )
+  ( 2 N-000091 )
+ )
+ ( /53358954 R4 R13 R
+  ( 1 N-000095 )
+  ( 2 N-000094 )
+ )
+ ( /53358953 R4 R14 R
+  ( 1 N-000086 )
+  ( 2 N-000084 )
+ )
+ ( /5335894C R4 R15 R
+  ( 1 N-000079 )
+  ( 2 N-000089 )
+ )
+ ( /5335894B R4 R16 R
+  ( 1 N-000027 )
+  ( 2 N-000026 )
+ )
+ ( /53358769 DIP-6__300_ELL U1 CNY17
+  ( 1 N-000031 )
+  ( 2 N-000032 )
+  ( 3 ? )
+  ( 4 /GND )
+  ( 5 /IN0 )
+  ( 6 ? )
+ )
+ ( /53358904 DIP-6__300_ELL U2 CNY17
+  ( 1 N-000038 )
+  ( 2 N-000037 )
+  ( 3 ? )
+  ( 4 /GND )
+  ( 5 /IN1 )
+  ( 6 ? )
+ )
+ ( /5335890A DIP-6__300_ELL U3 CNY17
+  ( 1 N-000044 )
+  ( 2 N-000045 )
+  ( 3 ? )
+  ( 4 /GND )
+  ( 5 /IN2 )
+  ( 6 ? )
+ )
+ ( /53358915 DIP-6__300_ELL U4 CNY17
+  ( 1 N-000012 )
+  ( 2 N-000011 )
+  ( 3 ? )
+  ( 4 /GND )
+  ( 5 /IN3 )
+  ( 6 ? )
+ )
+ ( /53358922 DIP-6__300_ELL U5 CNY17
+  ( 1 N-000015 )
+  ( 2 N-000017 )
+  ( 3 ? )
+  ( 4 /GND )
+  ( 5 /IN4 )
+  ( 6 ? )
+ )
+ ( /5335892E DIP-6__300_ELL U6 CNY17
+  ( 1 N-000003 )
+  ( 2 N-000002 )
+  ( 3 ? )
+  ( 4 /GND )
+  ( 5 /IN5 )
+  ( 6 ? )
+ )
+ ( /53358935 DIP-6__300_ELL U7 CNY17
+  ( 1 N-000028 )
+  ( 2 N-000030 )
+  ( 3 ? )
+  ( 4 /GND )
+  ( 5 /IN6 )
+  ( 6 ? )
+ )
+ ( /53358941 DIP-6__300_ELL U8 CNY17
+  ( 1 N-000023 )
+  ( 2 N-000022 )
+  ( 3 ? )
+  ( 4 /GND )
+  ( 5 /IN7 )
+  ( 6 ? )
+ )
+ ( /53358967 DIP-6__300_ELL U9 CNY17
+  ( 1 N-000051 )
+  ( 2 N-000056 )
+  ( 3 ? )
+  ( 4 /GND )
+  ( 5 /IN8 )
+  ( 6 ? )
+ )
+ ( /53358960 DIP-6__300_ELL U10 CNY17
+  ( 1 N-000052 )
+  ( 2 N-000053 )
+  ( 3 ? )
+  ( 4 /GND )
+  ( 5 /IN9 )
+  ( 6 ? )
+ )
+ ( /5335895F DIP-6__300_ELL U11 CNY17
+  ( 1 N-000063 )
+  ( 2 N-000062 )
+  ( 3 ? )
+  ( 4 /GND )
+  ( 5 /IN10 )
+  ( 6 ? )
+ )
+ ( /53358958 DIP-6__300_ELL U12 CNY17
+  ( 1 N-000090 )
+  ( 2 N-000092 )
+  ( 3 ? )
+  ( 4 /GND )
+  ( 5 /IN11 )
+  ( 6 ? )
+ )
+ ( /53358957 DIP-6__300_ELL U13 CNY17
+  ( 1 N-000096 )
+  ( 2 N-000095 )
+  ( 3 ? )
+  ( 4 /GND )
+  ( 5 /IN12 )
+  ( 6 ? )
+ )
+ ( /53358950 DIP-6__300_ELL U14 CNY17
+  ( 1 N-000085 )
+  ( 2 N-000086 )
+  ( 3 ? )
+  ( 4 /GND )
+  ( 5 /IN13 )
+  ( 6 ? )
+ )
+ ( /5335894F DIP-6__300_ELL U15 CNY17
+  ( 1 N-000080 )
+  ( 2 N-000079 )
+  ( 3 ? )
+  ( 4 /GND )
+  ( 5 /IN14 )
+  ( 6 ? )
+ )
+ ( /53358948 DIP-6__300_ELL U16 CNY17
+  ( 1 N-000025 )
+  ( 2 N-000027 )
+  ( 3 ? )
+  ( 4 /GND )
+  ( 5 /IN15 )
+  ( 6 ? )
+ )
+)
+*
+{ Allowed footprints by component:
+$component D1
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D2
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D3
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D4
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D5
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D6
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D7
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D8
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D9
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D10
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D11
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D12
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D13
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D14
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D15
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D16
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R4
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R5
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R6
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R7
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R8
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R9
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R10
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R11
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R12
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R13
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R14
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R15
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$component R16
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$endfootprintlist
+}

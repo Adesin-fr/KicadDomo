@@ -1,0 +1,404 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:mysensors_radios
+LIBS:mysensors_regulators
+LIBS:mySensors_FilPilote_RFM69-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Label 3250 4300 0    60   ~ 0
+GND
+Text Label 9750 4150 0    60   ~ 0
+GND
+Text Label 9600 2750 0    60   ~ 0
+3V3
+Text Label 8650 3200 0    60   ~ 0
+CS
+Text Label 8650 3500 0    60   ~ 0
+SCK
+Text Label 8650 3400 0    60   ~ 0
+MISO
+Text Label 8650 3300 0    60   ~ 0
+MOSI
+Text Label 5750 2200 0    60   ~ 0
+CS
+Text Label 5750 2300 0    60   ~ 0
+MOSI
+Text Label 5750 2400 0    60   ~ 0
+MISO
+Text Label 5750 2500 0    60   ~ 0
+SCK
+$Comp
+L MOC3041M U1
+U 1 1 57E3C933
+P 8050 1200
+F 0 "U1" H 7850 1400 50  0000 L CNN
+F 1 "MOC3041M" H 8050 1400 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm_LongPads" H 7850 1000 50  0000 L CIN
+F 3 "" H 8015 1200 50  0000 L CNN
+	1    8050 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L MOC3041M U2
+U 1 1 57E3C97C
+P 8050 1750
+F 0 "U2" H 7850 1950 50  0000 L CNN
+F 1 "MOC3041M" H 8050 1950 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm_LongPads" H 7850 1550 50  0000 L CIN
+F 3 "" H 8015 1750 50  0000 L CNN
+	1    8050 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 57E3C9BF
+P 7500 1100
+F 0 "R1" V 7580 1100 50  0000 C CNN
+F 1 "220" V 7500 1100 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 7430 1100 50  0001 C CNN
+F 3 "" H 7500 1100 50  0000 C CNN
+	1    7500 1100
+	0    1    1    0   
+$EndComp
+$Comp
+L R R2
+U 1 1 57E3CA3C
+P 7500 1650
+F 0 "R2" V 7580 1650 50  0000 C CNN
+F 1 "220" V 7500 1650 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 7430 1650 50  0001 C CNN
+F 3 "" H 7500 1650 50  0000 C CNN
+	1    7500 1650
+	0    1    1    0   
+$EndComp
+$Comp
+L D D1
+U 1 1 57E3CA83
+P 8850 1300
+F 0 "D1" H 8850 1400 50  0000 C CNN
+F 1 "D" H 8850 1200 50  0000 C CNN
+F 2 "Diodes_ThroughHole:Diode_DO-41_SOD81_Horizontal_RM10" H 8850 1300 50  0001 C CNN
+F 3 "" H 8850 1300 50  0000 C CNN
+	1    8850 1300
+	-1   0    0    1   
+$EndComp
+$Comp
+L D D2
+U 1 1 57E3CAE4
+P 8850 1850
+F 0 "D2" H 8850 1950 50  0000 C CNN
+F 1 "D" H 8850 1750 50  0000 C CNN
+F 2 "Diodes_ThroughHole:Diode_DO-41_SOD81_Horizontal_RM10" H 8850 1850 50  0001 C CNN
+F 3 "" H 8850 1850 50  0000 C CNN
+	1    8850 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 P1
+U 1 1 57E3CBBF
+P 10300 1100
+F 0 "P1" H 10300 1300 50  0000 C CNN
+F 1 "CONN_01X03" V 10400 1100 50  0000 C CNN
+F 2 "Connect:bornier3" H 10300 1100 50  0001 C CNN
+F 3 "" H 10300 1100 50  0000 C CNN
+	1    10300 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 2100 3550 2100
+Wire Wire Line
+	3550 2100 3550 2000
+Wire Wire Line
+	3050 2000 3700 2000
+Connection ~ 3550 2000
+Wire Wire Line
+	3700 4300 3200 4300
+Wire Wire Line
+	3700 4200 3550 4200
+Wire Wire Line
+	3550 4100 3550 4300
+Connection ~ 3550 4300
+Wire Wire Line
+	9350 4150 10000 4150
+Wire Wire Line
+	8550 3200 8900 3200
+Wire Wire Line
+	8550 3500 8900 3500
+Wire Wire Line
+	8550 3400 8900 3400
+Wire Wire Line
+	9450 2750 9850 2750
+Wire Wire Line
+	8600 3300 8900 3300
+Wire Wire Line
+	5600 2200 6050 2200
+Wire Wire Line
+	5600 2300 6050 2300
+Wire Wire Line
+	5600 2400 6050 2400
+Wire Wire Line
+	5600 2500 6050 2500
+Wire Wire Line
+	10100 1000 9350 1000
+Wire Wire Line
+	9350 1000 9350 1650
+Wire Wire Line
+	9350 1100 8350 1100
+Wire Wire Line
+	8350 1300 8700 1300
+Wire Wire Line
+	9350 1650 8350 1650
+Connection ~ 9350 1100
+Wire Wire Line
+	8350 1850 8700 1850
+Wire Wire Line
+	9100 1300 9100 1850
+Wire Wire Line
+	9100 1850 9000 1850
+Connection ~ 9100 1300
+Text Label 9700 1000 0    60   ~ 0
+PH_IN
+Wire Wire Line
+	10100 1200 9250 1200
+Wire Wire Line
+	9250 1200 9250 1300
+Wire Wire Line
+	9250 1300 9000 1300
+Text Label 9700 1200 0    60   ~ 0
+FP_OUT
+Wire Wire Line
+	10100 1100 9600 1100
+Text Label 9700 1100 0    60   ~ 0
+NEUTRE
+Wire Wire Line
+	7100 1100 7350 1100
+Wire Wire Line
+	7650 1100 7750 1100
+Wire Wire Line
+	7750 1300 7100 1300
+Wire Wire Line
+	7650 1650 7750 1650
+Wire Wire Line
+	7750 1850 7100 1850
+Wire Wire Line
+	7100 1650 7350 1650
+Text Label 7200 1300 0    60   ~ 0
+GND
+Text Label 7200 1850 0    60   ~ 0
+GND
+Text Label 7150 1100 0    60   ~ 0
+OPT1
+Text Label 7150 1650 0    60   ~ 0
+OPT2
+Wire Wire Line
+	5600 4000 6100 4000
+Wire Wire Line
+	5600 3900 6100 3900
+Text Label 5800 4000 0    60   ~ 0
+OPT1
+Text Label 5800 3900 0    60   ~ 0
+OPT2
+Wire Wire Line
+	8800 4650 8500 4650
+Wire Wire Line
+	8800 4900 8500 4900
+Text Label 8500 4900 0    60   ~ 0
+NEUTRE
+Text Label 8500 4650 0    60   ~ 0
+PH_IN
+$Comp
+L HLK-PM01 U5
+U 1 1 57E3D6E0
+P 9450 4800
+F 0 "U5" H 9250 4600 60  0000 C CNN
+F 1 "HLK-PM01" H 9400 5050 60  0000 C CNN
+F 2 "MyLibrary:HLK-PM01" H 9450 4800 60  0001 C CNN
+F 3 "" H 9450 4800 60  0000 C CNN
+	1    9450 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 4600 10400 4600
+Wire Wire Line
+	10100 4950 10400 4950
+Text Label 10200 4600 0    60   ~ 0
+GND
+Text Label 10200 4950 0    60   ~ 0
+VCC
+Wire Wire Line
+	9000 5750 8550 5750
+Wire Wire Line
+	9300 6000 9300 6250
+Text Label 9500 6250 0    60   ~ 0
+GND
+Text Label 9800 5750 0    60   ~ 0
+3V3
+Text Label 8700 5750 0    60   ~ 0
+VCC
+$Comp
+L C C3
+U 1 1 57E3DA4C
+P 10250 6000
+F 0 "C3" H 10275 6100 50  0000 L CNN
+F 1 "10u" H 10275 5900 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:C_Radial_D5_L11_P2" H 10288 5850 50  0001 C CNN
+F 3 "" H 10250 6000 50  0000 C CNN
+	1    10250 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10250 6150 10250 6250
+Connection ~ 10250 6250
+Wire Wire Line
+	10250 5850 10250 5750
+Connection ~ 10250 5750
+Wire Wire Line
+	10250 6250 9300 6250
+Wire Wire Line
+	10250 5750 9600 5750
+Text Label 3100 2000 0    60   ~ 0
+3V3
+$Comp
+L RFM69HW U4
+U 1 1 5875DDB7
+P 9450 3150
+F 0 "U4" H 9100 3400 40  0000 C CNN
+F 1 "RFM69HW" H 9700 2400 40  0000 C CNN
+F 2 "Mysensors_Radio:RFM69HW_SMD_Handsoldering" H 9450 3150 30  0001 C CIN
+F 3 "" H 9450 3150 60  0000 C CNN
+	1    9450 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 2800 9450 2750
+Wire Wire Line
+	9350 4150 9350 4000
+Wire Wire Line
+	9550 4000 9550 4150
+Connection ~ 9550 4150
+Wire Wire Line
+	10000 3150 10300 3150
+Text Label 10050 3150 0    60   ~ 0
+IRQ
+Wire Wire Line
+	5600 3800 6100 3800
+Text Label 5800 3800 0    60   ~ 0
+IRQ
+$Comp
+L ATMEGA328-A IC1
+U 1 1 5875E19C
+P 4600 3100
+F 0 "IC1" H 3850 4350 50  0000 L BNN
+F 1 "ATMEGA328-A" H 5000 1700 50  0000 L BNN
+F 2 "Housings_QFP:TQFP-32_7x7mm_Pitch0.8mm" H 4600 3100 50  0000 C CIN
+F 3 "" H 4600 3100 50  0000 C CNN
+	1    4600 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L AMS1117 U3
+U 1 1 5875E219
+P 9400 5750
+F 0 "U3" H 9500 5500 50  0000 R BNN
+F 1 "AMS1117" H 9300 6000 50  0000 C TNN
+F 2 "TO_SOT_Packages_SMD:SOT-223" H 9300 5800 60  0001 C CNN
+F 3 "" H 9300 5800 60  0000 C CNN
+	1    9400 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_02X03 P2
+U 1 1 5875E472
+P 4600 5200
+F 0 "P2" H 4600 5400 50  0000 C CNN
+F 1 "ICSP" H 4600 5000 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x03_Pitch2.54mm" H 4600 4000 50  0001 C CNN
+F 3 "" H 4600 4000 50  0000 C CNN
+	1    4600 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 5100 4350 5100
+Wire Wire Line
+	3950 5200 4350 5200
+Wire Wire Line
+	3950 5300 4350 5300
+Wire Wire Line
+	5200 5300 4850 5300
+Wire Wire Line
+	5200 5200 4850 5200
+Wire Wire Line
+	5200 5100 4850 5100
+Text Label 3950 5100 0    60   ~ 0
+MISO
+Text Label 3950 5200 0    60   ~ 0
+SCK
+Text Label 3950 5300 0    60   ~ 0
+RESET
+Text Label 4950 5100 0    60   ~ 0
+3V3
+Text Label 4950 5200 0    60   ~ 0
+MOSI
+Text Label 4950 5300 0    60   ~ 0
+GND
+Wire Wire Line
+	5600 3450 6100 3450
+Text Label 5750 3450 0    60   ~ 0
+RESET
+$Comp
+L CONN_01X01 P3
+U 1 1 5875E4BD
+P 8250 3000
+F 0 "P3" H 8250 3100 50  0000 C CNN
+F 1 "ANT" H 8250 2900 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm" H 8250 3000 50  0001 C CNN
+F 3 "" H 8250 3000 50  0000 C CNN
+	1    8250 3000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8450 3000 8900 3000
+Wire Wire Line
+	3700 4100 3550 4100
+Connection ~ 3550 4200
+$EndSCHEMATC

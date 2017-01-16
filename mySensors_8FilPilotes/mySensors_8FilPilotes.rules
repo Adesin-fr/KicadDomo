@@ -1,0 +1,104 @@
+
+(rules PCB mySensors_16Outputs
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 595)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.4)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.7)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 500.2 (type default_Big))
+    (clear 50.0 (type smd_smd))
+    (clear 500.2 (type smd_Big))
+    (clear 500.2 (type "kicad_default"_Big))
+    (clear 500.2 (type Big_Big))
+  )
+  (padstack "Via[0-1]_600:400_um"
+    (shape
+      (circle F.Cu 600.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 600.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_600:400_um" "Via[0-1]_600:400_um" default
+  )
+  (via 
+    "Via[0-1]_600:400_um-kicad_default" "Via[0-1]_600:400_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_600:400_um-Big" "Via[0-1]_600:400_um" Big
+  )
+  (via_rule
+    default "Via[0-1]_600:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_600:400_um-kicad_default"
+  )
+  (via_rule
+    Big "Via[0-1]_600:400_um-Big"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    GND "Net-(IC1-Pad1)" "Net-(IC1-Pad2)" /3V3 "Net-(IC1-Pad7)" "Net-(IC1-Pad8)" "Net-(IC1-Pad9)" "Net-(IC1-Pad10)"
+    "Net-(IC1-Pad11)" "Net-(IC1-Pad12)" "Net-(IC1-Pad13)" /CS /MOSI /MISO /SCK "Net-(IC1-Pad18)"
+    "Net-(IC1-Pad19)" "Net-(IC1-Pad20)" "Net-(IC1-Pad22)" /SRCLK /RCLK /SER "Net-(IC1-Pad26)" "Net-(IC1-Pad27)"
+    "Net-(IC1-Pad28)" /RESET "Net-(IC1-Pad30)" "Net-(IC1-Pad31)" /IRQ /S0 /S1 /S2
+    /S3 /S4 /S5 /S6 /S7 "Net-(U2-Pad1)" "Net-(U2-Pad3)" "Net-(U2-Pad4)"
+    "Net-(U2-Pad5)" "Net-(U2-Pad6)" "Net-(U2-Pad7)" "Net-(U2-Pad11)" "Net-(U2-Pad16)" "Net-(U3-Pad9)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class Big
+    VCC "Net-(P2-Pad1)" "Net-(P4-Pad1)" "Net-(P4-Pad2)" "Net-(P5-Pad1)" "Net-(P5-Pad2)" "Net-(P6-Pad1)" "Net-(P6-Pad2)"
+    "Net-(P7-Pad1)" "Net-(P7-Pad2)" "Net-(P8-Pad1)" "Net-(P8-Pad2)" "Net-(P9-Pad1)" "Net-(P9-Pad2)" "Net-(P10-Pad1)" "Net-(P10-Pad2)"
+    "Net-(P11-Pad1)" "Net-(P11-Pad2)"
+    (clearance_class Big)
+    (via_rule Big)
+    (rule
+      (width 500.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)

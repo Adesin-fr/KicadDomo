@@ -1,0 +1,401 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:myLibrary
+LIBS:mySensors_FilPilote-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L NRF24L01+ U4
+U 1 1 57E3BD82
+P 9400 3900
+F 0 "U4" H 9450 3600 60  0000 C CNN
+F 1 "NRF24L01+" H 9450 4150 60  0000 C CNN
+F 2 "MyLibrary:NRF24L01" H 9250 3950 60  0001 C CNN
+F 3 "" H 9250 3950 60  0000 C CNN
+	1    9400 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L ATMEGA328P_Arduino IC1
+U 1 1 57E3C51B
+P 4600 3100
+F 0 "IC1" H 3850 4350 50  0000 L BNN
+F 1 "ATMEGA328P_Arduino" H 4300 1700 50  0000 L BNN
+F 2 "Housings_DIP:DIP-28_W7.62mm_LongPads" H 4600 3100 50  0000 C CIN
+F 3 "" H 4600 3100 50  0000 C CNN
+	1    4600 3100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3700 2600
+Text Label 3250 4300 0    60   ~ 0
+GND
+NoConn ~ 10150 4100
+Text Label 8500 3800 0    60   ~ 0
+GND
+Text Label 10200 3800 0    60   ~ 0
+3V3
+Text Label 8500 3900 0    60   ~ 0
+CE
+Text Label 8500 4000 0    60   ~ 0
+SCK
+Text Label 8500 4100 0    60   ~ 0
+MISO
+Text Label 10200 3900 0    60   ~ 0
+CS
+Text Label 10200 4000 0    60   ~ 0
+MOSI
+Text Label 5750 2100 0    60   ~ 0
+CE
+Text Label 5750 2200 0    60   ~ 0
+CS
+Text Label 5750 2300 0    60   ~ 0
+MOSI
+Text Label 5750 2400 0    60   ~ 0
+MISO
+Text Label 5750 2500 0    60   ~ 0
+SCK
+$Comp
+L MOC3041M U1
+U 1 1 57E3C933
+P 8050 1200
+F 0 "U1" H 7850 1400 50  0000 L CNN
+F 1 "MOC3041M" H 8050 1400 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm_LongPads" H 7850 1000 50  0000 L CIN
+F 3 "" H 8015 1200 50  0000 L CNN
+	1    8050 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L MOC3041M U2
+U 1 1 57E3C97C
+P 8050 1750
+F 0 "U2" H 7850 1950 50  0000 L CNN
+F 1 "MOC3041M" H 8050 1950 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm_LongPads" H 7850 1550 50  0000 L CIN
+F 3 "" H 8015 1750 50  0000 L CNN
+	1    8050 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 57E3C9BF
+P 7500 1100
+F 0 "R1" V 7580 1100 50  0000 C CNN
+F 1 "220" V 7500 1100 50  0000 C CNN
+F 2 "Resistors_ThroughHole:RES35" V 7430 1100 50  0001 C CNN
+F 3 "" H 7500 1100 50  0000 C CNN
+	1    7500 1100
+	0    1    1    0   
+$EndComp
+$Comp
+L R R2
+U 1 1 57E3CA3C
+P 7500 1650
+F 0 "R2" V 7580 1650 50  0000 C CNN
+F 1 "220" V 7500 1650 50  0000 C CNN
+F 2 "Resistors_ThroughHole:RES35" V 7430 1650 50  0001 C CNN
+F 3 "" H 7500 1650 50  0000 C CNN
+	1    7500 1650
+	0    1    1    0   
+$EndComp
+$Comp
+L D D1
+U 1 1 57E3CA83
+P 8850 1300
+F 0 "D1" H 8850 1400 50  0000 C CNN
+F 1 "D" H 8850 1200 50  0000 C CNN
+F 2 "Diodes_ThroughHole:Diode_DO-41_SOD81_Horizontal_RM10" H 8850 1300 50  0001 C CNN
+F 3 "" H 8850 1300 50  0000 C CNN
+	1    8850 1300
+	-1   0    0    1   
+$EndComp
+$Comp
+L D D2
+U 1 1 57E3CAE4
+P 8850 1850
+F 0 "D2" H 8850 1950 50  0000 C CNN
+F 1 "D" H 8850 1750 50  0000 C CNN
+F 2 "Diodes_ThroughHole:Diode_DO-41_SOD81_Horizontal_RM10" H 8850 1850 50  0001 C CNN
+F 3 "" H 8850 1850 50  0000 C CNN
+	1    8850 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 P1
+U 1 1 57E3CBBF
+P 10300 1100
+F 0 "P1" H 10300 1300 50  0000 C CNN
+F 1 "CONN_01X03" V 10400 1100 50  0000 C CNN
+F 2 "Connect:bornier3" H 10300 1100 50  0001 C CNN
+F 3 "" H 10300 1100 50  0000 C CNN
+	1    10300 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 2100 3550 2100
+Wire Wire Line
+	3550 2100 3550 2000
+Wire Wire Line
+	3050 2000 3700 2000
+Connection ~ 3550 2000
+Wire Wire Line
+	3700 4300 3200 4300
+Wire Wire Line
+	3700 4200 3550 4200
+Wire Wire Line
+	3550 4200 3550 4300
+Connection ~ 3550 4300
+Wire Wire Line
+	8750 3800 8400 3800
+Wire Wire Line
+	8400 3900 8750 3900
+Wire Wire Line
+	8400 4000 8750 4000
+Wire Wire Line
+	8400 4100 8750 4100
+Wire Wire Line
+	10150 3800 10450 3800
+Wire Wire Line
+	10150 3900 10450 3900
+Wire Wire Line
+	10150 4000 10450 4000
+Wire Wire Line
+	5600 2100 6050 2100
+Wire Wire Line
+	5600 2200 6050 2200
+Wire Wire Line
+	5600 2300 6050 2300
+Wire Wire Line
+	5600 2400 6050 2400
+Wire Wire Line
+	5600 2500 6050 2500
+Wire Wire Line
+	10100 1000 9350 1000
+Wire Wire Line
+	9350 1000 9350 1650
+Wire Wire Line
+	9350 1100 8350 1100
+Wire Wire Line
+	8350 1300 8700 1300
+Wire Wire Line
+	9350 1650 8350 1650
+Connection ~ 9350 1100
+Wire Wire Line
+	8350 1850 8700 1850
+Wire Wire Line
+	9100 1300 9100 1850
+Wire Wire Line
+	9100 1850 9000 1850
+Connection ~ 9100 1300
+Text Label 9700 1000 0    60   ~ 0
+PH_IN
+Wire Wire Line
+	10100 1200 9250 1200
+Wire Wire Line
+	9250 1200 9250 1300
+Wire Wire Line
+	9250 1300 9000 1300
+Text Label 9700 1200 0    60   ~ 0
+FP_OUT
+Wire Wire Line
+	10100 1100 9600 1100
+Text Label 9700 1100 0    60   ~ 0
+NEUTRE
+Wire Wire Line
+	7100 1100 7350 1100
+Wire Wire Line
+	7650 1100 7750 1100
+Wire Wire Line
+	7750 1300 7100 1300
+Wire Wire Line
+	7650 1650 7750 1650
+Wire Wire Line
+	7750 1850 7100 1850
+Wire Wire Line
+	7100 1650 7350 1650
+Text Label 7200 1300 0    60   ~ 0
+GND
+Text Label 7200 1850 0    60   ~ 0
+GND
+Text Label 7150 1100 0    60   ~ 0
+OPT1
+Text Label 7150 1650 0    60   ~ 0
+OPT2
+Wire Wire Line
+	5600 3800 6100 3800
+Wire Wire Line
+	5600 3900 6100 3900
+Text Label 5800 3800 0    60   ~ 0
+OPT1
+Text Label 5800 3900 0    60   ~ 0
+OPT2
+Wire Wire Line
+	8800 4650 8500 4650
+Wire Wire Line
+	8800 4900 8500 4900
+Text Label 8500 4900 0    60   ~ 0
+NEUTRE
+Text Label 8500 4650 0    60   ~ 0
+PH_IN
+$Comp
+L HLK-PM01 U5
+U 1 1 57E3D6E0
+P 9450 4800
+F 0 "U5" H 9250 4600 60  0000 C CNN
+F 1 "HLK-PM01" H 9400 5050 60  0000 C CNN
+F 2 "MyLibrary:HLK-PM01" H 9450 4800 60  0001 C CNN
+F 3 "" H 9450 4800 60  0000 C CNN
+	1    9450 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 4600 10400 4600
+Wire Wire Line
+	10100 4950 10400 4950
+Text Label 10200 4600 0    60   ~ 0
+GND
+Text Label 10200 4950 0    60   ~ 0
+VCC
+$Comp
+L AP1117D33 U3
+U 1 1 57E3D85B
+P 9300 5750
+F 0 "U3" H 9400 5500 50  0000 C CNN
+F 1 "LD1117V33" H 9300 6000 50  0000 C CNN
+F 2 "Diodes_ThroughHole:Diode_TO-220_Dual_CommonCathode_Vertical" H 9300 5750 50  0001 C CNN
+F 3 "" H 9300 5750 50  0000 C CNN
+	1    9300 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 5750 8550 5750
+Wire Wire Line
+	9300 6050 9300 6250
+Text Label 9500 6250 0    60   ~ 0
+GND
+Text Label 9800 5750 0    60   ~ 0
+3V3
+Text Label 8700 5750 0    60   ~ 0
+VCC
+$Comp
+L C C3
+U 1 1 57E3DA4C
+P 10250 6000
+F 0 "C3" H 10275 6100 50  0000 L CNN
+F 1 "1u" H 10275 5900 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:C_Radial_D5_L11_P2" H 10288 5850 50  0001 C CNN
+F 3 "" H 10250 6000 50  0000 C CNN
+	1    10250 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10250 6150 10250 6250
+Connection ~ 10250 6250
+Wire Wire Line
+	10250 5850 10250 5750
+Connection ~ 10250 5750
+Wire Wire Line
+	10250 6250 9300 6250
+Wire Wire Line
+	10250 5750 9600 5750
+$Comp
+L Crystal Y1
+U 1 1 57E3E251
+P 6600 2650
+F 0 "Y1" H 6600 2800 50  0000 C CNN
+F 1 "Crystal" H 6600 2500 50  0000 C CNN
+F 2 "Crystals:Crystal_HC49-U_Vertical" H 6600 2650 50  0001 C CNN
+F 3 "" H 6600 2650 50  0000 C CNN
+	1    6600 2650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5600 2600 6200 2600
+Wire Wire Line
+	6200 2600 6200 2500
+Wire Wire Line
+	6200 2500 6950 2500
+Wire Wire Line
+	6200 2800 6950 2800
+Wire Wire Line
+	6200 2800 6200 2700
+Wire Wire Line
+	6200 2700 5600 2700
+$Comp
+L C C1
+U 1 1 57E3E4AC
+P 7100 2500
+F 0 "C1" H 7125 2600 50  0000 L CNN
+F 1 "22p" H 7125 2400 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:C_Disc_D3_P2.5" H 7138 2350 50  0001 C CNN
+F 3 "" H 7100 2500 50  0000 C CNN
+	1    7100 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L C C2
+U 1 1 57E3E5B5
+P 7100 2800
+F 0 "C2" H 7125 2900 50  0000 L CNN
+F 1 "22p" H 7125 2700 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:C_Disc_D3_P2.5" H 7138 2650 50  0001 C CNN
+F 3 "" H 7100 2800 50  0000 C CNN
+	1    7100 2800
+	0    1    1    0   
+$EndComp
+Connection ~ 6600 2500
+Connection ~ 6600 2800
+Wire Wire Line
+	7250 2500 7450 2500
+Wire Wire Line
+	7450 2500 7450 2800
+Wire Wire Line
+	7450 2650 7650 2650
+Wire Wire Line
+	7450 2800 7250 2800
+Connection ~ 7450 2650
+Text Label 7500 2650 0    60   ~ 0
+GND
+Text Label 3100 2000 0    60   ~ 0
+VCC
+$EndSCHEMATC

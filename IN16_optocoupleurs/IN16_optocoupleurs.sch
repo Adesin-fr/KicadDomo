@@ -1,0 +1,1089 @@
+EESchema Schematic File Version 2  date ven. 28 mars 2014 16:46:57 CET
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:IN16_optocoupleurs-cache
+EELAYER 25  0
+EELAYER END
+$Descr A4 11700 8267
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "28 mar 2014"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Label 8650 3100 0    60   ~ 0
+IN11
+Text Label 8650 3000 0    60   ~ 0
+IN8
+Text Label 8650 2900 0    60   ~ 0
+IN12
+Text Label 8650 2800 0    60   ~ 0
+GND
+Text Label 8650 2700 0    60   ~ 0
+IN13
+Text Label 8650 2600 0    60   ~ 0
+VCC
+Text Label 8650 2500 0    60   ~ 0
+IN14
+Text Label 7400 5800 0    60   ~ 0
+IN15
+Text Label 7400 4950 0    60   ~ 0
+IN14
+Text Label 7400 4150 0    60   ~ 0
+IN13
+Text Label 7400 3400 0    60   ~ 0
+IN12
+Text Label 7400 2700 0    60   ~ 0
+IN11
+Text Label 7400 2050 0    60   ~ 0
+IN10
+Text Label 7400 1400 0    60   ~ 0
+IN9
+Text Label 7400 700  0    60   ~ 0
+IN8
+Text Label 3200 5800 0    60   ~ 0
+IN7
+Text Label 3200 4950 0    60   ~ 0
+IN6
+Text Label 3200 4150 0    60   ~ 0
+IN5
+Text Label 3200 3400 0    60   ~ 0
+IN4
+Text Label 3200 2700 0    60   ~ 0
+IN3
+Text Label 3200 2050 0    60   ~ 0
+IN2
+Text Label 3200 1400 0    60   ~ 0
+IN1
+Text Label 8650 2400 0    60   ~ 0
+IN15
+$Comp
+L CONN_10 P1
+U 1 1 53358968
+P 9350 1250
+F 0 "P1" V 9300 1250 60  0000 C CNN
+F 1 "CONN_10" V 9400 1250 60  0000 C CNN
+	1    9350 1250
+	1    0    0    -1  
+$EndComp
+Text Label 8650 800  0    60   ~ 0
+IN0
+Text Label 8650 900  0    60   ~ 0
+IN1
+Text Label 8650 1000 0    60   ~ 0
+VCC
+Text Label 8650 1100 0    60   ~ 0
+IN2
+Text Label 8650 1200 0    60   ~ 0
+GND
+Text Label 8650 1300 0    60   ~ 0
+IN3
+Text Label 8650 1400 0    60   ~ 0
+IN7
+Text Label 8650 1500 0    60   ~ 0
+IN4
+Text Label 8650 1600 0    60   ~ 0
+IN6
+Text Label 8650 1700 0    60   ~ 0
+IN5
+Wire Wire Line
+	9000 800  8550 800 
+Wire Wire Line
+	9000 1000 8550 1000
+Wire Wire Line
+	9000 1200 8550 1200
+Wire Wire Line
+	9000 1500 8550 1500
+Wire Wire Line
+	8550 1700 9000 1700
+Wire Wire Line
+	9000 1600 8550 1600
+Wire Wire Line
+	9000 1400 8550 1400
+Wire Wire Line
+	9000 1300 8550 1300
+Wire Wire Line
+	9000 1100 8550 1100
+Wire Wire Line
+	9000 900  8550 900 
+$Comp
+L OPTO-TRANSISTOR U9
+U 1 1 53358967
+P 6600 800
+F 0 "U9" H 6800 1100 60  0000 C CNN
+F 1 "OPTO-TRANSISTOR" H 6700 500 60  0000 C CNN
+	1    6600 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P10
+U 1 1 53358966
+P 4850 1000
+F 0 "P10" V 4800 1000 40  0000 C CNN
+F 1 "CONN_2" V 4900 1000 40  0000 C CNN
+	1    4850 1000
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED D9
+U 1 1 53358965
+P 5650 600
+F 0 "D9" H 5650 700 50  0000 C CNN
+F 1 "LED" H 5650 500 50  0000 C CNN
+	1    5650 600 
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R9
+U 1 1 53358964
+P 5600 900
+F 0 "R9" V 5680 900 50  0000 C CNN
+F 1 "R" V 5600 900 50  0000 C CNN
+	1    5600 900 
+	0    1    1    0   
+$EndComp
+Text Label 5500 1100 0    60   ~ 0
+GND
+Text Label 5100 600  0    60   ~ 0
+VCC
+Wire Wire Line
+	7200 1000 7750 1000
+Wire Wire Line
+	5350 900  5200 900 
+Wire Wire Line
+	5850 600  5950 600 
+Wire Wire Line
+	5050 600  5450 600 
+Wire Wire Line
+	5950 900  5850 900 
+Wire Wire Line
+	5200 1100 5900 1100
+Wire Wire Line
+	7200 700  7750 700 
+Text Label 7400 1000 0    60   ~ 0
+GND
+NoConn ~ 7200 600 
+NoConn ~ 7200 1300
+Text Label 7400 1700 0    60   ~ 0
+GND
+Wire Wire Line
+	7200 1400 7750 1400
+Wire Wire Line
+	5200 1800 5900 1800
+Wire Wire Line
+	5950 1600 5850 1600
+Wire Wire Line
+	5050 1300 5450 1300
+Wire Wire Line
+	5850 1300 5950 1300
+Wire Wire Line
+	5350 1600 5200 1600
+Wire Wire Line
+	7200 1700 7750 1700
+Text Label 5100 1300 0    60   ~ 0
+VCC
+Text Label 5500 1800 0    60   ~ 0
+GND
+$Comp
+L R R10
+U 1 1 53358963
+P 5600 1600
+F 0 "R10" V 5680 1600 50  0000 C CNN
+F 1 "R" V 5600 1600 50  0000 C CNN
+	1    5600 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D10
+U 1 1 53358962
+P 5650 1300
+F 0 "D10" H 5650 1400 50  0000 C CNN
+F 1 "LED" H 5650 1200 50  0000 C CNN
+	1    5650 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P11
+U 1 1 53358961
+P 4850 1700
+F 0 "P11" V 4800 1700 40  0000 C CNN
+F 1 "CONN_2" V 4900 1700 40  0000 C CNN
+	1    4850 1700
+	-1   0    0    1   
+$EndComp
+$Comp
+L OPTO-TRANSISTOR U10
+U 1 1 53358960
+P 6600 1500
+F 0 "U10" H 6800 1800 60  0000 C CNN
+F 1 "OPTO-TRANSISTOR" H 6700 1200 60  0000 C CNN
+	1    6600 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L OPTO-TRANSISTOR U11
+U 1 1 5335895F
+P 6600 2150
+F 0 "U11" H 6800 2450 60  0000 C CNN
+F 1 "OPTO-TRANSISTOR" H 6700 1850 60  0000 C CNN
+	1    6600 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P12
+U 1 1 5335895E
+P 4850 2350
+F 0 "P12" V 4800 2350 40  0000 C CNN
+F 1 "CONN_2" V 4900 2350 40  0000 C CNN
+	1    4850 2350
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED D11
+U 1 1 5335895D
+P 5650 1950
+F 0 "D11" H 5650 2050 50  0000 C CNN
+F 1 "LED" H 5650 1850 50  0000 C CNN
+	1    5650 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R11
+U 1 1 5335895C
+P 5600 2250
+F 0 "R11" V 5680 2250 50  0000 C CNN
+F 1 "R" V 5600 2250 50  0000 C CNN
+	1    5600 2250
+	0    1    1    0   
+$EndComp
+Text Label 5500 2450 0    60   ~ 0
+GND
+Text Label 5100 1950 0    60   ~ 0
+VCC
+Wire Wire Line
+	7200 2350 7750 2350
+Wire Wire Line
+	5350 2250 5200 2250
+Wire Wire Line
+	5850 1950 5950 1950
+Wire Wire Line
+	5050 1950 5450 1950
+Wire Wire Line
+	5950 2250 5850 2250
+Wire Wire Line
+	5200 2450 5900 2450
+Wire Wire Line
+	7200 2050 7750 2050
+Text Label 7400 2350 0    60   ~ 0
+GND
+NoConn ~ 7200 1950
+NoConn ~ 7200 2600
+Text Label 7400 3000 0    60   ~ 0
+GND
+Wire Wire Line
+	7200 2700 7750 2700
+Wire Wire Line
+	5200 3100 5900 3100
+Wire Wire Line
+	5950 2900 5850 2900
+Wire Wire Line
+	5050 2600 5450 2600
+Wire Wire Line
+	5850 2600 5950 2600
+Wire Wire Line
+	5350 2900 5200 2900
+Wire Wire Line
+	7200 3000 7750 3000
+Text Label 5100 2600 0    60   ~ 0
+VCC
+Text Label 5500 3100 0    60   ~ 0
+GND
+$Comp
+L R R12
+U 1 1 5335895B
+P 5600 2900
+F 0 "R12" V 5680 2900 50  0000 C CNN
+F 1 "R" V 5600 2900 50  0000 C CNN
+	1    5600 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D12
+U 1 1 5335895A
+P 5650 2600
+F 0 "D12" H 5650 2700 50  0000 C CNN
+F 1 "LED" H 5650 2500 50  0000 C CNN
+	1    5650 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P13
+U 1 1 53358959
+P 4850 3000
+F 0 "P13" V 4800 3000 40  0000 C CNN
+F 1 "CONN_2" V 4900 3000 40  0000 C CNN
+	1    4850 3000
+	-1   0    0    1   
+$EndComp
+$Comp
+L OPTO-TRANSISTOR U12
+U 1 1 53358958
+P 6600 2800
+F 0 "U12" H 6800 3100 60  0000 C CNN
+F 1 "OPTO-TRANSISTOR" H 6700 2500 60  0000 C CNN
+	1    6600 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L OPTO-TRANSISTOR U13
+U 1 1 53358957
+P 6600 3500
+F 0 "U13" H 6800 3800 60  0000 C CNN
+F 1 "OPTO-TRANSISTOR" H 6700 3200 60  0000 C CNN
+	1    6600 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P14
+U 1 1 53358956
+P 4850 3700
+F 0 "P14" V 4800 3700 40  0000 C CNN
+F 1 "CONN_2" V 4900 3700 40  0000 C CNN
+	1    4850 3700
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED D13
+U 1 1 53358955
+P 5650 3300
+F 0 "D13" H 5650 3400 50  0000 C CNN
+F 1 "LED" H 5650 3200 50  0000 C CNN
+	1    5650 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R13
+U 1 1 53358954
+P 5600 3600
+F 0 "R13" V 5680 3600 50  0000 C CNN
+F 1 "R" V 5600 3600 50  0000 C CNN
+	1    5600 3600
+	0    1    1    0   
+$EndComp
+Text Label 5500 3800 0    60   ~ 0
+GND
+Text Label 5100 3300 0    60   ~ 0
+VCC
+Wire Wire Line
+	7200 3700 7750 3700
+Wire Wire Line
+	5350 3600 5200 3600
+Wire Wire Line
+	5850 3300 5950 3300
+Wire Wire Line
+	5050 3300 5450 3300
+Wire Wire Line
+	5950 3600 5850 3600
+Wire Wire Line
+	5200 3800 5900 3800
+Wire Wire Line
+	7200 3400 7750 3400
+Text Label 7400 3700 0    60   ~ 0
+GND
+NoConn ~ 7200 3300
+NoConn ~ 7200 4050
+Text Label 7400 4450 0    60   ~ 0
+GND
+Wire Wire Line
+	7200 4150 7750 4150
+Wire Wire Line
+	5200 4550 5900 4550
+Wire Wire Line
+	5950 4350 5850 4350
+Wire Wire Line
+	5050 4050 5450 4050
+Wire Wire Line
+	5850 4050 5950 4050
+Wire Wire Line
+	5350 4350 5200 4350
+Wire Wire Line
+	7200 4450 7750 4450
+Text Label 5100 4050 0    60   ~ 0
+VCC
+Text Label 5500 4550 0    60   ~ 0
+GND
+$Comp
+L R R14
+U 1 1 53358953
+P 5600 4350
+F 0 "R14" V 5680 4350 50  0000 C CNN
+F 1 "R" V 5600 4350 50  0000 C CNN
+	1    5600 4350
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D14
+U 1 1 53358952
+P 5650 4050
+F 0 "D14" H 5650 4150 50  0000 C CNN
+F 1 "LED" H 5650 3950 50  0000 C CNN
+	1    5650 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P15
+U 1 1 53358951
+P 4850 4450
+F 0 "P15" V 4800 4450 40  0000 C CNN
+F 1 "CONN_2" V 4900 4450 40  0000 C CNN
+	1    4850 4450
+	-1   0    0    1   
+$EndComp
+$Comp
+L OPTO-TRANSISTOR U14
+U 1 1 53358950
+P 6600 4250
+F 0 "U14" H 6800 4550 60  0000 C CNN
+F 1 "OPTO-TRANSISTOR" H 6700 3950 60  0000 C CNN
+	1    6600 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L OPTO-TRANSISTOR U15
+U 1 1 5335894F
+P 6600 5050
+F 0 "U15" H 6800 5350 60  0000 C CNN
+F 1 "OPTO-TRANSISTOR" H 6700 4750 60  0000 C CNN
+	1    6600 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P16
+U 1 1 5335894E
+P 4850 5250
+F 0 "P16" V 4800 5250 40  0000 C CNN
+F 1 "CONN_2" V 4900 5250 40  0000 C CNN
+	1    4850 5250
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED D15
+U 1 1 5335894D
+P 5650 4850
+F 0 "D15" H 5650 4950 50  0000 C CNN
+F 1 "LED" H 5650 4750 50  0000 C CNN
+	1    5650 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R15
+U 1 1 5335894C
+P 5600 5150
+F 0 "R15" V 5680 5150 50  0000 C CNN
+F 1 "R" V 5600 5150 50  0000 C CNN
+	1    5600 5150
+	0    1    1    0   
+$EndComp
+Text Label 5500 5350 0    60   ~ 0
+GND
+Text Label 5100 4850 0    60   ~ 0
+VCC
+Wire Wire Line
+	7200 5250 7750 5250
+Wire Wire Line
+	5350 5150 5200 5150
+Wire Wire Line
+	5850 4850 5950 4850
+Wire Wire Line
+	5050 4850 5450 4850
+Wire Wire Line
+	5950 5150 5850 5150
+Wire Wire Line
+	5200 5350 5900 5350
+Wire Wire Line
+	7200 4950 7750 4950
+Text Label 7400 5250 0    60   ~ 0
+GND
+NoConn ~ 7200 4850
+NoConn ~ 7200 5700
+Text Label 7400 6100 0    60   ~ 0
+GND
+Wire Wire Line
+	7200 5800 7750 5800
+Wire Wire Line
+	5200 6200 5900 6200
+Wire Wire Line
+	5950 6000 5850 6000
+Wire Wire Line
+	5050 5700 5450 5700
+Wire Wire Line
+	5850 5700 5950 5700
+Wire Wire Line
+	5350 6000 5200 6000
+Wire Wire Line
+	7200 6100 7750 6100
+Text Label 5100 5700 0    60   ~ 0
+VCC
+Text Label 5500 6200 0    60   ~ 0
+GND
+$Comp
+L R R16
+U 1 1 5335894B
+P 5600 6000
+F 0 "R16" V 5680 6000 50  0000 C CNN
+F 1 "R" V 5600 6000 50  0000 C CNN
+	1    5600 6000
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D16
+U 1 1 5335894A
+P 5650 5700
+F 0 "D16" H 5650 5800 50  0000 C CNN
+F 1 "LED" H 5650 5600 50  0000 C CNN
+	1    5650 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P17
+U 1 1 53358949
+P 4850 6100
+F 0 "P17" V 4800 6100 40  0000 C CNN
+F 1 "CONN_2" V 4900 6100 40  0000 C CNN
+	1    4850 6100
+	-1   0    0    1   
+$EndComp
+$Comp
+L OPTO-TRANSISTOR U16
+U 1 1 53358948
+P 6600 5900
+F 0 "U16" H 6800 6200 60  0000 C CNN
+F 1 "OPTO-TRANSISTOR" H 6700 5600 60  0000 C CNN
+	1    6600 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L OPTO-TRANSISTOR U8
+U 1 1 53358941
+P 2400 5900
+F 0 "U8" H 2600 6200 60  0000 C CNN
+F 1 "OPTO-TRANSISTOR" H 2500 5600 60  0000 C CNN
+	1    2400 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P9
+U 1 1 53358940
+P 650 6100
+F 0 "P9" V 600 6100 40  0000 C CNN
+F 1 "CONN_2" V 700 6100 40  0000 C CNN
+	1    650  6100
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED D8
+U 1 1 5335893F
+P 1450 5700
+F 0 "D8" H 1450 5800 50  0000 C CNN
+F 1 "LED" H 1450 5600 50  0000 C CNN
+	1    1450 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R8
+U 1 1 5335893E
+P 1400 6000
+F 0 "R8" V 1480 6000 50  0000 C CNN
+F 1 "R" V 1400 6000 50  0000 C CNN
+	1    1400 6000
+	0    1    1    0   
+$EndComp
+Text Label 1300 6200 0    60   ~ 0
+GND
+Text Label 900  5700 0    60   ~ 0
+VCC
+Wire Wire Line
+	3000 6100 3550 6100
+Wire Wire Line
+	1150 6000 1000 6000
+Wire Wire Line
+	1650 5700 1750 5700
+Wire Wire Line
+	850  5700 1250 5700
+Wire Wire Line
+	1750 6000 1650 6000
+Wire Wire Line
+	1000 6200 1700 6200
+Wire Wire Line
+	3000 5800 3550 5800
+Text Label 3200 6100 0    60   ~ 0
+GND
+NoConn ~ 3000 5700
+NoConn ~ 3000 4850
+Text Label 3200 5250 0    60   ~ 0
+GND
+Wire Wire Line
+	3000 4950 3550 4950
+Wire Wire Line
+	1000 5350 1700 5350
+Wire Wire Line
+	1750 5150 1650 5150
+Wire Wire Line
+	850  4850 1250 4850
+Wire Wire Line
+	1650 4850 1750 4850
+Wire Wire Line
+	1150 5150 1000 5150
+Wire Wire Line
+	3000 5250 3550 5250
+Text Label 900  4850 0    60   ~ 0
+VCC
+Text Label 1300 5350 0    60   ~ 0
+GND
+$Comp
+L R R7
+U 1 1 53358938
+P 1400 5150
+F 0 "R7" V 1480 5150 50  0000 C CNN
+F 1 "R" V 1400 5150 50  0000 C CNN
+	1    1400 5150
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D7
+U 1 1 53358937
+P 1450 4850
+F 0 "D7" H 1450 4950 50  0000 C CNN
+F 1 "LED" H 1450 4750 50  0000 C CNN
+	1    1450 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P8
+U 1 1 53358936
+P 650 5250
+F 0 "P8" V 600 5250 40  0000 C CNN
+F 1 "CONN_2" V 700 5250 40  0000 C CNN
+	1    650  5250
+	-1   0    0    1   
+$EndComp
+$Comp
+L OPTO-TRANSISTOR U7
+U 1 1 53358935
+P 2400 5050
+F 0 "U7" H 2600 5350 60  0000 C CNN
+F 1 "OPTO-TRANSISTOR" H 2500 4750 60  0000 C CNN
+	1    2400 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L OPTO-TRANSISTOR U6
+U 1 1 5335892E
+P 2400 4250
+F 0 "U6" H 2600 4550 60  0000 C CNN
+F 1 "OPTO-TRANSISTOR" H 2500 3950 60  0000 C CNN
+	1    2400 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P7
+U 1 1 5335892D
+P 650 4450
+F 0 "P7" V 600 4450 40  0000 C CNN
+F 1 "CONN_2" V 700 4450 40  0000 C CNN
+	1    650  4450
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED D6
+U 1 1 5335892C
+P 1450 4050
+F 0 "D6" H 1450 4150 50  0000 C CNN
+F 1 "LED" H 1450 3950 50  0000 C CNN
+	1    1450 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R6
+U 1 1 5335892B
+P 1400 4350
+F 0 "R6" V 1480 4350 50  0000 C CNN
+F 1 "R" V 1400 4350 50  0000 C CNN
+	1    1400 4350
+	0    1    1    0   
+$EndComp
+Text Label 1300 4550 0    60   ~ 0
+GND
+Text Label 900  4050 0    60   ~ 0
+VCC
+Wire Wire Line
+	3000 4450 3550 4450
+Wire Wire Line
+	1150 4350 1000 4350
+Wire Wire Line
+	1650 4050 1750 4050
+Wire Wire Line
+	850  4050 1250 4050
+Wire Wire Line
+	1750 4350 1650 4350
+Wire Wire Line
+	1000 4550 1700 4550
+Wire Wire Line
+	3000 4150 3550 4150
+Text Label 3200 4450 0    60   ~ 0
+GND
+NoConn ~ 3000 4050
+NoConn ~ 3000 3300
+Text Label 3200 3700 0    60   ~ 0
+GND
+Wire Wire Line
+	3000 3400 3550 3400
+Wire Wire Line
+	1000 3800 1700 3800
+Wire Wire Line
+	1750 3600 1650 3600
+Wire Wire Line
+	850  3300 1250 3300
+Wire Wire Line
+	1650 3300 1750 3300
+Wire Wire Line
+	1150 3600 1000 3600
+Wire Wire Line
+	3000 3700 3550 3700
+Text Label 900  3300 0    60   ~ 0
+VCC
+Text Label 1300 3800 0    60   ~ 0
+GND
+$Comp
+L R R5
+U 1 1 53358925
+P 1400 3600
+F 0 "R5" V 1480 3600 50  0000 C CNN
+F 1 "R" V 1400 3600 50  0000 C CNN
+	1    1400 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D5
+U 1 1 53358924
+P 1450 3300
+F 0 "D5" H 1450 3400 50  0000 C CNN
+F 1 "LED" H 1450 3200 50  0000 C CNN
+	1    1450 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P6
+U 1 1 53358923
+P 650 3700
+F 0 "P6" V 600 3700 40  0000 C CNN
+F 1 "CONN_2" V 700 3700 40  0000 C CNN
+	1    650  3700
+	-1   0    0    1   
+$EndComp
+$Comp
+L OPTO-TRANSISTOR U5
+U 1 1 53358922
+P 2400 3500
+F 0 "U5" H 2600 3800 60  0000 C CNN
+F 1 "OPTO-TRANSISTOR" H 2500 3200 60  0000 C CNN
+	1    2400 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L OPTO-TRANSISTOR U4
+U 1 1 53358915
+P 2400 2800
+F 0 "U4" H 2600 3100 60  0000 C CNN
+F 1 "OPTO-TRANSISTOR" H 2500 2500 60  0000 C CNN
+	1    2400 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P5
+U 1 1 53358914
+P 650 3000
+F 0 "P5" V 600 3000 40  0000 C CNN
+F 1 "CONN_2" V 700 3000 40  0000 C CNN
+	1    650  3000
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED D4
+U 1 1 53358913
+P 1450 2600
+F 0 "D4" H 1450 2700 50  0000 C CNN
+F 1 "LED" H 1450 2500 50  0000 C CNN
+	1    1450 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4
+U 1 1 53358912
+P 1400 2900
+F 0 "R4" V 1480 2900 50  0000 C CNN
+F 1 "R" V 1400 2900 50  0000 C CNN
+	1    1400 2900
+	0    1    1    0   
+$EndComp
+Text Label 1300 3100 0    60   ~ 0
+GND
+Text Label 900  2600 0    60   ~ 0
+VCC
+Wire Wire Line
+	3000 3000 3550 3000
+Wire Wire Line
+	1150 2900 1000 2900
+Wire Wire Line
+	1650 2600 1750 2600
+Wire Wire Line
+	850  2600 1250 2600
+Wire Wire Line
+	1750 2900 1650 2900
+Wire Wire Line
+	1000 3100 1700 3100
+Wire Wire Line
+	3000 2700 3550 2700
+Text Label 3200 3000 0    60   ~ 0
+GND
+NoConn ~ 3000 2600
+NoConn ~ 3000 1950
+Text Label 3200 2350 0    60   ~ 0
+GND
+Wire Wire Line
+	3000 2050 3550 2050
+Wire Wire Line
+	1000 2450 1700 2450
+Wire Wire Line
+	1750 2250 1650 2250
+Wire Wire Line
+	850  1950 1250 1950
+Wire Wire Line
+	1650 1950 1750 1950
+Wire Wire Line
+	1150 2250 1000 2250
+Wire Wire Line
+	3000 2350 3550 2350
+Text Label 900  1950 0    60   ~ 0
+VCC
+Text Label 1300 2450 0    60   ~ 0
+GND
+$Comp
+L R R3
+U 1 1 5335890D
+P 1400 2250
+F 0 "R3" V 1480 2250 50  0000 C CNN
+F 1 "R" V 1400 2250 50  0000 C CNN
+	1    1400 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D3
+U 1 1 5335890C
+P 1450 1950
+F 0 "D3" H 1450 2050 50  0000 C CNN
+F 1 "LED" H 1450 1850 50  0000 C CNN
+	1    1450 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P4
+U 1 1 5335890B
+P 650 2350
+F 0 "P4" V 600 2350 40  0000 C CNN
+F 1 "CONN_2" V 700 2350 40  0000 C CNN
+	1    650  2350
+	-1   0    0    1   
+$EndComp
+$Comp
+L OPTO-TRANSISTOR U3
+U 1 1 5335890A
+P 2400 2150
+F 0 "U3" H 2600 2450 60  0000 C CNN
+F 1 "OPTO-TRANSISTOR" H 2500 1850 60  0000 C CNN
+	1    2400 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L OPTO-TRANSISTOR U2
+U 1 1 53358904
+P 2400 1500
+F 0 "U2" H 2600 1800 60  0000 C CNN
+F 1 "OPTO-TRANSISTOR" H 2500 1200 60  0000 C CNN
+	1    2400 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P3
+U 1 1 53358903
+P 650 1700
+F 0 "P3" V 600 1700 40  0000 C CNN
+F 1 "CONN_2" V 700 1700 40  0000 C CNN
+	1    650  1700
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED D2
+U 1 1 53358902
+P 1450 1300
+F 0 "D2" H 1450 1400 50  0000 C CNN
+F 1 "LED" H 1450 1200 50  0000 C CNN
+	1    1450 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 53358901
+P 1400 1600
+F 0 "R2" V 1480 1600 50  0000 C CNN
+F 1 "R" V 1400 1600 50  0000 C CNN
+	1    1400 1600
+	0    1    1    0   
+$EndComp
+Text Label 1300 1800 0    60   ~ 0
+GND
+Text Label 900  1300 0    60   ~ 0
+VCC
+Wire Wire Line
+	3000 1700 3550 1700
+Wire Wire Line
+	1150 1600 1000 1600
+Wire Wire Line
+	1650 1300 1750 1300
+Wire Wire Line
+	850  1300 1250 1300
+Wire Wire Line
+	1750 1600 1650 1600
+Wire Wire Line
+	1000 1800 1700 1800
+Wire Wire Line
+	3000 1400 3550 1400
+Text Label 3200 1700 0    60   ~ 0
+GND
+NoConn ~ 3000 1300
+NoConn ~ 3000 600 
+Text Label 3200 700  0    60   ~ 0
+IN0
+Text Label 3200 1000 0    60   ~ 0
+GND
+Wire Wire Line
+	3000 700  3550 700 
+Wire Wire Line
+	1000 1100 1700 1100
+Wire Wire Line
+	1750 900  1650 900 
+Wire Wire Line
+	850  600  1250 600 
+Wire Wire Line
+	9000 2500 8550 2500
+Wire Wire Line
+	9000 2700 8550 2700
+Wire Wire Line
+	9000 2900 8550 2900
+Wire Wire Line
+	9000 3000 8550 3000
+Wire Wire Line
+	9000 3200 8550 3200
+Wire Wire Line
+	8550 3300 9000 3300
+Wire Wire Line
+	9000 3100 8550 3100
+Wire Wire Line
+	9000 2800 8550 2800
+Wire Wire Line
+	9000 2600 8550 2600
+Wire Wire Line
+	9000 2400 8550 2400
+Wire Wire Line
+	1650 600  1750 600 
+Wire Wire Line
+	1150 900  1000 900 
+Wire Wire Line
+	3000 1000 3550 1000
+Text Label 900  600  0    60   ~ 0
+VCC
+Text Label 1300 1100 0    60   ~ 0
+GND
+$Comp
+L R R1
+U 1 1 533588B4
+P 1400 900
+F 0 "R1" V 1480 900 50  0000 C CNN
+F 1 "R" V 1400 900 50  0000 C CNN
+	1    1400 900 
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D1
+U 1 1 53358887
+P 1450 600
+F 0 "D1" H 1450 700 50  0000 C CNN
+F 1 "LED" H 1450 500 50  0000 C CNN
+	1    1450 600 
+	1    0    0    -1  
+$EndComp
+Text Label 8650 3300 0    60   ~ 0
+IN10
+Text Label 8650 3200 0    60   ~ 0
+IN9
+$Comp
+L CONN_10 P0
+U 1 1 533587CD
+P 9350 2850
+F 0 "P0" V 9300 2850 60  0000 C CNN
+F 1 "CONN_10" V 9400 2850 60  0000 C CNN
+	1    9350 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P2
+U 1 1 533587B3
+P 650 1000
+F 0 "P2" V 600 1000 40  0000 C CNN
+F 1 "CONN_2" V 700 1000 40  0000 C CNN
+	1    650  1000
+	-1   0    0    1   
+$EndComp
+$Comp
+L OPTO-TRANSISTOR U1
+U 1 1 53358769
+P 2400 800
+F 0 "U1" H 2600 1100 60  0000 C CNN
+F 1 "CNY17" H 2500 500 60  0000 C CNN
+	1    2400 800 
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

@@ -1,0 +1,1395 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:mysensors_radios
+LIBS:mysensors_regulators
+LIBS:myLibrary
+LIBS:mySensors_8FilPilotes-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L ATMEGA328-A IC1
+U 1 1 5876469C
+P 1850 3100
+F 0 "IC1" H 1150 1700 50  0000 L BNN
+F 1 "ATMEGA328-A" H 2250 1700 50  0000 L BNN
+F 2 "Housings_QFP:TQFP-32_7x7mm_Pitch0.8mm" H 1950 4350 50  0000 C CIN
+F 3 "" H 1850 3100 50  0000 C CNN
+	1    1850 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L RFM69HW U2
+U 1 1 587646FD
+P 2000 5350
+F 0 "U2" H 1650 5600 40  0000 C CNN
+F 1 "RFM69HW" H 2250 4600 40  0000 C CNN
+F 2 "Mysensors_Radio:RFM69HW_SMD_Handsoldering" H 2000 5350 30  0001 C CIN
+F 3 "" H 2000 5350 60  0000 C CNN
+	1    2000 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L AMS1117 U1
+U 1 1 58764782
+P 1950 950
+F 0 "U1" H 2050 700 50  0000 R BNN
+F 1 "AMS1117" H 1850 1200 50  0000 C TNN
+F 2 "TO_SOT_Packages_SMD:SOT-223" H 1850 1000 60  0001 C CNN
+F 3 "" H 1850 1000 60  0000 C CNN
+	1    1950 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P1
+U 1 1 58764921
+P 800 1000
+F 0 "P1" H 800 1150 50  0000 C CNN
+F 1 "5VIN" V 900 1000 50  0000 C CNN
+F 2 "Connectors:bornier2" H 800 1000 50  0001 C CNN
+F 3 "" H 800 1000 50  0000 C CNN
+	1    800  1000
+	-1   0    0    1   
+$EndComp
+Text Label 2700 950  0    60   ~ 0
+3V3
+$Comp
+L 74HC595 U3
+U 1 1 58764AC4
+P 4450 2400
+F 0 "U3" H 4600 3000 50  0000 C CNN
+F 1 "74HC595" H 4450 1800 50  0000 C CNN
+F 2 "SMD_Packages:SO-16-N" H 4450 2400 50  0001 C CNN
+F 3 "" H 4450 2400 50  0000 C CNN
+	1    4450 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C2
+U 1 1 58764C44
+P 2400 1100
+F 0 "C2" H 2425 1200 50  0000 L CNN
+F 1 "10uF" H 2425 1000 50  0000 L CNN
+F 2 "Capacitors_THT:C_Radial_D5_L6_P2.5" H 2438 950 50  0001 C CNN
+F 3 "" H 2400 1100 50  0000 C CNN
+	1    2400 1100
+	1    0    0    -1  
+$EndComp
+Text Label 1200 900  0    60   ~ 0
+VCC
+$Comp
+L CONN_02X03 P3
+U 1 1 58764DB3
+P 1950 7250
+F 0 "P3" H 1950 7450 50  0000 C CNN
+F 1 "CONN_02X03" H 1950 7050 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x03_Pitch2.54mm" H 1950 6050 50  0001 C CNN
+F 3 "" H 1950 6050 50  0000 C CNN
+	1    1950 7250
+	1    0    0    -1  
+$EndComp
+Text Label 1400 7150 0    60   ~ 0
+MISO
+Text Label 1400 7250 0    60   ~ 0
+SCK
+Text Label 1400 7350 0    60   ~ 0
+RESET
+Text Label 2250 7150 0    60   ~ 0
+3V3
+Text Label 2250 7250 0    60   ~ 0
+MOSI
+Text Label 2250 7350 0    60   ~ 0
+GND
+$Comp
+L C C1
+U 1 1 587650E8
+P 1350 1100
+F 0 "C1" H 1375 1200 50  0000 L CNN
+F 1 "10uF" H 1375 1000 50  0000 L CNN
+F 2 "Capacitors_THT:C_Radial_D5_L6_P2.5" H 1388 950 50  0001 C CNN
+F 3 "" H 1350 1100 50  0000 C CNN
+	1    1350 1100
+	1    0    0    -1  
+$EndComp
+Text Label 2900 3450 0    60   ~ 0
+RESET
+Text Label 2900 2500 0    60   ~ 0
+SCK
+Text Label 2900 2400 0    60   ~ 0
+MISO
+Text Label 2900 2300 0    60   ~ 0
+MOSI
+Text Label 2100 5000 0    60   ~ 0
+3V3
+Text Label 2650 5350 0    60   ~ 0
+IRQ
+Text Label 1200 5400 0    60   ~ 0
+CS
+Text Label 1200 5500 0    60   ~ 0
+MOSI
+Text Label 1200 5600 0    60   ~ 0
+MISO
+Text Label 1200 5700 0    60   ~ 0
+SCK
+$Comp
+L CONN_01X01 P2
+U 1 1 58765535
+P 600 5200
+F 0 "P2" H 600 5300 50  0000 C CNN
+F 1 "ANT" H 600 5100 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm" H 600 5200 50  0001 C CNN
+F 3 "" H 600 5200 50  0000 C CNN
+	1    600  5200
+	-1   0    0    1   
+$EndComp
+Text Label 2900 2200 0    60   ~ 0
+CS
+Text Label 650  2000 0    60   ~ 0
+3V3
+Text Label 700  4100 0    60   ~ 0
+GND
+Text Label 2900 3800 0    60   ~ 0
+IRQ
+Text Label 5300 1950 0    60   ~ 0
+FP4_B
+Text Label 5300 2050 0    60   ~ 0
+FP4_A
+Text Label 5300 2150 0    60   ~ 0
+FP3_B
+Text Label 5300 2250 0    60   ~ 0
+FP3_A
+Text Label 5300 2350 0    60   ~ 0
+FP2_B
+Text Label 5300 2450 0    60   ~ 0
+FP2_A
+Text Label 5300 2550 0    60   ~ 0
+FP1_B
+Text Label 5300 2650 0    60   ~ 0
+FP1_A
+Text Label 3450 2250 0    60   ~ 0
+VCC
+Text Label 3450 2450 0    60   ~ 0
+RCLK
+Text Label 3400 1950 0    60   ~ 0
+SER
+Text Label 3400 2150 0    60   ~ 0
+SRCLK
+Text Label 3450 2550 0    60   ~ 0
+GND
+Text Label 3000 2850 0    60   ~ 0
+SER
+Text Label 3000 3050 0    60   ~ 0
+SRCLK
+Text Label 3000 2950 0    60   ~ 0
+RCLK
+$Comp
+L CONN_01X02 P4
+U 1 1 5876743C
+P 7750 5850
+F 0 "P4" H 7750 6000 50  0000 C CNN
+F 1 "CONN_01X02" V 7850 5850 50  0000 C CNN
+F 2 "Connectors:bornier2" H 7750 5850 50  0001 C CNN
+F 3 "" H 7750 5850 50  0000 C CNN
+	1    7750 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 1050 1100 1050
+Wire Wire Line
+	1350 7150 1700 7150
+Wire Wire Line
+	1350 7250 1700 7250
+Wire Wire Line
+	1350 7350 1700 7350
+Wire Wire Line
+	2500 7150 2200 7150
+Wire Wire Line
+	2500 7250 2200 7250
+Wire Wire Line
+	2500 7350 2200 7350
+Wire Wire Line
+	1100 1050 1100 1250
+Wire Wire Line
+	1100 1250 2950 1250
+Wire Wire Line
+	1850 1250 1850 1200
+Connection ~ 1350 1250
+Connection ~ 1850 1250
+Wire Wire Line
+	2850 2300 3150 2300
+Wire Wire Line
+	2850 2400 3150 2400
+Wire Wire Line
+	2850 2500 3150 2500
+Wire Wire Line
+	2850 3450 3150 3450
+Wire Wire Line
+	2850 3800 3150 3800
+Wire Wire Line
+	1450 5400 1100 5400
+Wire Wire Line
+	1100 5500 1450 5500
+Wire Wire Line
+	1100 5600 1450 5600
+Wire Wire Line
+	1100 5700 1450 5700
+Wire Wire Line
+	1900 6200 1900 6300
+Wire Wire Line
+	1900 6300 2350 6300
+Wire Wire Line
+	2100 6200 2100 6300
+Connection ~ 2100 6300
+Wire Wire Line
+	2550 5350 2950 5350
+Wire Wire Line
+	1450 5200 800  5200
+Wire Wire Line
+	2000 5000 2350 5000
+Wire Wire Line
+	2850 2200 3150 2200
+Wire Wire Line
+	950  2000 550  2000
+Wire Wire Line
+	800  2000 800  2100
+Wire Wire Line
+	800  2100 950  2100
+Connection ~ 800  2000
+Wire Wire Line
+	950  4300 650  4300
+Wire Wire Line
+	650  4300 650  4100
+Wire Wire Line
+	650  4100 950  4100
+Wire Wire Line
+	950  4200 650  4200
+Connection ~ 650  4200
+Wire Wire Line
+	5150 1950 5500 1950
+Wire Wire Line
+	5150 2050 5500 2050
+Wire Wire Line
+	5500 2150 5150 2150
+Wire Wire Line
+	5500 2250 5150 2250
+Wire Wire Line
+	5500 2350 5150 2350
+Wire Wire Line
+	5500 2450 5150 2450
+Wire Wire Line
+	5500 2550 5150 2550
+Wire Wire Line
+	5500 2650 5150 2650
+Wire Wire Line
+	3750 2250 3400 2250
+Wire Wire Line
+	3750 2450 3400 2450
+Wire Wire Line
+	3750 1950 3400 1950
+Wire Wire Line
+	3750 2150 3400 2150
+Wire Wire Line
+	3750 2550 3400 2550
+Wire Wire Line
+	2850 2850 3300 2850
+Wire Wire Line
+	2850 2950 3300 2950
+Wire Wire Line
+	2850 3050 3300 3050
+Wire Wire Line
+	7550 5800 7250 5800
+$Comp
+L CONN_01X02 P5
+U 1 1 587679A8
+P 8800 5250
+F 0 "P5" H 8800 5400 50  0000 C CNN
+F 1 "CONN_01X02" V 8900 5250 50  0000 C CNN
+F 2 "Connectors:bornier2" H 8800 5250 50  0001 C CNN
+F 3 "" H 8800 5250 50  0000 C CNN
+	1    8800 5250
+	1    0    0    1   
+$EndComp
+$Comp
+L CONN_01X02 P6
+U 1 1 58767BF0
+P 8800 5850
+F 0 "P6" H 8800 6000 50  0000 C CNN
+F 1 "CONN_01X02" V 8900 5850 50  0000 C CNN
+F 2 "Connectors:bornier2" H 8800 5850 50  0001 C CNN
+F 3 "" H 8800 5850 50  0000 C CNN
+	1    8800 5850
+	1    0    0    1   
+$EndComp
+$Comp
+L CONN_01X02 P7
+U 1 1 58767C02
+P 9850 5250
+F 0 "P7" H 9850 5400 50  0000 C CNN
+F 1 "CONN_01X02" V 9950 5250 50  0000 C CNN
+F 2 "Connectors:bornier2" H 9850 5250 50  0001 C CNN
+F 3 "" H 9850 5250 50  0000 C CNN
+	1    9850 5250
+	1    0    0    1   
+$EndComp
+$Comp
+L CONN_01X02 P8
+U 1 1 58767E80
+P 9850 5850
+F 0 "P8" H 9850 6000 50  0000 C CNN
+F 1 "CONN_01X02" V 9950 5850 50  0000 C CNN
+F 2 "Connectors:bornier2" H 9850 5850 50  0001 C CNN
+F 3 "" H 9850 5850 50  0000 C CNN
+	1    9850 5850
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	1000 950  1200 950 
+Wire Wire Line
+	1200 950  1200 900 
+Wire Wire Line
+	1200 900  1500 900 
+Wire Wire Line
+	1500 900  1500 950 
+Wire Wire Line
+	1500 950  1550 950 
+Wire Wire Line
+	1350 950  1350 900 
+Connection ~ 1350 900 
+Connection ~ 2400 1250
+Text Label 2700 1250 0    60   ~ 0
+GND
+Wire Wire Line
+	2150 950  2950 950 
+Connection ~ 2400 950 
+Text Label 2200 6300 0    60   ~ 0
+GND
+$Comp
+L 74HC595 U4
+U 1 1 58778D35
+P 4450 3900
+F 0 "U4" H 4600 4500 50  0000 C CNN
+F 1 "74HC595" H 4450 3300 50  0000 C CNN
+F 2 "SMD_Packages:SO-16-N" H 4450 3900 50  0001 C CNN
+F 3 "" H 4450 3900 50  0000 C CNN
+	1    4450 3900
+	1    0    0    -1  
+$EndComp
+Text Label 5300 3450 0    60   ~ 0
+FP8_B
+Text Label 5300 3550 0    60   ~ 0
+FP8_A
+Text Label 5300 3650 0    60   ~ 0
+FP7_B
+Text Label 5300 3750 0    60   ~ 0
+FP7_A
+Text Label 5300 3850 0    60   ~ 0
+FP6_B
+Text Label 5300 3950 0    60   ~ 0
+FP6_A
+Text Label 5300 4050 0    60   ~ 0
+FP5_B
+Text Label 5300 4150 0    60   ~ 0
+FP5_A
+Text Label 3450 3750 0    60   ~ 0
+VCC
+Text Label 3450 3950 0    60   ~ 0
+RCLK
+Text Label 3400 3450 0    60   ~ 0
+SER2
+Text Label 3400 3650 0    60   ~ 0
+SRCLK
+Text Label 3450 4050 0    60   ~ 0
+GND
+Wire Wire Line
+	5150 3450 5500 3450
+Wire Wire Line
+	5150 3550 5500 3550
+Wire Wire Line
+	5500 3650 5150 3650
+Wire Wire Line
+	5500 3750 5150 3750
+Wire Wire Line
+	5500 3850 5150 3850
+Wire Wire Line
+	5500 3950 5150 3950
+Wire Wire Line
+	5500 4050 5150 4050
+Wire Wire Line
+	5500 4150 5150 4150
+Wire Wire Line
+	3750 3750 3400 3750
+Wire Wire Line
+	3750 3950 3400 3950
+Wire Wire Line
+	3750 3450 3400 3450
+Wire Wire Line
+	3750 3650 3400 3650
+Wire Wire Line
+	3750 4050 3400 4050
+Wire Wire Line
+	5150 2850 5500 2850
+Text Label 5250 2850 0    60   ~ 0
+SER2
+Wire Wire Line
+	8600 5200 8300 5200
+Wire Wire Line
+	8300 5300 8600 5300
+Wire Wire Line
+	8300 5800 8600 5800
+Wire Wire Line
+	8300 5900 8600 5900
+Wire Wire Line
+	9350 5200 9650 5200
+Wire Wire Line
+	9350 5300 9650 5300
+Wire Wire Line
+	9300 5800 9650 5800
+Wire Wire Line
+	9300 5900 9650 5900
+Text Label 9350 5900 0    60   ~ 0
+FP8
+Text Label 9350 5800 0    60   ~ 0
+FP7
+Text Label 9400 5300 0    60   ~ 0
+FP6
+Text Label 9400 5200 0    60   ~ 0
+FP5
+Text Label 8350 5900 0    60   ~ 0
+FP4
+Text Label 8350 5800 0    60   ~ 0
+FP3
+Text Label 8350 5300 0    60   ~ 0
+FP2
+Text Label 8350 5200 0    60   ~ 0
+FP1
+Text Label 7300 5800 0    60   ~ 0
+PH_IN
+Wire Wire Line
+	7350 5800 7350 5900
+Wire Wire Line
+	7350 5900 7550 5900
+Connection ~ 7350 5800
+$Comp
+L MOC3041M U5
+U 1 1 587797A7
+P 6800 800
+F 0 "U5" H 6600 1000 50  0000 L CNN
+F 1 "MOC3041M" H 6800 1000 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm_LongPads" H 6600 600 50  0000 L CIN
+F 3 "" H 6765 800 50  0000 L CNN
+	1    6800 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L MOC3041M U6
+U 1 1 58779854
+P 6800 1300
+F 0 "U6" H 6600 1500 50  0000 L CNN
+F 1 "MOC3041M" H 6800 1500 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm_LongPads" H 6600 1100 50  0000 L CIN
+F 3 "" H 6765 1300 50  0000 L CNN
+	1    6800 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 900  7900 900 
+Wire Wire Line
+	7100 1400 7750 1400
+Wire Wire Line
+	7750 1400 7750 900 
+Connection ~ 7750 900 
+$Comp
+L D D1
+U 1 1 58779B32
+P 7400 700
+F 0 "D1" H 7400 800 50  0000 C CNN
+F 1 "D" H 7400 600 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-123" H 7400 700 50  0001 C CNN
+F 3 "" H 7400 700 50  0000 C CNN
+	1    7400 700 
+	1    0    0    -1  
+$EndComp
+$Comp
+L D D2
+U 1 1 58779B9F
+P 7400 1200
+F 0 "D2" H 7400 1300 50  0000 C CNN
+F 1 "D" H 7400 1100 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-123" H 7400 1200 50  0001 C CNN
+F 3 "" H 7400 1200 50  0000 C CNN
+	1    7400 1200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7250 700  7100 700 
+Wire Wire Line
+	7100 1200 7250 1200
+Wire Wire Line
+	7550 1200 7600 1200
+Wire Wire Line
+	7600 1200 7600 700 
+Wire Wire Line
+	7550 700  7900 700 
+Connection ~ 7600 700 
+Text Label 7800 700  0    60   ~ 0
+PH_IN
+Text Label 7800 900  0    60   ~ 0
+FP1
+Wire Wire Line
+	6500 900  6250 900 
+Wire Wire Line
+	6500 1400 6250 1400
+Text Label 6300 1400 0    60   ~ 0
+GND
+Text Label 6300 900  0    60   ~ 0
+GND
+$Comp
+L R R1
+U 1 1 58779F68
+P 6300 700
+F 0 "R1" V 6380 700 50  0000 C CNN
+F 1 "R" V 6300 700 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 6230 700 50  0001 C CNN
+F 3 "" H 6300 700 50  0000 C CNN
+	1    6300 700 
+	0    1    1    0   
+$EndComp
+$Comp
+L R R2
+U 1 1 5877A021
+P 6300 1200
+F 0 "R2" V 6380 1200 50  0000 C CNN
+F 1 "R" V 6300 1200 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 6230 1200 50  0001 C CNN
+F 3 "" H 6300 1200 50  0000 C CNN
+	1    6300 1200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6450 700  6500 700 
+Wire Wire Line
+	6450 1200 6500 1200
+Wire Wire Line
+	6150 700  5950 700 
+Wire Wire Line
+	6150 1200 5950 1200
+Text Label 5950 700  0    60   ~ 0
+FP1_A
+Text Label 5950 1200 0    60   ~ 0
+FP1_B
+$Comp
+L MOC3041M U7
+U 1 1 5877A4CD
+P 6800 1800
+F 0 "U7" H 6600 2000 50  0000 L CNN
+F 1 "MOC3041M" H 6800 2000 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm_LongPads" H 6600 1600 50  0000 L CIN
+F 3 "" H 6765 1800 50  0000 L CNN
+	1    6800 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L MOC3041M U8
+U 1 1 5877A4D3
+P 6800 2300
+F 0 "U8" H 6600 2500 50  0000 L CNN
+F 1 "MOC3041M" H 6800 2500 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm_LongPads" H 6600 2100 50  0000 L CIN
+F 3 "" H 6765 2300 50  0000 L CNN
+	1    6800 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 1900 7900 1900
+Wire Wire Line
+	7100 2400 7750 2400
+Wire Wire Line
+	7750 2400 7750 1900
+Connection ~ 7750 1900
+$Comp
+L D D3
+U 1 1 5877A4DD
+P 7400 1700
+F 0 "D3" H 7400 1800 50  0000 C CNN
+F 1 "D" H 7400 1600 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-123" H 7400 1700 50  0001 C CNN
+F 3 "" H 7400 1700 50  0000 C CNN
+	1    7400 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L D D4
+U 1 1 5877A4E3
+P 7400 2200
+F 0 "D4" H 7400 2300 50  0000 C CNN
+F 1 "D" H 7400 2100 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-123" H 7400 2200 50  0001 C CNN
+F 3 "" H 7400 2200 50  0000 C CNN
+	1    7400 2200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7250 1700 7100 1700
+Wire Wire Line
+	7100 2200 7250 2200
+Wire Wire Line
+	7550 2200 7600 2200
+Wire Wire Line
+	7600 2200 7600 1700
+Wire Wire Line
+	7550 1700 7900 1700
+Connection ~ 7600 1700
+Text Label 7800 1700 0    60   ~ 0
+PH_IN
+Text Label 7800 1900 0    60   ~ 0
+FP2
+Wire Wire Line
+	6500 1900 6250 1900
+Wire Wire Line
+	6500 2400 6250 2400
+Text Label 6300 2400 0    60   ~ 0
+GND
+Text Label 6300 1900 0    60   ~ 0
+GND
+$Comp
+L R R3
+U 1 1 5877A4F5
+P 6300 1700
+F 0 "R3" V 6380 1700 50  0000 C CNN
+F 1 "R" V 6300 1700 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 6230 1700 50  0001 C CNN
+F 3 "" H 6300 1700 50  0000 C CNN
+	1    6300 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L R R4
+U 1 1 5877A4FB
+P 6300 2200
+F 0 "R4" V 6380 2200 50  0000 C CNN
+F 1 "R" V 6300 2200 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 6230 2200 50  0001 C CNN
+F 3 "" H 6300 2200 50  0000 C CNN
+	1    6300 2200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6450 1700 6500 1700
+Wire Wire Line
+	6450 2200 6500 2200
+Wire Wire Line
+	6150 1700 5950 1700
+Wire Wire Line
+	6150 2200 5950 2200
+Text Label 5950 1700 0    60   ~ 0
+FP2_A
+Text Label 5950 2200 0    60   ~ 0
+FP2_B
+$Comp
+L MOC3041M U9
+U 1 1 5877A6C3
+P 6800 2800
+F 0 "U9" H 6600 3000 50  0000 L CNN
+F 1 "MOC3041M" H 6800 3000 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm_LongPads" H 6600 2600 50  0000 L CIN
+F 3 "" H 6765 2800 50  0000 L CNN
+	1    6800 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L MOC3041M U10
+U 1 1 5877A6C9
+P 6800 3300
+F 0 "U10" H 6600 3500 50  0000 L CNN
+F 1 "MOC3041M" H 6800 3500 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm_LongPads" H 6600 3100 50  0000 L CIN
+F 3 "" H 6765 3300 50  0000 L CNN
+	1    6800 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 2900 7900 2900
+Wire Wire Line
+	7100 3400 7750 3400
+Wire Wire Line
+	7750 3400 7750 2900
+Connection ~ 7750 2900
+$Comp
+L D D5
+U 1 1 5877A6D3
+P 7400 2700
+F 0 "D5" H 7400 2800 50  0000 C CNN
+F 1 "D" H 7400 2600 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-123" H 7400 2700 50  0001 C CNN
+F 3 "" H 7400 2700 50  0000 C CNN
+	1    7400 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L D D6
+U 1 1 5877A6D9
+P 7400 3200
+F 0 "D6" H 7400 3300 50  0000 C CNN
+F 1 "D" H 7400 3100 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-123" H 7400 3200 50  0001 C CNN
+F 3 "" H 7400 3200 50  0000 C CNN
+	1    7400 3200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7250 2700 7100 2700
+Wire Wire Line
+	7100 3200 7250 3200
+Wire Wire Line
+	7550 3200 7600 3200
+Wire Wire Line
+	7600 3200 7600 2700
+Wire Wire Line
+	7550 2700 7900 2700
+Connection ~ 7600 2700
+Text Label 7800 2700 0    60   ~ 0
+PH_IN
+Text Label 7800 2900 0    60   ~ 0
+FP3
+Wire Wire Line
+	6500 2900 6250 2900
+Wire Wire Line
+	6500 3400 6250 3400
+Text Label 6300 3400 0    60   ~ 0
+GND
+Text Label 6300 2900 0    60   ~ 0
+GND
+$Comp
+L R R5
+U 1 1 5877A6EB
+P 6300 2700
+F 0 "R5" V 6380 2700 50  0000 C CNN
+F 1 "R" V 6300 2700 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 6230 2700 50  0001 C CNN
+F 3 "" H 6300 2700 50  0000 C CNN
+	1    6300 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L R R6
+U 1 1 5877A6F1
+P 6300 3200
+F 0 "R6" V 6380 3200 50  0000 C CNN
+F 1 "R" V 6300 3200 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 6230 3200 50  0001 C CNN
+F 3 "" H 6300 3200 50  0000 C CNN
+	1    6300 3200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6450 2700 6500 2700
+Wire Wire Line
+	6450 3200 6500 3200
+Wire Wire Line
+	6150 2700 5950 2700
+Wire Wire Line
+	6150 3200 5950 3200
+Text Label 5950 2700 0    60   ~ 0
+FP3_A
+Text Label 5950 3200 0    60   ~ 0
+FP3_B
+$Comp
+L MOC3041M U11
+U 1 1 5877A6FD
+P 6800 3800
+F 0 "U11" H 6600 4000 50  0000 L CNN
+F 1 "MOC3041M" H 6800 4000 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm_LongPads" H 6600 3600 50  0000 L CIN
+F 3 "" H 6765 3800 50  0000 L CNN
+	1    6800 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L MOC3041M U12
+U 1 1 5877A703
+P 6800 4300
+F 0 "U12" H 6600 4500 50  0000 L CNN
+F 1 "MOC3041M" H 6800 4500 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm_LongPads" H 6600 4100 50  0000 L CIN
+F 3 "" H 6765 4300 50  0000 L CNN
+	1    6800 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 3900 7900 3900
+Wire Wire Line
+	7100 4400 7750 4400
+Wire Wire Line
+	7750 4400 7750 3900
+Connection ~ 7750 3900
+$Comp
+L D D7
+U 1 1 5877A70D
+P 7400 3700
+F 0 "D7" H 7400 3800 50  0000 C CNN
+F 1 "D" H 7400 3600 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-123" H 7400 3700 50  0001 C CNN
+F 3 "" H 7400 3700 50  0000 C CNN
+	1    7400 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L D D8
+U 1 1 5877A713
+P 7400 4200
+F 0 "D8" H 7400 4300 50  0000 C CNN
+F 1 "D" H 7400 4100 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-123" H 7400 4200 50  0001 C CNN
+F 3 "" H 7400 4200 50  0000 C CNN
+	1    7400 4200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7250 3700 7100 3700
+Wire Wire Line
+	7100 4200 7250 4200
+Wire Wire Line
+	7550 4200 7600 4200
+Wire Wire Line
+	7600 4200 7600 3700
+Wire Wire Line
+	7550 3700 7900 3700
+Connection ~ 7600 3700
+Text Label 7800 3700 0    60   ~ 0
+PH_IN
+Text Label 7800 3900 0    60   ~ 0
+FP4
+Wire Wire Line
+	6500 3900 6250 3900
+Wire Wire Line
+	6500 4400 6250 4400
+Text Label 6300 4400 0    60   ~ 0
+GND
+Text Label 6300 3900 0    60   ~ 0
+GND
+$Comp
+L R R7
+U 1 1 5877A725
+P 6300 3700
+F 0 "R7" V 6380 3700 50  0000 C CNN
+F 1 "R" V 6300 3700 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 6230 3700 50  0001 C CNN
+F 3 "" H 6300 3700 50  0000 C CNN
+	1    6300 3700
+	0    1    1    0   
+$EndComp
+$Comp
+L R R8
+U 1 1 5877A72B
+P 6300 4200
+F 0 "R8" V 6380 4200 50  0000 C CNN
+F 1 "R" V 6300 4200 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 6230 4200 50  0001 C CNN
+F 3 "" H 6300 4200 50  0000 C CNN
+	1    6300 4200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6450 3700 6500 3700
+Wire Wire Line
+	6450 4200 6500 4200
+Wire Wire Line
+	6150 3700 5950 3700
+Wire Wire Line
+	6150 4200 5950 4200
+Text Label 5950 3700 0    60   ~ 0
+FP4_A
+Text Label 5950 4200 0    60   ~ 0
+FP4_B
+$Comp
+L MOC3041M U13
+U 1 1 5877B25F
+P 9700 800
+F 0 "U13" H 9500 1000 50  0000 L CNN
+F 1 "MOC3041M" H 9700 1000 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm_LongPads" H 9500 600 50  0000 L CIN
+F 3 "" H 9665 800 50  0000 L CNN
+	1    9700 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L MOC3041M U14
+U 1 1 5877B265
+P 9700 1300
+F 0 "U14" H 9500 1500 50  0000 L CNN
+F 1 "MOC3041M" H 9700 1500 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm_LongPads" H 9500 1100 50  0000 L CIN
+F 3 "" H 9665 1300 50  0000 L CNN
+	1    9700 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 900  10800 900 
+Wire Wire Line
+	10000 1400 10650 1400
+Wire Wire Line
+	10650 1400 10650 900 
+Connection ~ 10650 900 
+$Comp
+L D D9
+U 1 1 5877B26F
+P 10300 700
+F 0 "D9" H 10300 800 50  0000 C CNN
+F 1 "D" H 10300 600 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-123" H 10300 700 50  0001 C CNN
+F 3 "" H 10300 700 50  0000 C CNN
+	1    10300 700 
+	1    0    0    -1  
+$EndComp
+$Comp
+L D D10
+U 1 1 5877B275
+P 10300 1200
+F 0 "D10" H 10300 1300 50  0000 C CNN
+F 1 "D" H 10300 1100 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-123" H 10300 1200 50  0001 C CNN
+F 3 "" H 10300 1200 50  0000 C CNN
+	1    10300 1200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10150 700  10000 700 
+Wire Wire Line
+	10000 1200 10150 1200
+Wire Wire Line
+	10450 1200 10500 1200
+Wire Wire Line
+	10500 1200 10500 700 
+Wire Wire Line
+	10450 700  10800 700 
+Connection ~ 10500 700 
+Text Label 10700 700  0    60   ~ 0
+PH_IN
+Text Label 10700 900  0    60   ~ 0
+FP5
+Wire Wire Line
+	9400 900  9150 900 
+Wire Wire Line
+	9400 1400 9150 1400
+Text Label 9200 1400 0    60   ~ 0
+GND
+Text Label 9200 900  0    60   ~ 0
+GND
+$Comp
+L R R9
+U 1 1 5877B287
+P 9200 700
+F 0 "R9" V 9280 700 50  0000 C CNN
+F 1 "R" V 9200 700 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 9130 700 50  0001 C CNN
+F 3 "" H 9200 700 50  0000 C CNN
+	1    9200 700 
+	0    1    1    0   
+$EndComp
+$Comp
+L R R10
+U 1 1 5877B28D
+P 9200 1200
+F 0 "R10" V 9280 1200 50  0000 C CNN
+F 1 "R" V 9200 1200 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 9130 1200 50  0001 C CNN
+F 3 "" H 9200 1200 50  0000 C CNN
+	1    9200 1200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9350 700  9400 700 
+Wire Wire Line
+	9350 1200 9400 1200
+Wire Wire Line
+	9050 700  8850 700 
+Wire Wire Line
+	9050 1200 8850 1200
+Text Label 8850 700  0    60   ~ 0
+FP5_A
+Text Label 8850 1200 0    60   ~ 0
+FP5_B
+$Comp
+L MOC3041M U15
+U 1 1 5877B299
+P 9700 1800
+F 0 "U15" H 9500 2000 50  0000 L CNN
+F 1 "MOC3041M" H 9700 2000 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm_LongPads" H 9500 1600 50  0000 L CIN
+F 3 "" H 9665 1800 50  0000 L CNN
+	1    9700 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L MOC3041M U16
+U 1 1 5877B29F
+P 9700 2300
+F 0 "U16" H 9500 2500 50  0000 L CNN
+F 1 "MOC3041M" H 9700 2500 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm_LongPads" H 9500 2100 50  0000 L CIN
+F 3 "" H 9665 2300 50  0000 L CNN
+	1    9700 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 1900 10800 1900
+Wire Wire Line
+	10000 2400 10650 2400
+Wire Wire Line
+	10650 2400 10650 1900
+Connection ~ 10650 1900
+$Comp
+L D D11
+U 1 1 5877B2A9
+P 10300 1700
+F 0 "D11" H 10300 1800 50  0000 C CNN
+F 1 "D" H 10300 1600 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-123" H 10300 1700 50  0001 C CNN
+F 3 "" H 10300 1700 50  0000 C CNN
+	1    10300 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L D D12
+U 1 1 5877B2AF
+P 10300 2200
+F 0 "D12" H 10300 2300 50  0000 C CNN
+F 1 "D" H 10300 2100 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-123" H 10300 2200 50  0001 C CNN
+F 3 "" H 10300 2200 50  0000 C CNN
+	1    10300 2200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10150 1700 10000 1700
+Wire Wire Line
+	10000 2200 10150 2200
+Wire Wire Line
+	10450 2200 10500 2200
+Wire Wire Line
+	10500 2200 10500 1700
+Wire Wire Line
+	10450 1700 10800 1700
+Connection ~ 10500 1700
+Text Label 10700 1700 0    60   ~ 0
+PH_IN
+Text Label 10700 1900 0    60   ~ 0
+FP6
+Wire Wire Line
+	9400 1900 9150 1900
+Wire Wire Line
+	9400 2400 9150 2400
+Text Label 9200 2400 0    60   ~ 0
+GND
+Text Label 9200 1900 0    60   ~ 0
+GND
+$Comp
+L R R11
+U 1 1 5877B2C1
+P 9200 1700
+F 0 "R11" V 9280 1700 50  0000 C CNN
+F 1 "R" V 9200 1700 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 9130 1700 50  0001 C CNN
+F 3 "" H 9200 1700 50  0000 C CNN
+	1    9200 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L R R12
+U 1 1 5877B2C7
+P 9200 2200
+F 0 "R12" V 9280 2200 50  0000 C CNN
+F 1 "R" V 9200 2200 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 9130 2200 50  0001 C CNN
+F 3 "" H 9200 2200 50  0000 C CNN
+	1    9200 2200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9350 1700 9400 1700
+Wire Wire Line
+	9350 2200 9400 2200
+Wire Wire Line
+	9050 1700 8850 1700
+Wire Wire Line
+	9050 2200 8850 2200
+Text Label 8850 1700 0    60   ~ 0
+FP6_A
+Text Label 8850 2200 0    60   ~ 0
+FP6_B
+$Comp
+L MOC3041M U17
+U 1 1 5877B2D3
+P 9700 2800
+F 0 "U17" H 9500 3000 50  0000 L CNN
+F 1 "MOC3041M" H 9700 3000 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm_LongPads" H 9500 2600 50  0000 L CIN
+F 3 "" H 9665 2800 50  0000 L CNN
+	1    9700 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L MOC3041M U18
+U 1 1 5877B2D9
+P 9700 3300
+F 0 "U18" H 9500 3500 50  0000 L CNN
+F 1 "MOC3041M" H 9700 3500 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm_LongPads" H 9500 3100 50  0000 L CIN
+F 3 "" H 9665 3300 50  0000 L CNN
+	1    9700 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 2900 10800 2900
+Wire Wire Line
+	10000 3400 10650 3400
+Wire Wire Line
+	10650 3400 10650 2900
+Connection ~ 10650 2900
+$Comp
+L D D13
+U 1 1 5877B2E3
+P 10300 2700
+F 0 "D13" H 10300 2800 50  0000 C CNN
+F 1 "D" H 10300 2600 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-123" H 10300 2700 50  0001 C CNN
+F 3 "" H 10300 2700 50  0000 C CNN
+	1    10300 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L D D14
+U 1 1 5877B2E9
+P 10300 3200
+F 0 "D14" H 10300 3300 50  0000 C CNN
+F 1 "D" H 10300 3100 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-123" H 10300 3200 50  0001 C CNN
+F 3 "" H 10300 3200 50  0000 C CNN
+	1    10300 3200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10150 2700 10000 2700
+Wire Wire Line
+	10000 3200 10150 3200
+Wire Wire Line
+	10450 3200 10500 3200
+Wire Wire Line
+	10500 3200 10500 2700
+Wire Wire Line
+	10450 2700 10800 2700
+Connection ~ 10500 2700
+Text Label 10700 2700 0    60   ~ 0
+PH_IN
+Text Label 10700 2900 0    60   ~ 0
+FP7
+Wire Wire Line
+	9400 2900 9150 2900
+Wire Wire Line
+	9400 3400 9150 3400
+Text Label 9200 3400 0    60   ~ 0
+GND
+Text Label 9200 2900 0    60   ~ 0
+GND
+$Comp
+L R R13
+U 1 1 5877B2FB
+P 9200 2700
+F 0 "R13" V 9280 2700 50  0000 C CNN
+F 1 "R" V 9200 2700 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 9130 2700 50  0001 C CNN
+F 3 "" H 9200 2700 50  0000 C CNN
+	1    9200 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L R R14
+U 1 1 5877B301
+P 9200 3200
+F 0 "R14" V 9280 3200 50  0000 C CNN
+F 1 "R" V 9200 3200 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 9130 3200 50  0001 C CNN
+F 3 "" H 9200 3200 50  0000 C CNN
+	1    9200 3200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9350 2700 9400 2700
+Wire Wire Line
+	9350 3200 9400 3200
+Wire Wire Line
+	9050 2700 8850 2700
+Wire Wire Line
+	9050 3200 8850 3200
+Text Label 8850 2700 0    60   ~ 0
+FP7_A
+Text Label 8850 3200 0    60   ~ 0
+FP7_B
+$Comp
+L MOC3041M U19
+U 1 1 5877B30D
+P 9700 3800
+F 0 "U19" H 9500 4000 50  0000 L CNN
+F 1 "MOC3041M" H 9700 4000 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm_LongPads" H 9500 3600 50  0000 L CIN
+F 3 "" H 9665 3800 50  0000 L CNN
+	1    9700 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L MOC3041M U20
+U 1 1 5877B313
+P 9700 4300
+F 0 "U20" H 9500 4500 50  0000 L CNN
+F 1 "MOC3041M" H 9700 4500 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm_LongPads" H 9500 4100 50  0000 L CIN
+F 3 "" H 9665 4300 50  0000 L CNN
+	1    9700 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 3900 10800 3900
+Wire Wire Line
+	10000 4400 10650 4400
+Wire Wire Line
+	10650 4400 10650 3900
+Connection ~ 10650 3900
+$Comp
+L D D15
+U 1 1 5877B31D
+P 10300 3700
+F 0 "D15" H 10300 3800 50  0000 C CNN
+F 1 "D" H 10300 3600 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-123" H 10300 3700 50  0001 C CNN
+F 3 "" H 10300 3700 50  0000 C CNN
+	1    10300 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L D D16
+U 1 1 5877B323
+P 10300 4200
+F 0 "D16" H 10300 4300 50  0000 C CNN
+F 1 "D" H 10300 4100 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-123" H 10300 4200 50  0001 C CNN
+F 3 "" H 10300 4200 50  0000 C CNN
+	1    10300 4200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10150 3700 10000 3700
+Wire Wire Line
+	10000 4200 10150 4200
+Wire Wire Line
+	10450 4200 10500 4200
+Wire Wire Line
+	10500 4200 10500 3700
+Wire Wire Line
+	10450 3700 10800 3700
+Connection ~ 10500 3700
+Text Label 10700 3700 0    60   ~ 0
+PH_IN
+Text Label 10700 3900 0    60   ~ 0
+FP8
+Wire Wire Line
+	9400 3900 9150 3900
+Wire Wire Line
+	9400 4400 9150 4400
+Text Label 9200 4400 0    60   ~ 0
+GND
+Text Label 9200 3900 0    60   ~ 0
+GND
+$Comp
+L R R15
+U 1 1 5877B335
+P 9200 3700
+F 0 "R15" V 9280 3700 50  0000 C CNN
+F 1 "R" V 9200 3700 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 9130 3700 50  0001 C CNN
+F 3 "" H 9200 3700 50  0000 C CNN
+	1    9200 3700
+	0    1    1    0   
+$EndComp
+$Comp
+L R R16
+U 1 1 5877B33B
+P 9200 4200
+F 0 "R16" V 9280 4200 50  0000 C CNN
+F 1 "R" V 9200 4200 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 9130 4200 50  0001 C CNN
+F 3 "" H 9200 4200 50  0000 C CNN
+	1    9200 4200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9350 3700 9400 3700
+Wire Wire Line
+	9350 4200 9400 4200
+Wire Wire Line
+	9050 3700 8850 3700
+Wire Wire Line
+	9050 4200 8850 4200
+Text Label 8850 3700 0    60   ~ 0
+FP8_A
+Text Label 8850 4200 0    60   ~ 0
+FP8_B
+$Comp
+L CONN_01X02 P9
+U 1 1 5877C46D
+P 7750 5250
+F 0 "P9" H 7750 5400 50  0000 C CNN
+F 1 "CONN_01X02" V 7850 5250 50  0000 C CNN
+F 2 "Connectors:bornier2" H 7750 5250 50  0001 C CNN
+F 3 "" H 7750 5250 50  0000 C CNN
+	1    7750 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 5200 7250 5200
+Text Label 7300 5200 0    60   ~ 0
+PH_IN
+Wire Wire Line
+	7350 5200 7350 5300
+Wire Wire Line
+	7350 5300 7550 5300
+Connection ~ 7350 5200
+$EndSCHEMATC
