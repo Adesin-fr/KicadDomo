@@ -68,12 +68,12 @@ $EndComp
 $Comp
 L CONN_01X03 P4
 U 1 1 587A3CDC
-P 9050 4400
-F 0 "P4" H 9128 4441 50  0000 L CNN
-F 1 "CONN_01X03" H 9128 4350 50  0000 L CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 9050 4400 50  0001 C CNN
-F 3 "" H 9050 4400 50  0000 C CNN
-	1    9050 4400
+P 9150 4900
+F 0 "P4" H 9228 4941 50  0000 L CNN
+F 1 "CONN_01X03" H 9228 4850 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 9150 4900 50  0001 C CNN
+F 3 "" H 9150 4900 50  0000 C CNN
+	1    9150 4900
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -90,13 +90,13 @@ $EndComp
 $Comp
 L R R1
 U 1 1 587A3DC5
-P 8550 3700
-F 0 "R1" H 8480 3654 50  0000 R CNN
-F 1 "4K7" H 8480 3745 50  0000 R CNN
-F 2 "Resistors_SMD:R_1206_HandSoldering" V 8480 3700 50  0001 C CNN
-F 3 "" H 8550 3700 50  0000 C CNN
-	1    8550 3700
-	1    0    0    -1  
+P 8500 3750
+F 0 "R1" H 8430 3704 50  0000 R CNN
+F 1 "4K7" H 8430 3795 50  0000 R CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 8430 3750 50  0001 C CNN
+F 3 "" H 8500 3750 50  0000 C CNN
+	1    8500 3750
+	0    1    1    0   
 $EndComp
 $Comp
 L C C1
@@ -165,13 +165,13 @@ Text Label 2600 4800 0    60   ~ 0
 GND
 Text Label 5900 5650 0    60   ~ 0
 3V3
-Text Label 9050 3400 0    60   ~ 0
+Text Label 8700 3750 0    60   ~ 0
 3V3
-Text Label 8600 3950 0    60   ~ 0
+Text Label 8700 3950 0    60   ~ 0
 GND
-Text Label 8650 4300 0    60   ~ 0
+Text Label 8750 4800 0    60   ~ 0
 3V3
-Text Label 8650 4500 0    60   ~ 0
+Text Label 8750 5000 0    60   ~ 0
 GND
 $Comp
 L CONN_01X01 P2
@@ -208,9 +208,9 @@ Text Label 4950 2700 0    60   ~ 0
 CE
 Text Label 5000 3450 0    60   ~ 0
 PC1
-Text Label 8200 3850 0    60   ~ 0
+Text Label 8700 3850 0    60   ~ 0
 PC0
-Text Label 8150 4400 0    60   ~ 0
+Text Label 8750 4900 0    60   ~ 0
 PC1
 $Comp
 L CONN_02X03 P5
@@ -307,21 +307,14 @@ Wire Wire Line
 Wire Wire Line
 	8200 3850 8850 3850
 Wire Wire Line
-	8850 3750 8850 3400
-Wire Wire Line
 	8850 3950 8600 3950
-Connection ~ 8550 3850
+Connection ~ 8350 3850
 Wire Wire Line
-	8550 3550 8550 3400
+	8950 4800 8700 4800
 Wire Wire Line
-	8550 3400 9050 3400
-Connection ~ 8850 3400
+	8950 5000 8700 5000
 Wire Wire Line
-	8850 4300 8600 4300
-Wire Wire Line
-	8850 4500 8600 4500
-Wire Wire Line
-	8850 4400 8150 4400
+	8950 4900 8250 4900
 Wire Wire Line
 	6200 6000 6350 6000
 Wire Wire Line
@@ -403,4 +396,22 @@ Text Label 1900 2100 0    60   ~ 0
 VIN
 Text Label 1900 2200 0    60   ~ 0
 GND
+$Comp
+L R R2
+U 1 1 587CCD31
+P 8550 4800
+F 0 "R2" H 8480 4754 50  0000 R CNN
+F 1 "4K7" H 8480 4845 50  0000 R CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 8480 4800 50  0001 C CNN
+F 3 "" H 8550 4800 50  0000 C CNN
+	1    8550 4800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8400 4800 8400 4900
+Connection ~ 8400 4900
+Wire Wire Line
+	8850 3750 8650 3750
+Wire Wire Line
+	8350 3750 8350 3850
 $EndSCHEMATC
