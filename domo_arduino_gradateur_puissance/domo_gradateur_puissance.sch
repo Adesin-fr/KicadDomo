@@ -28,11 +28,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:arduino
-LIBS:ArduProMiniTKB
 LIBS:myLibrary
-LIBS:mysensors_regulators
-LIBS:mysensors_radios
 LIBS:domo_gradateur_puissance-cache
 EELAYER 25 0
 EELAYER END
@@ -1025,9 +1021,9 @@ Wire Wire Line
 Wire Wire Line
 	750  3000 1150 3000
 Wire Wire Line
-	1150 5300 1000 5300
+	1000 5300 1150 5300
 Wire Wire Line
-	1000 5300 1000 5200
+	1000 5100 1000 5300
 Wire Wire Line
 	700  5200 1150 5200
 Connection ~ 1000 5200
@@ -1338,4 +1334,6 @@ Text Label 2950 2000 0    60   ~ 0
 MOSI
 Text Label 2950 2100 0    60   ~ 0
 GND
+Wire Wire Line
+	1150 5100 1000 5100
 $EndSCHEMATC

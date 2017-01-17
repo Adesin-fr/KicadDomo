@@ -1333,7 +1333,7 @@ SCK
 Text Label 2150 2100 0    60   ~ 0
 RESET
 Text Label 2950 1900 0    60   ~ 0
-VCC
+3V3
 Text Label 2950 2000 0    60   ~ 0
 MOSI
 Text Label 2950 2100 0    60   ~ 0
