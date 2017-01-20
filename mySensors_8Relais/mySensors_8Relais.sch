@@ -1,0 +1,842 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:mysensors_radios
+LIBS:mysensors_regulators
+LIBS:myLibrary
+LIBS:relay_spdt
+LIBS:uln-udn
+LIBS:mySensors_8Relais-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L ATMEGA328-A IC1
+U 1 1 5876469C
+P 2300 3100
+F 0 "IC1" H 1550 4350 50  0000 L BNN
+F 1 "ATMEGA328-A" H 2700 1700 50  0000 L BNN
+F 2 "Housings_QFP:TQFP-32_7x7mm_Pitch0.8mm" H 2550 4350 50  0000 C CIN
+F 3 "" H 2300 3100 50  0000 C CNN
+	1    2300 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L RFM69HW U2
+U 1 1 587646FD
+P 2350 5350
+F 0 "U2" H 2000 5600 40  0000 C CNN
+F 1 "RFM69HW" H 2600 4600 40  0000 C CNN
+F 2 "Mysensors_Radio:RFM69HW_SMD_Handsoldering" H 2350 5350 30  0001 C CIN
+F 3 "" H 2350 5350 60  0000 C CNN
+	1    2350 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L AMS1117 U1
+U 1 1 58764782
+P 1950 950
+F 0 "U1" H 2050 700 50  0000 R BNN
+F 1 "AMS1117" H 1850 1200 50  0000 C TNN
+F 2 "TO_SOT_Packages_SMD:SOT-223" H 1850 1000 60  0001 C CNN
+F 3 "" H 1850 1000 60  0000 C CNN
+	1    1950 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P1
+U 1 1 58764921
+P 800 1000
+F 0 "P1" H 800 1150 50  0000 C CNN
+F 1 "5VIN" V 900 1000 50  0000 C CNN
+F 2 "Connectors:bornier2" H 800 1000 50  0001 C CNN
+F 3 "" H 800 1000 50  0000 C CNN
+	1    800  1000
+	-1   0    0    1   
+$EndComp
+Text Label 2700 950  0    60   ~ 0
+3V3
+$Comp
+L C C2
+U 1 1 58764C44
+P 2400 1100
+F 0 "C2" H 2425 1200 50  0000 L CNN
+F 1 "10uF" H 2425 1000 50  0000 L CNN
+F 2 "Capacitors_THT:C_Radial_D5_L6_P2.5" H 2438 950 50  0001 C CNN
+F 3 "" H 2400 1100 50  0000 C CNN
+	1    2400 1100
+	1    0    0    -1  
+$EndComp
+Text Label 1200 900  0    60   ~ 0
+VCC
+$Comp
+L CONN_02X03 P3
+U 1 1 58764DB3
+P 2300 7250
+F 0 "P3" H 2300 7450 50  0000 C CNN
+F 1 "CONN_02X03" H 2300 7050 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x03_Pitch2.54mm" H 2300 6050 50  0001 C CNN
+F 3 "" H 2300 6050 50  0000 C CNN
+	1    2300 7250
+	1    0    0    -1  
+$EndComp
+Text Label 1750 7150 0    60   ~ 0
+MISO
+Text Label 1750 7250 0    60   ~ 0
+SCK
+Text Label 1750 7350 0    60   ~ 0
+RESET
+Text Label 2600 7150 0    60   ~ 0
+3V3
+Text Label 2600 7250 0    60   ~ 0
+MOSI
+Text Label 2600 7350 0    60   ~ 0
+GND
+$Comp
+L C C1
+U 1 1 587650E8
+P 1350 1100
+F 0 "C1" H 1375 1200 50  0000 L CNN
+F 1 "10uF" H 1375 1000 50  0000 L CNN
+F 2 "Capacitors_THT:C_Radial_D5_L6_P2.5" H 1388 950 50  0001 C CNN
+F 3 "" H 1350 1100 50  0000 C CNN
+	1    1350 1100
+	1    0    0    -1  
+$EndComp
+Text Label 3350 3450 0    60   ~ 0
+RESET
+Text Label 3350 2500 0    60   ~ 0
+SCK
+Text Label 3350 2400 0    60   ~ 0
+MISO
+Text Label 3350 2300 0    60   ~ 0
+MOSI
+Text Label 2450 5000 0    60   ~ 0
+3V3
+Text Label 3000 5350 0    60   ~ 0
+IRQ
+Text Label 1550 5400 0    60   ~ 0
+CS
+Text Label 1550 5500 0    60   ~ 0
+MOSI
+Text Label 1550 5600 0    60   ~ 0
+MISO
+Text Label 1550 5700 0    60   ~ 0
+SCK
+$Comp
+L CONN_01X01 P2
+U 1 1 58765535
+P 950 5200
+F 0 "P2" H 950 5300 50  0000 C CNN
+F 1 "ANT" H 950 5100 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm" H 950 5200 50  0001 C CNN
+F 3 "" H 950 5200 50  0000 C CNN
+	1    950  5200
+	-1   0    0    1   
+$EndComp
+Text Label 3350 2200 0    60   ~ 0
+CS
+Text Label 1100 2000 0    60   ~ 0
+3V3
+Text Label 1150 4100 0    60   ~ 0
+GND
+Text Label 3350 3800 0    60   ~ 0
+IRQ
+Text Label 5800 5250 0    60   ~ 0
+S7
+Text Label 5800 5350 0    60   ~ 0
+S6
+Text Label 5800 5450 0    60   ~ 0
+S5
+Text Label 5800 5550 0    60   ~ 0
+S4
+Text Label 5800 5650 0    60   ~ 0
+S3
+Text Label 5800 5750 0    60   ~ 0
+S2
+Text Label 5800 5850 0    60   ~ 0
+S1
+Text Label 5800 5950 0    60   ~ 0
+S0
+Wire Wire Line
+	1000 1050 1100 1050
+Wire Wire Line
+	1700 7150 2050 7150
+Wire Wire Line
+	1700 7250 2050 7250
+Wire Wire Line
+	1700 7350 2050 7350
+Wire Wire Line
+	2850 7150 2550 7150
+Wire Wire Line
+	2850 7250 2550 7250
+Wire Wire Line
+	2850 7350 2550 7350
+Wire Wire Line
+	1100 1050 1100 1250
+Wire Wire Line
+	1100 1250 2950 1250
+Wire Wire Line
+	1850 1250 1850 1200
+Connection ~ 1350 1250
+Connection ~ 1850 1250
+Wire Wire Line
+	3300 2300 3600 2300
+Wire Wire Line
+	3300 2400 3600 2400
+Wire Wire Line
+	3300 2500 3600 2500
+Wire Wire Line
+	3300 3450 3600 3450
+Wire Wire Line
+	3300 3800 3600 3800
+Wire Wire Line
+	1800 5400 1450 5400
+Wire Wire Line
+	1450 5500 1800 5500
+Wire Wire Line
+	1450 5600 1800 5600
+Wire Wire Line
+	1450 5700 1800 5700
+Wire Wire Line
+	2250 6200 2250 6300
+Wire Wire Line
+	2250 6300 2700 6300
+Wire Wire Line
+	2450 6200 2450 6300
+Connection ~ 2450 6300
+Wire Wire Line
+	2900 5350 3300 5350
+Wire Wire Line
+	1800 5200 1150 5200
+Wire Wire Line
+	2350 5000 2700 5000
+Wire Wire Line
+	3300 2200 3600 2200
+Wire Wire Line
+	1400 2000 1000 2000
+Wire Wire Line
+	1250 2000 1250 2100
+Wire Wire Line
+	1250 2100 1400 2100
+Connection ~ 1250 2000
+Wire Wire Line
+	1400 4300 1100 4300
+Wire Wire Line
+	1100 4300 1100 4100
+Wire Wire Line
+	1100 4100 1400 4100
+Wire Wire Line
+	1400 4200 1100 4200
+Connection ~ 1100 4200
+Wire Wire Line
+	5650 5250 6000 5250
+Wire Wire Line
+	5650 5350 6000 5350
+Wire Wire Line
+	6000 5450 5650 5450
+Wire Wire Line
+	6000 5550 5650 5550
+Wire Wire Line
+	6000 5650 5650 5650
+Wire Wire Line
+	6000 5750 5650 5750
+Wire Wire Line
+	6000 5850 5650 5850
+Wire Wire Line
+	6000 5950 5650 5950
+Wire Wire Line
+	7350 1050 8000 1050
+Text Label 7550 1050 0    60   ~ 0
+S0
+Wire Wire Line
+	7350 750  8000 750 
+Text Label 7550 750  0    60   ~ 0
+VCC
+Text Label 7550 1650 0    60   ~ 0
+S1
+Text Label 7550 1350 0    60   ~ 0
+VCC
+Text Label 7550 2250 0    60   ~ 0
+S2
+Text Label 7550 1950 0    60   ~ 0
+VCC
+Text Label 7550 2850 0    60   ~ 0
+S3
+Text Label 7550 2550 0    60   ~ 0
+VCC
+Text Label 7550 3450 0    60   ~ 0
+S4
+Text Label 7550 3150 0    60   ~ 0
+VCC
+Text Label 7550 4050 0    60   ~ 0
+S5
+Text Label 7550 3750 0    60   ~ 0
+VCC
+Text Label 7550 4650 0    60   ~ 0
+S6
+Text Label 7550 4350 0    60   ~ 0
+VCC
+Text Label 7550 5250 0    60   ~ 0
+S7
+Text Label 7550 4950 0    60   ~ 0
+VCC
+$Comp
+L D D1
+U 1 1 58768BBC
+P 7350 900
+F 0 "D1" H 7350 1000 50  0000 C CNN
+F 1 "D" H 7350 800 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-123" H 7350 900 50  0001 C CNN
+F 3 "" H 7350 900 50  0000 C CNN
+	1    7350 900 
+	0    1    1    0   
+$EndComp
+$Comp
+L D D2
+U 1 1 58768C8C
+P 7350 1500
+F 0 "D2" H 7350 1600 50  0000 C CNN
+F 1 "D" H 7350 1400 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-123" H 7350 1500 50  0001 C CNN
+F 3 "" H 7350 1500 50  0000 C CNN
+	1    7350 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L D D3
+U 1 1 58768D34
+P 7350 2100
+F 0 "D3" H 7350 2200 50  0000 C CNN
+F 1 "D" H 7350 2000 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-123" H 7350 2100 50  0001 C CNN
+F 3 "" H 7350 2100 50  0000 C CNN
+	1    7350 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L D D4
+U 1 1 58768E5D
+P 7350 2700
+F 0 "D4" H 7350 2800 50  0000 C CNN
+F 1 "D" H 7350 2600 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-123" H 7350 2700 50  0001 C CNN
+F 3 "" H 7350 2700 50  0000 C CNN
+	1    7350 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L D D5
+U 1 1 58768F13
+P 7350 3300
+F 0 "D5" H 7350 3400 50  0000 C CNN
+F 1 "D" H 7350 3200 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-123" H 7350 3300 50  0001 C CNN
+F 3 "" H 7350 3300 50  0000 C CNN
+	1    7350 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L D D6
+U 1 1 5876905D
+P 7350 3900
+F 0 "D6" H 7350 4000 50  0000 C CNN
+F 1 "D" H 7350 3800 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-123" H 7350 3900 50  0001 C CNN
+F 3 "" H 7350 3900 50  0000 C CNN
+	1    7350 3900
+	0    1    1    0   
+$EndComp
+$Comp
+L D D7
+U 1 1 58769113
+P 7350 4500
+F 0 "D7" H 7350 4600 50  0000 C CNN
+F 1 "D" H 7350 4400 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-123" H 7350 4500 50  0001 C CNN
+F 3 "" H 7350 4500 50  0000 C CNN
+	1    7350 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L D D8
+U 1 1 587691CE
+P 7350 5100
+F 0 "D8" H 7350 5200 50  0000 C CNN
+F 1 "D" H 7350 5000 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-123" H 7350 5100 50  0001 C CNN
+F 3 "" H 7350 5100 50  0000 C CNN
+	1    7350 5100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1000 950  1200 950 
+Wire Wire Line
+	1200 950  1200 900 
+Wire Wire Line
+	1200 900  1500 900 
+Wire Wire Line
+	1500 900  1500 950 
+Wire Wire Line
+	1500 950  1550 950 
+Wire Wire Line
+	1350 950  1350 900 
+Connection ~ 1350 900 
+Connection ~ 2400 1250
+Text Label 2700 1250 0    60   ~ 0
+GND
+Wire Wire Line
+	2150 950  2950 950 
+Connection ~ 2400 950 
+Text Label 2550 6300 0    60   ~ 0
+GND
+$Comp
+L CONN_01X03 P4
+U 1 1 5882307D
+P 8900 800
+F 0 "P4" H 8900 1000 50  0000 C CNN
+F 1 "CONN_01X03" V 9000 800 50  0000 C CNN
+F 2 "Connectors:bornier3" H 8900 800 50  0001 C CNN
+F 3 "" H 8900 800 50  0000 C CNN
+	1    8900 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L SRD_Type_C RLY1
+U 1 1 588234F5
+P 8100 850
+F 0 "RLY1" H 8200 1100 60  0000 C CNN
+F 1 "SRD_Type_C" H 8250 550 60  0000 C CNN
+F 2 "MyLibrary:SRD_Relay_TypeC" V 8250 800 60  0001 C CNN
+F 3 "" V 8250 800 60  0000 C CNN
+	1    8100 850 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 750  8000 800 
+Wire Wire Line
+	8000 1050 8000 1000
+Wire Wire Line
+	8450 700  8700 700 
+Wire Wire Line
+	8450 800  8450 900 
+Wire Wire Line
+	8450 900  8700 900 
+Wire Wire Line
+	8450 1000 8600 1000
+Wire Wire Line
+	8600 1000 8600 800 
+Wire Wire Line
+	8600 800  8700 800 
+Wire Wire Line
+	7350 1650 8000 1650
+Wire Wire Line
+	7350 1350 8000 1350
+$Comp
+L CONN_01X03 P5
+U 1 1 58823D2E
+P 8900 1400
+F 0 "P5" H 8900 1600 50  0000 C CNN
+F 1 "CONN_01X03" V 9000 1400 50  0000 C CNN
+F 2 "Connectors:bornier3" H 8900 1400 50  0001 C CNN
+F 3 "" H 8900 1400 50  0000 C CNN
+	1    8900 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L SRD_Type_C RLY2
+U 1 1 58823D34
+P 8100 1450
+F 0 "RLY2" H 8200 1700 60  0000 C CNN
+F 1 "SRD_Type_C" H 8250 1150 60  0000 C CNN
+F 2 "MyLibrary:SRD_Relay_TypeC" V 8250 1400 60  0001 C CNN
+F 3 "" V 8250 1400 60  0000 C CNN
+	1    8100 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 1350 8000 1400
+Wire Wire Line
+	8000 1650 8000 1600
+Wire Wire Line
+	8450 1300 8700 1300
+Wire Wire Line
+	8450 1400 8450 1500
+Wire Wire Line
+	8450 1500 8700 1500
+Wire Wire Line
+	8450 1600 8600 1600
+Wire Wire Line
+	8600 1600 8600 1400
+Wire Wire Line
+	8600 1400 8700 1400
+Wire Wire Line
+	7350 2250 8000 2250
+Wire Wire Line
+	7350 1950 8000 1950
+$Comp
+L CONN_01X03 P6
+U 1 1 58823E5A
+P 8900 2000
+F 0 "P6" H 8900 2200 50  0000 C CNN
+F 1 "CONN_01X03" V 9000 2000 50  0000 C CNN
+F 2 "Connectors:bornier3" H 8900 2000 50  0001 C CNN
+F 3 "" H 8900 2000 50  0000 C CNN
+	1    8900 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L SRD_Type_C RLY3
+U 1 1 58823E60
+P 8100 2050
+F 0 "RLY3" H 8200 2300 60  0000 C CNN
+F 1 "SRD_Type_C" H 8250 1750 60  0000 C CNN
+F 2 "MyLibrary:SRD_Relay_TypeC" V 8250 2000 60  0001 C CNN
+F 3 "" V 8250 2000 60  0000 C CNN
+	1    8100 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 1950 8000 2000
+Wire Wire Line
+	8000 2250 8000 2200
+Wire Wire Line
+	8450 1900 8700 1900
+Wire Wire Line
+	8450 2000 8450 2100
+Wire Wire Line
+	8450 2100 8700 2100
+Wire Wire Line
+	8450 2200 8600 2200
+Wire Wire Line
+	8600 2200 8600 2000
+Wire Wire Line
+	8600 2000 8700 2000
+Wire Wire Line
+	7350 2850 8000 2850
+Wire Wire Line
+	7350 2550 8000 2550
+$Comp
+L CONN_01X03 P7
+U 1 1 58823E70
+P 8900 2600
+F 0 "P7" H 8900 2800 50  0000 C CNN
+F 1 "CONN_01X03" V 9000 2600 50  0000 C CNN
+F 2 "Connectors:bornier3" H 8900 2600 50  0001 C CNN
+F 3 "" H 8900 2600 50  0000 C CNN
+	1    8900 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L SRD_Type_C RLY4
+U 1 1 58823E76
+P 8100 2650
+F 0 "RLY4" H 8200 2900 60  0000 C CNN
+F 1 "SRD_Type_C" H 8250 2350 60  0000 C CNN
+F 2 "MyLibrary:SRD_Relay_TypeC" V 8250 2600 60  0001 C CNN
+F 3 "" V 8250 2600 60  0000 C CNN
+	1    8100 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 2550 8000 2600
+Wire Wire Line
+	8000 2850 8000 2800
+Wire Wire Line
+	8450 2500 8700 2500
+Wire Wire Line
+	8450 2600 8450 2700
+Wire Wire Line
+	8450 2700 8700 2700
+Wire Wire Line
+	8450 2800 8600 2800
+Wire Wire Line
+	8600 2800 8600 2600
+Wire Wire Line
+	8600 2600 8700 2600
+Wire Wire Line
+	7350 3450 8000 3450
+Wire Wire Line
+	7350 3150 8000 3150
+$Comp
+L CONN_01X03 P8
+U 1 1 58824132
+P 8900 3200
+F 0 "P8" H 8900 3400 50  0000 C CNN
+F 1 "CONN_01X03" V 9000 3200 50  0000 C CNN
+F 2 "Connectors:bornier3" H 8900 3200 50  0001 C CNN
+F 3 "" H 8900 3200 50  0000 C CNN
+	1    8900 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L SRD_Type_C RLY5
+U 1 1 58824138
+P 8100 3250
+F 0 "RLY5" H 8200 3500 60  0000 C CNN
+F 1 "SRD_Type_C" H 8250 2950 60  0000 C CNN
+F 2 "MyLibrary:SRD_Relay_TypeC" V 8250 3200 60  0001 C CNN
+F 3 "" V 8250 3200 60  0000 C CNN
+	1    8100 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 3150 8000 3200
+Wire Wire Line
+	8000 3450 8000 3400
+Wire Wire Line
+	8450 3100 8700 3100
+Wire Wire Line
+	8450 3200 8450 3300
+Wire Wire Line
+	8450 3300 8700 3300
+Wire Wire Line
+	8450 3400 8600 3400
+Wire Wire Line
+	8600 3400 8600 3200
+Wire Wire Line
+	8600 3200 8700 3200
+Wire Wire Line
+	7350 4050 8000 4050
+Wire Wire Line
+	7350 3750 8000 3750
+$Comp
+L CONN_01X03 P9
+U 1 1 58824148
+P 8900 3800
+F 0 "P9" H 8900 4000 50  0000 C CNN
+F 1 "CONN_01X03" V 9000 3800 50  0000 C CNN
+F 2 "Connectors:bornier3" H 8900 3800 50  0001 C CNN
+F 3 "" H 8900 3800 50  0000 C CNN
+	1    8900 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L SRD_Type_C RLY6
+U 1 1 5882414E
+P 8100 3850
+F 0 "RLY6" H 8200 4100 60  0000 C CNN
+F 1 "SRD_Type_C" H 8250 3550 60  0000 C CNN
+F 2 "MyLibrary:SRD_Relay_TypeC" V 8250 3800 60  0001 C CNN
+F 3 "" V 8250 3800 60  0000 C CNN
+	1    8100 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 3750 8000 3800
+Wire Wire Line
+	8000 4050 8000 4000
+Wire Wire Line
+	8450 3700 8700 3700
+Wire Wire Line
+	8450 3800 8450 3900
+Wire Wire Line
+	8450 3900 8700 3900
+Wire Wire Line
+	8450 4000 8600 4000
+Wire Wire Line
+	8600 4000 8600 3800
+Wire Wire Line
+	8600 3800 8700 3800
+Wire Wire Line
+	7350 4650 8000 4650
+Wire Wire Line
+	7350 4350 8000 4350
+$Comp
+L CONN_01X03 P10
+U 1 1 5882415E
+P 8900 4400
+F 0 "P10" H 8900 4600 50  0000 C CNN
+F 1 "CONN_01X03" V 9000 4400 50  0000 C CNN
+F 2 "Connectors:bornier3" H 8900 4400 50  0001 C CNN
+F 3 "" H 8900 4400 50  0000 C CNN
+	1    8900 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L SRD_Type_C RLY7
+U 1 1 58824164
+P 8100 4450
+F 0 "RLY7" H 8200 4700 60  0000 C CNN
+F 1 "SRD_Type_C" H 8250 4150 60  0000 C CNN
+F 2 "MyLibrary:SRD_Relay_TypeC" V 8250 4400 60  0001 C CNN
+F 3 "" V 8250 4400 60  0000 C CNN
+	1    8100 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 4350 8000 4400
+Wire Wire Line
+	8000 4650 8000 4600
+Wire Wire Line
+	8450 4300 8700 4300
+Wire Wire Line
+	8450 4400 8450 4500
+Wire Wire Line
+	8450 4500 8700 4500
+Wire Wire Line
+	8450 4600 8600 4600
+Wire Wire Line
+	8600 4600 8600 4400
+Wire Wire Line
+	8600 4400 8700 4400
+Wire Wire Line
+	7350 5250 8000 5250
+Wire Wire Line
+	7350 4950 8000 4950
+$Comp
+L CONN_01X03 P11
+U 1 1 58824174
+P 8900 5000
+F 0 "P11" H 8900 5200 50  0000 C CNN
+F 1 "CONN_01X03" V 9000 5000 50  0000 C CNN
+F 2 "Connectors:bornier3" H 8900 5000 50  0001 C CNN
+F 3 "" H 8900 5000 50  0000 C CNN
+	1    8900 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L SRD_Type_C RLY8
+U 1 1 5882417A
+P 8100 5050
+F 0 "RLY8" H 8200 5300 60  0000 C CNN
+F 1 "SRD_Type_C" H 8250 4750 60  0000 C CNN
+F 2 "MyLibrary:SRD_Relay_TypeC" V 8250 5000 60  0001 C CNN
+F 3 "" V 8250 5000 60  0000 C CNN
+	1    8100 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 4950 8000 5000
+Wire Wire Line
+	8000 5250 8000 5200
+Wire Wire Line
+	8450 4900 8700 4900
+Wire Wire Line
+	8450 5000 8450 5100
+Wire Wire Line
+	8450 5100 8700 5100
+Wire Wire Line
+	8450 5200 8600 5200
+Wire Wire Line
+	8600 5200 8600 5000
+Wire Wire Line
+	8600 5000 8700 5000
+$Comp
+L ULN2803A IC2
+U 1 1 58823265
+P 5150 5650
+F 0 "IC2" H 4850 6180 50  0000 L BNN
+F 1 "ULN2803A" H 4850 5050 50  0000 L BNN
+F 2 "Housings_SOIC:SOIC-18W_7.5x11.6mm_Pitch1.27mm" H 5150 5800 50  0001 C CNN
+F 3 "" H 5150 5650 60  0001 C CNN
+	1    5150 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 6050 4300 6050
+Text Label 4350 6050 0    60   ~ 0
+GND
+Wire Wire Line
+	4300 5950 4650 5950
+Wire Wire Line
+	4300 5850 4650 5850
+Wire Wire Line
+	4300 5750 4650 5750
+Wire Wire Line
+	4300 5650 4650 5650
+Wire Wire Line
+	4300 5550 4650 5550
+Wire Wire Line
+	4300 5450 4650 5450
+Wire Wire Line
+	4300 5350 4650 5350
+Wire Wire Line
+	4300 5250 4650 5250
+Text Label 4350 5250 0    60   ~ 0
+SL7
+Text Label 4350 5350 0    60   ~ 0
+SL6
+Text Label 4350 5450 0    60   ~ 0
+SL5
+Text Label 4350 5550 0    60   ~ 0
+SL4
+Text Label 4350 5650 0    60   ~ 0
+SL3
+Text Label 4350 5750 0    60   ~ 0
+SL2
+Text Label 4350 5850 0    60   ~ 0
+SL1
+Text Label 4350 5950 0    60   ~ 0
+SL0
+Wire Wire Line
+	3600 2850 3300 2850
+Wire Wire Line
+	3600 2950 3300 2950
+Wire Wire Line
+	3600 3050 3300 3050
+Wire Wire Line
+	3600 3150 3300 3150
+Wire Wire Line
+	3600 3250 3300 3250
+Wire Wire Line
+	3600 3350 3300 3350
+Wire Wire Line
+	3600 3600 3300 3600
+Wire Wire Line
+	3600 3700 3300 3700
+Text Label 3400 2850 0    60   ~ 0
+SL7
+Text Label 3400 2950 0    60   ~ 0
+SL6
+Text Label 3400 3050 0    60   ~ 0
+SL5
+Text Label 3400 3150 0    60   ~ 0
+SL4
+Text Label 3400 3250 0    60   ~ 0
+SL3
+Text Label 3400 3350 0    60   ~ 0
+SL2
+Text Label 3400 3600 0    60   ~ 0
+SL1
+Text Label 3400 3700 0    60   ~ 0
+SL0
+$EndSCHEMATC
