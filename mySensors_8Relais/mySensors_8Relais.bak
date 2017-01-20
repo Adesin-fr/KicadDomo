@@ -28,13 +28,10 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:mysensors_radios
-LIBS:mysensors_regulators
-LIBS:myLibrary
 LIBS:relay_spdt
 LIBS:uln-udn
 LIBS:mySensors_8Relais-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -65,7 +62,7 @@ U 1 1 587646FD
 P 2350 5350
 F 0 "U2" H 2000 5600 40  0000 C CNN
 F 1 "RFM69HW" H 2600 4600 40  0000 C CNN
-F 2 "Mysensors_Radio:RFM69HW_SMD_Handsoldering" H 2350 5350 30  0001 C CIN
+F 2 "mysensors-radio:RFM69HW_SMD_Handsoldering" H 2350 5350 30  0001 C CIN
 F 3 "" H 2350 5350 60  0000 C CNN
 	1    2350 5350
 	1    0    0    -1  
@@ -181,21 +178,21 @@ GND
 Text Label 3350 3800 0    60   ~ 0
 IRQ
 Text Label 5800 5250 0    60   ~ 0
-S7
-Text Label 5800 5350 0    60   ~ 0
-S6
-Text Label 5800 5450 0    60   ~ 0
-S5
-Text Label 5800 5550 0    60   ~ 0
-S4
-Text Label 5800 5650 0    60   ~ 0
-S3
-Text Label 5800 5750 0    60   ~ 0
-S2
-Text Label 5800 5850 0    60   ~ 0
-S1
-Text Label 5800 5950 0    60   ~ 0
 S0
+Text Label 5800 5350 0    60   ~ 0
+S1
+Text Label 5800 5450 0    60   ~ 0
+S2
+Text Label 5800 5550 0    60   ~ 0
+S3
+Text Label 5800 5650 0    60   ~ 0
+S4
+Text Label 5800 5750 0    60   ~ 0
+S5
+Text Label 5800 5850 0    60   ~ 0
+S6
+Text Label 5800 5950 0    60   ~ 0
+S7
 Wire Wire Line
 	1000 1050 1100 1050
 Wire Wire Line
@@ -761,12 +758,12 @@ Wire Wire Line
 Wire Wire Line
 	8600 5000 8700 5000
 $Comp
-L ULN2803A IC?
+L ULN2803A IC2
 U 1 1 58823265
 P 5150 5650
-F 0 "IC?" H 4850 6180 50  0000 L BNN
+F 0 "IC2" H 4850 6180 50  0000 L BNN
 F 1 "ULN2803A" H 4850 5050 50  0000 L BNN
-F 2 "uln-udn-DIL18" H 5150 5800 50  0001 C CNN
+F 2 "Housings_SOIC:SOIC-18W_7.5x11.6mm_Pitch1.27mm" H 5150 5800 50  0001 C CNN
 F 3 "" H 5150 5650 60  0001 C CNN
 	1    5150 5650
 	1    0    0    -1  
@@ -792,21 +789,21 @@ Wire Wire Line
 Wire Wire Line
 	4300 5250 4650 5250
 Text Label 4350 5250 0    60   ~ 0
-SL7
-Text Label 4350 5350 0    60   ~ 0
-SL6
-Text Label 4350 5450 0    60   ~ 0
-SL5
-Text Label 4350 5550 0    60   ~ 0
-SL4
-Text Label 4350 5650 0    60   ~ 0
-SL3
-Text Label 4350 5750 0    60   ~ 0
-SL2
-Text Label 4350 5850 0    60   ~ 0
-SL1
-Text Label 4350 5950 0    60   ~ 0
 SL0
+Text Label 4350 5350 0    60   ~ 0
+SL1
+Text Label 4350 5450 0    60   ~ 0
+SL2
+Text Label 4350 5550 0    60   ~ 0
+SL3
+Text Label 4350 5650 0    60   ~ 0
+SL4
+Text Label 4350 5750 0    60   ~ 0
+SL5
+Text Label 4350 5850 0    60   ~ 0
+SL6
+Text Label 4350 5950 0    60   ~ 0
+SL7
 Wire Wire Line
 	3600 2850 3300 2850
 Wire Wire Line

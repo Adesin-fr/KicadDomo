@@ -28,13 +28,10 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:mysensors_radios
-LIBS:mysensors_regulators
-LIBS:myLibrary
 LIBS:relay_spdt
 LIBS:uln-udn
 LIBS:mySensors_8Relais-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -65,7 +62,7 @@ U 1 1 587646FD
 P 2350 5350
 F 0 "U2" H 2000 5600 40  0000 C CNN
 F 1 "RFM69HW" H 2600 4600 40  0000 C CNN
-F 2 "Mysensors_Radio:RFM69HW_SMD_Handsoldering" H 2350 5350 30  0001 C CIN
+F 2 "mysensors-radio:RFM69HW_SMD_Handsoldering" H 2350 5350 30  0001 C CIN
 F 3 "" H 2350 5350 60  0000 C CNN
 	1    2350 5350
 	1    0    0    -1  
@@ -181,21 +178,21 @@ GND
 Text Label 3350 3800 0    60   ~ 0
 IRQ
 Text Label 5800 5250 0    60   ~ 0
-S7
-Text Label 5800 5350 0    60   ~ 0
-S6
-Text Label 5800 5450 0    60   ~ 0
-S5
-Text Label 5800 5550 0    60   ~ 0
-S4
-Text Label 5800 5650 0    60   ~ 0
-S3
-Text Label 5800 5750 0    60   ~ 0
-S2
-Text Label 5800 5850 0    60   ~ 0
-S1
-Text Label 5800 5950 0    60   ~ 0
 S0
+Text Label 5800 5350 0    60   ~ 0
+S1
+Text Label 5800 5450 0    60   ~ 0
+S2
+Text Label 5800 5550 0    60   ~ 0
+S3
+Text Label 5800 5650 0    60   ~ 0
+S4
+Text Label 5800 5750 0    60   ~ 0
+S5
+Text Label 5800 5850 0    60   ~ 0
+S6
+Text Label 5800 5950 0    60   ~ 0
+S7
 Wire Wire Line
 	1000 1050 1100 1050
 Wire Wire Line
@@ -437,7 +434,7 @@ F 1 "CONN_01X03" V 9000 800 50  0000 C CNN
 F 2 "Connectors:bornier3" H 8900 800 50  0001 C CNN
 F 3 "" H 8900 800 50  0000 C CNN
 	1    8900 800 
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L SRD_Type_C RLY1
@@ -479,7 +476,7 @@ F 1 "CONN_01X03" V 9000 1400 50  0000 C CNN
 F 2 "Connectors:bornier3" H 8900 1400 50  0001 C CNN
 F 3 "" H 8900 1400 50  0000 C CNN
 	1    8900 1400
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L SRD_Type_C RLY2
@@ -521,7 +518,7 @@ F 1 "CONN_01X03" V 9000 2000 50  0000 C CNN
 F 2 "Connectors:bornier3" H 8900 2000 50  0001 C CNN
 F 3 "" H 8900 2000 50  0000 C CNN
 	1    8900 2000
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L SRD_Type_C RLY3
@@ -563,7 +560,7 @@ F 1 "CONN_01X03" V 9000 2600 50  0000 C CNN
 F 2 "Connectors:bornier3" H 8900 2600 50  0001 C CNN
 F 3 "" H 8900 2600 50  0000 C CNN
 	1    8900 2600
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L SRD_Type_C RLY4
@@ -605,7 +602,7 @@ F 1 "CONN_01X03" V 9000 3200 50  0000 C CNN
 F 2 "Connectors:bornier3" H 8900 3200 50  0001 C CNN
 F 3 "" H 8900 3200 50  0000 C CNN
 	1    8900 3200
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L SRD_Type_C RLY5
@@ -647,7 +644,7 @@ F 1 "CONN_01X03" V 9000 3800 50  0000 C CNN
 F 2 "Connectors:bornier3" H 8900 3800 50  0001 C CNN
 F 3 "" H 8900 3800 50  0000 C CNN
 	1    8900 3800
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L SRD_Type_C RLY6
@@ -689,7 +686,7 @@ F 1 "CONN_01X03" V 9000 4400 50  0000 C CNN
 F 2 "Connectors:bornier3" H 8900 4400 50  0001 C CNN
 F 3 "" H 8900 4400 50  0000 C CNN
 	1    8900 4400
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L SRD_Type_C RLY7
@@ -731,7 +728,7 @@ F 1 "CONN_01X03" V 9000 5000 50  0000 C CNN
 F 2 "Connectors:bornier3" H 8900 5000 50  0001 C CNN
 F 3 "" H 8900 5000 50  0000 C CNN
 	1    8900 5000
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L SRD_Type_C RLY8
@@ -792,21 +789,21 @@ Wire Wire Line
 Wire Wire Line
 	4300 5250 4650 5250
 Text Label 4350 5250 0    60   ~ 0
-SL7
-Text Label 4350 5350 0    60   ~ 0
-SL6
-Text Label 4350 5450 0    60   ~ 0
-SL5
-Text Label 4350 5550 0    60   ~ 0
-SL4
-Text Label 4350 5650 0    60   ~ 0
-SL3
-Text Label 4350 5750 0    60   ~ 0
-SL2
-Text Label 4350 5850 0    60   ~ 0
-SL1
-Text Label 4350 5950 0    60   ~ 0
 SL0
+Text Label 4350 5350 0    60   ~ 0
+SL1
+Text Label 4350 5450 0    60   ~ 0
+SL2
+Text Label 4350 5550 0    60   ~ 0
+SL3
+Text Label 4350 5650 0    60   ~ 0
+SL4
+Text Label 4350 5750 0    60   ~ 0
+SL5
+Text Label 4350 5850 0    60   ~ 0
+SL6
+Text Label 4350 5950 0    60   ~ 0
+SL7
 Wire Wire Line
 	3600 2850 3300 2850
 Wire Wire Line
