@@ -434,7 +434,7 @@ F 1 "CONN_01X03" V 9000 800 50  0000 C CNN
 F 2 "Connectors:bornier3" H 8900 800 50  0001 C CNN
 F 3 "" H 8900 800 50  0000 C CNN
 	1    8900 800 
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L SRD_Type_C RLY1
@@ -476,7 +476,7 @@ F 1 "CONN_01X03" V 9000 1400 50  0000 C CNN
 F 2 "Connectors:bornier3" H 8900 1400 50  0001 C CNN
 F 3 "" H 8900 1400 50  0000 C CNN
 	1    8900 1400
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L SRD_Type_C RLY2
@@ -518,7 +518,7 @@ F 1 "CONN_01X03" V 9000 2000 50  0000 C CNN
 F 2 "Connectors:bornier3" H 8900 2000 50  0001 C CNN
 F 3 "" H 8900 2000 50  0000 C CNN
 	1    8900 2000
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L SRD_Type_C RLY3
@@ -560,7 +560,7 @@ F 1 "CONN_01X03" V 9000 2600 50  0000 C CNN
 F 2 "Connectors:bornier3" H 8900 2600 50  0001 C CNN
 F 3 "" H 8900 2600 50  0000 C CNN
 	1    8900 2600
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L SRD_Type_C RLY4
@@ -602,7 +602,7 @@ F 1 "CONN_01X03" V 9000 3200 50  0000 C CNN
 F 2 "Connectors:bornier3" H 8900 3200 50  0001 C CNN
 F 3 "" H 8900 3200 50  0000 C CNN
 	1    8900 3200
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L SRD_Type_C RLY5
@@ -644,7 +644,7 @@ F 1 "CONN_01X03" V 9000 3800 50  0000 C CNN
 F 2 "Connectors:bornier3" H 8900 3800 50  0001 C CNN
 F 3 "" H 8900 3800 50  0000 C CNN
 	1    8900 3800
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L SRD_Type_C RLY6
@@ -686,7 +686,7 @@ F 1 "CONN_01X03" V 9000 4400 50  0000 C CNN
 F 2 "Connectors:bornier3" H 8900 4400 50  0001 C CNN
 F 3 "" H 8900 4400 50  0000 C CNN
 	1    8900 4400
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L SRD_Type_C RLY7
@@ -728,7 +728,7 @@ F 1 "CONN_01X03" V 9000 5000 50  0000 C CNN
 F 2 "Connectors:bornier3" H 8900 5000 50  0001 C CNN
 F 3 "" H 8900 5000 50  0000 C CNN
 	1    8900 5000
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L SRD_Type_C RLY8
