@@ -28,11 +28,8 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:mysensors_radios
-LIBS:mysensors_regulators
-LIBS:myLibrary
-LIBS:mySensors_16Outputs-cache
-EELAYER 25 0
+LIBS:mySensors_8RelaisReed-cache
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -297,7 +294,7 @@ Wire Wire Line
 Wire Wire Line
 	2350 5000 2700 5000
 Wire Wire Line
-	3300 2200 3600 2200
+	3300 2200 3750 2200
 Wire Wire Line
 	1400 2000 1000 2000
 Wire Wire Line
@@ -705,4 +702,23 @@ Wire Wire Line
 Connection ~ 2400 950 
 Text Label 2550 6300 0    60   ~ 0
 GND
+$Comp
+L R R9
+U 1 1 58B2DB4E
+P 3750 2000
+F 0 "R9" H 3820 2046 50  0000 L CNN
+F 1 "10k" H 3820 1955 50  0000 L CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V -120 50  50  0001 C CNN
+F 3 "" H -50 50  50  0001 C CNN
+	1    3750 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 2200 3750 2150
+Wire Wire Line
+	3750 1850 3750 1800
+Wire Wire Line
+	3750 1800 4000 1800
+Text Label 3800 1800 0    60   ~ 0
+3V3
 $EndSCHEMATC

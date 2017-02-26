@@ -1,11 +1,11 @@
-G04 #@! TF.GenerationSoftware,KiCad,Pcbnew,no-vcs-found-7500~57~ubuntu16.04.1*
-G04 #@! TF.CreationDate,2017-01-25T22:27:02+01:00*
+G04 #@! TF.GenerationSoftware,KiCad,Pcbnew,no-vcs-found-7560~57~ubuntu16.04.1*
+G04 #@! TF.CreationDate,2017-02-05T10:32:15+01:00*
 G04 #@! TF.ProjectId,MultiUse_Battery_RFM69HCW,4D756C74695573655F42617474657279,rev?*
 G04 #@! TF.FileFunction,Soldermask,Top*
 G04 #@! TF.FilePolarity,Negative*
 %FSLAX46Y46*%
 G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
-G04 Created by KiCad (PCBNEW no-vcs-found-7500~57~ubuntu16.04.1) date Wed Jan 25 22:27:02 2017*
+G04 Created by KiCad (PCBNEW no-vcs-found-7560~57~ubuntu16.04.1) date Sun Feb  5 10:32:15 2017*
 %MOMM*%
 %LPD*%
 G01*
