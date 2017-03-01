@@ -114,6 +114,8 @@ void loop() {
 	float lectureMV = value * VRef /1023;
 
 	Temp = ((lectureMV) - 1569) / -8.2;
+	// LMT86 :
+	// Temp = ((lectureMV) - 2103) / -10.9;
 
  	send(msg.set(Temp,1));
 
