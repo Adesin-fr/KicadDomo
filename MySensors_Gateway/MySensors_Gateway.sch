@@ -166,7 +166,7 @@ $EndComp
 Text Label 7600 4050 0    60   ~ 0
 3V3
 Text Label 8100 4500 0    60   ~ 0
-IRQ3
+IRQ
 Text Label 7800 5450 0    60   ~ 0
 GND
 $Comp
@@ -399,14 +399,6 @@ Text Label 6450 2900 0    60   ~ 0
 MISO3
 Text Label 3450 1050 0    60   ~ 0
 VCC
-Wire Wire Line
-	6900 3000 6400 3000
-Text Label 6450 3000 0    60   ~ 0
-IRQ3
-Wire Wire Line
-	8300 3000 8700 3000
-Text Label 8400 3000 0    60   ~ 0
-IRQ
 Wire Wire Line
 	6900 3500 6400 3500
 Text Label 6450 3500 0    60   ~ 0

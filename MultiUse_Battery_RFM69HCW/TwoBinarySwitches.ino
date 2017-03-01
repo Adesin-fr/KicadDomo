@@ -1,4 +1,6 @@
 /**
+ *  TODO : Handle short press / Long press / long press release (3 child per button ?)
+ *		 : Handle direct actions to other node (reading config. in EEPROM)
  *	http://www.gammon.com.au/forum/?id=11497
  *  Pins : PC0 /PC1
 
@@ -30,6 +32,8 @@
 */
 
 #define MY_RADIO_RFM69
+#define MY_IS_RFM69HW
+#define MY_RFM69_FREQUENCY RF69_868MHZ
 
 #include <SPI.h>
 #include <MySensors.h>
@@ -38,8 +42,8 @@
 #define SKETCH_MAJOR_VER "1"
 #define SKETCH_MINOR_VER "0"
 
-#define PRIMARY_BUTTON_PIN PC0
-#define PRIMARY_BUTTON_PIN PC1
+#define PRIMARY_BUTTON_PIN		A0
+#define SECONDARY_BUTTON_PIN 	A1
 #define PRIMARY_CHILD_ID	1
 #define SECONDARY_CHILD_ID	2
 
@@ -50,6 +54,11 @@ MyMessage msg2(SECONDARY_CHILD_ID, V_TRIPPED);
 int sentValue=2;
 int sentValue2=2;
 int lastPctBattery=0;
+
+
+ISR (PCINT1_vect){
+	PCICR = 0;  // cancel pin change interrupts
+} // end of ISR (PCINT1_vect)
 
 
 void setup(){
@@ -87,8 +96,8 @@ void Dormir(){
 
 	power_all_disable ();  // turn off various modules
 
-	PCIFR  |= bit (PCIF0) | bit (PCIF1) | bit (PCIF2);   // clear any outstanding interrupts
-	PCICR  |= bit (PCIE0) | bit (PCIE1) | bit (PCIE2);   // enable pin change interrupts
+	PCIFR  |= bit bit (PCIF1);   // clear any outstanding interrupts (Need only PCIF1)
+	PCICR  |= bit (PCIE1);   // enable pin change interrupts (Need only PICE1)
 
 	// turn off brown-out enable in software
 	MCUCR = bit (BODS) | bit (BODSE);
@@ -121,7 +130,6 @@ int PctBattery(){
 	while(ADCSRA & (1 << ADSC));
 
 	/* Récupère le résultat de la conversion */
-
 	float tension_alim = (1023 * 1.1) / (ADCL | (ADCH << 8));
 
 	return map(constrain(tension_alim,2,3), 2, 3, 0, 100);
@@ -135,6 +143,9 @@ void loop() {
 
 	// Sleep until key change.
 	Dormir();
+
+	// Be sure that we does'nt go back to interrupt when we are awake.
+	noInterrupts ();
 
 	delay(50);	// To debounce
 
@@ -160,5 +171,7 @@ void loop() {
 		sendBatteryLevel(pctBat);
 		lastPctBattery = pctBat;
 	}
+	// Now we can set interrupts ON again.
+	interrupts();
 
 }
