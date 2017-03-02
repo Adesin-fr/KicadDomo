@@ -1,11 +1,12 @@
 /**
  *  LMT85 sensor on S0 (AD1 input)
  *  LMT85 power supply on S1 (AD0 output)
- *	http://www.gammon.com.au/forum/?id=11497
  *  Pins : PC0 /PC1
 
-	LMT85 : Temp = ((lecture mv) - 1569) / -8.2
-
+	// LMT85
+	//Temp = ((lectureMV) - 1569) / -8.2;
+	// LMT86 :
+	 Temp = ((lectureMV) - 2103) / -10.9;
 */
 
 #define MY_RADIO_RFM69
@@ -15,12 +16,12 @@
 #include <SPI.h>
 #include <MySensors.h>
 
-#define SKETCH_NAME "TMP35 Sensor"
+#define SKETCH_NAME "LMT85 Temp. Sensor"
 #define SKETCH_MAJOR_VER "1"
 #define SKETCH_MINOR_VER "0"
 
-#define POWER_OUT			A0
-#define TMP_IN			 	A1
+#define POWER_OUT			A1
+#define TMP_IN			 	A0
 #define PRIMARY_CHILD_ID	1
 #define SLEEP_TIME 			300000	 // Sleep time between reads (in milliseconds) = 5 minutes
 
@@ -41,8 +42,8 @@ void setup(){
 void presentation() {
 	// Send the sketch version information to the gateway and Controller
 	sendSketchInfo(SKETCH_NAME, SKETCH_MAJOR_VER "." SKETCH_MINOR_VER);
-
 	present(PRIMARY_CHILD_ID, S_TEMP);
+
 }
 
 
@@ -64,35 +65,33 @@ void Dormir(){
 }
 
 
-float VBattery(){
+long VBattery(){
 	/* Elimine toutes charges résiduelles */
-	ADMUX = 0x4F;
-	delayMicroseconds(5);
+	ADMUX = (_BV(REFS0) | _BV(MUX3) | _BV(MUX2) | _BV(MUX1) );
+	delayMicroseconds(350);
 
 	/* Sélectionne la référence interne à 1.1 volts comme point de mesure, avec comme limite haute VCC */
 	ADMUX = 0x4E;
 	delayMicroseconds(200);
 
 	/* Active le convertisseur analogique -> numérique */
-	ADCSRA |= (1 << ADEN);
-
-	/* Lance une conversion analogique -> numérique */
-	ADCSRA |= (1 << ADSC);
+	ADCSRA |= _BV(ADSC);
 
 	/* Attend la fin de la conversion */
-	while(ADCSRA & (1 << ADSC));
+	while(bit_is_set(ADCSRA, ADSC));
 
 	/* Récupère le résultat de la conversion */
-	float tension_alim = (1023 * 1.1) / (ADCL | (ADCH << 8));
+	long vcc = 1125300L / ADC;
 
+	return vcc;
 }
 
 // Loop will iterate on changes on the BUTTON_PINs
 void loop() {
 
-	long Temp;
-	float VRef = VBattery();
-	int pctBat 	= map(constrain(VRef,2,3), 2, 3, 0, 100);;
+	float Temp;
+	long VRef = VBattery();
+	int pctBat 	= map(constrain(VRef, 2000, 3000), 2000, 3000, 0, 100);;
 
 	// Send Battery PCT if changed :
 	if (lastPctBattery != pctBat){
@@ -102,22 +101,27 @@ void loop() {
 
 	// Power ON sensor :
 	digitalWrite(POWER_OUT, HIGH);
+
+	// Tension de reference = AVCC
+	ADMUX |= (1 >> REFS0);
 	delay(2);	// Wait 2ms that sensor gets ready
 
 	// Do analog conversion :
-	value = analogRead(TMP_IN);
+	long value = analogRead(TMP_IN);
 
 	// Power OFF sensor, not needed anymore !
 	digitalWrite(POWER_OUT, LOW);
 
 
-	float lectureMV = value * VRef /1023;
+	long lectureMV = (value * VRef) / 1023;
 
-	Temp = ((lectureMV) - 1569) / -8.2;
+	// LMT85
+	//Temp = ((lectureMV) - 1569) / -8.2;
 	// LMT86 :
-	// Temp = ((lectureMV) - 2103) / -10.9;
+	 Temp = ((lectureMV) - 2103) / -10.9;
 
- 	send(msg.set(Temp,1));
+ 	send(msg.set(Temp,2));
+	float Vcc = VRef / 1000.0;
 
 
 	// Sleep until key change.
