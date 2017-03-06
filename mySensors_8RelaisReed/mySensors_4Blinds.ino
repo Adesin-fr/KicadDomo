@@ -69,7 +69,7 @@ void StopBlind(int i){
 void SetNewPos(int i, int pos){
 	// Sets the [i] blind to [pos] percent.
 
-	// Do not set invalid positions !
+	// Do not set invalid positions ! 	
 	if (pos>100 && pos <0){
 		return;
 	}

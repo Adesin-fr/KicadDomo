@@ -4,40 +4,12 @@
  *	http://www.gammon.com.au/forum/?id=11497
  *  Pins : PC0 /PC1
 
-
-	Pin change interrupts.
-
-	Pin                  Mask / Flag / Enable
-
-	D0	  PCINT16 (PCMSK2 / PCIF2 / PCIE2)
-	D1	  PCINT17 (PCMSK2 / PCIF2 / PCIE2)
-	D2	  PCINT18 (PCMSK2 / PCIF2 / PCIE2)
-	D3	  PCINT19 (PCMSK2 / PCIF2 / PCIE2)
-	D4	  PCINT20 (PCMSK2 / PCIF2 / PCIE2)
-	D5	  PCINT21 (PCMSK2 / PCIF2 / PCIE2)
-	D6	  PCINT22 (PCMSK2 / PCIF2 / PCIE2)
-	D7	  PCINT23 (PCMSK2 / PCIF2 / PCIE2)
-	D8	  PCINT0 (PCMSK0 / PCIF0 / PCIE0)
-	D9	  PCINT1 (PCMSK0 / PCIF0 / PCIE0)
-	D10	  PCINT2 (PCMSK0 / PCIF0 / PCIE0)
-	D11	  PCINT3 (PCMSK0 / PCIF0 / PCIE0)
-	D12	  PCINT4 (PCMSK0 / PCIF0 / PCIE0)
-	D13	  PCINT5 (PCMSK0 / PCIF0 / PCIE0)
-	A0	  PCINT8 (PCMSK1 / PCIF1 / PCIE1)
-	A1	  PCINT9 (PCMSK1 / PCIF1 / PCIE1)
-	A2	  PCINT10 (PCMSK1 / PCIF1 / PCIE1)
-	A3	  PCINT11 (PCMSK1 / PCIF1 / PCIE1)
-	A4	  PCINT12 (PCMSK1 / PCIF1 / PCIE1)
-	A5	  PCINT13 (PCMSK1 / PCIF1 / PCIE1)
+	avrdude  -c usbasp -p m328p -U lfuse:w:0xE2:m -U hfuse:w:0xDA:m -U efuse:w:0xFF:m
 */
 
 #define MY_RADIO_RFM69
 #define MY_IS_RFM69HW
 #define MY_RFM69_FREQUENCY RF69_868MHZ
-#define RFM69_ENABLE_ENCRYPTION
-// La cle de cryptage doit faire exactement 16 octets
-#define RFM69_ENCRYPTKEY    "Crypt_My_Home_17"
-
 
 #include <SPI.h>
 #include <MySensors.h>
@@ -71,10 +43,6 @@ void setup(){
 	pinMode(PRIMARY_BUTTON_PIN, INPUT_PULLUP);
 	pinMode(SECONDARY_BUTTON_PIN, INPUT_PULLUP);
 
-	// pin change interrupt masks (see above list)
-	PCMSK1 |= bit (PCINT8);		// pin PC0
-	PCMSK1 |= bit (PCINT9);		// pin PC1
-
 }
 
 void presentation() {
@@ -100,7 +68,11 @@ void Dormir(){
 
 	power_all_disable ();  // turn off various modules
 
-	PCIFR  |= bit bit (PCIF1);   // clear any outstanding interrupts (Need only PCIF1)
+	// pin change interrupt masks (see above list)
+	PCMSK1 |= bit (PCINT8);		// pin PC0
+	PCMSK1 |= bit (PCINT9);		// pin PC1
+
+	PCIFR  |= bit (PCIF1);   // clear any outstanding interrupts (Need only PCIF1)
 	PCICR  |= bit (PCIE1);   // enable pin change interrupts (Need only PICE1)
 
 	// turn off brown-out enable in software
@@ -115,42 +87,42 @@ void Dormir(){
 }
 
 
-int PctBattery(){
+long VBattery(){
 	/* Elimine toutes charges résiduelles */
-	ADMUX = 0x4F;
-	delayMicroseconds(5);
+	ADMUX = (_BV(REFS0) | _BV(MUX3) | _BV(MUX2) | _BV(MUX1) );
+	delayMicroseconds(350);
 
 	/* Sélectionne la référence interne à 1.1 volts comme point de mesure, avec comme limite haute VCC */
 	ADMUX = 0x4E;
 	delayMicroseconds(200);
 
 	/* Active le convertisseur analogique -> numérique */
-	ADCSRA |= (1 << ADEN);
-
-	/* Lance une conversion analogique -> numérique */
-	ADCSRA |= (1 << ADSC);
+	ADCSRA |= _BV(ADSC);
 
 	/* Attend la fin de la conversion */
-	while(ADCSRA & (1 << ADSC));
+	while(bit_is_set(ADCSRA, ADSC));
 
 	/* Récupère le résultat de la conversion */
-	float tension_alim = (1023 * 1.1) / (ADCL | (ADCH << 8));
+	long vcc = 1125300L / ADC;
 
-	return map(constrain(tension_alim,2,3), 2, 3, 0, 100);
+	return vcc;
 }
+
+
 
 // Loop will iterate on changes on the BUTTON_PINs
 void loop() {
 
 	uint8_t value;
-	int pctBat;
+	long VRef = VBattery();
+	int pctBat 	= map(constrain(VRef, 2000, 3000), 2000, 3000, 0, 100);;
 
-	// Sleep until key change.
-	Dormir();
-
-	// Be sure that we does'nt go back to interrupt when we are awake.
-	noInterrupts ();
-
+	// Send Battery PCT if changed :
+	if (lastPctBattery != pctBat){
+		sendBatteryLevel(pctBat);
+		lastPctBattery = pctBat;
+	}
+	
 	delay(50);	// To debounce
 
 	value = digitalRead(PRIMARY_BUTTON_PIN);
@@ -169,13 +141,14 @@ void loop() {
 		 sentValue2 = value;
 	}
 
-	pctBat = PctBattery();
-	// Send Voltage :
-	if (lastPctBattery != pctBat){
-		sendBatteryLevel(pctBat);
-		lastPctBattery = pctBat;
-	}
+
 	// Now we can set interrupts ON again.
 	interrupts();
+
+	// Sleep until key change.
+	Dormir();
+
+	// Be sure that we does'nt go back to interrupt when we are awake.
+	noInterrupts ();
 
 }
