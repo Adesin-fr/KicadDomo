@@ -14,17 +14,15 @@
  *		- V_CUSTOM 1			Set the light ON for the amount of minutes stored in V_VAR1
  *		- V_CUSTOM 2			Begin a Dim swipe cycle : go from current dim level to 100, then go back to 0 and so on...
  *		- V_CUSTOM 3			End a dim swipe cycle : Stops on the current Dim level.
+ *		- V_CUSTOM 4			Cycle thru dim values (0,2,5,10,50,100)
  *		- V_VAR1   <0-255>		Set the timer value
  *		- V_VAR2   <0-255>		Set the delay between two variations when changing dim value
  */
 
 
-// Enable debug prints
-#define MY_DEBUG
-
-// Enable and select radio type attached
-//#define MY_RADIO_NRF24
 #define MY_RADIO_RFM69
+#define MY_IS_RFM69HW
+#define MY_RFM69_FREQUENCY RF69_868MHZ
 
 #include <SPI.h>
 #include <MySensors.h>
@@ -45,6 +43,7 @@
 
 #define EEPROM_TIMER_SETTING 1
 #define EEPROM_DIMMER_DELAY 10
+#define EEPROM_DIMMERTIMEOUT_VALUE 20
 
 
 int CurrentLightState[NB_LIGHT_OUTPUTS];
@@ -55,7 +54,8 @@ int TimerValue[NB_LIGHT_OUTPUTS];
 int DimmerDelay[NB_LIGHT_OUTPUTS];
 int SwipeCycleOn[NB_LIGHT_OUTPUTS];
 long lastDimValueChangedTime[NB_LIGHT_OUTPUTS];
-
+int DimmerTimeOut[NB_LIGHT_OUTPUTS];
+byte DimmerTimeOut_DefaultValue;
 
 void setup(){
 	//Retreive our last light state from the eprom
@@ -65,14 +65,13 @@ void setup(){
 		TargetDimValue[i]	= 0;
 		TimerValue[i]		= 0;
 		SwipeCycleOn[i]		= 0;
+		DimmerTimeOut 		= 0;
 		TimerSetting		= loadState(EEPROM_TIMER_SETTING + i);
 		DimmerDelay 		= loadState(EEPROM_DIMMER_DELAY + i);
 	}
 
+	DimmerTimeOut_DefaultValue= loadState(EEPROM_DIMMERTIMEOUT_VALUE);
 
-	#ifdef MY_DEBUG
-		Serial.println( "Node ready to receive messages..." );
-	#endif
 }
 
 void presentation() {
@@ -120,71 +119,92 @@ void loop(){
 
 void receive(const MyMessage &message){
 
+	int targetId = message.sensor;
+
 	if (message.type == V_STATUS) {
-		#ifdef MY_DEBUG
-			Serial.println( "V_STATUS command received..." );
-		#endif
 
 		int lstate= atoi( message.data );
 		if ((lstate!=0) && (lstate!=1)) {
-			#ifdef MY_DEBUG
-			Serial.println( "V_STATUS data invalid (should be 0/1)" );
-			#endif
 			return;
 		}else{
 			// Set the new state on the output :
-			CurrentLightState[message.sensor] = lstate;
+			CurrentLightState[targetId] = lstate;
 		}
 	}
 	else if (message.type == V_PERCENTAGE) {
 		int dimvalue= atoi( message.data );
 		if ((dimvalue<0)||(dimvalue>100)) {
 			// Invalid dim value
-			#ifdef MY_DEBUG
-			Serial.println( "Invalid V_PERCENTAGE data received (should be 0-100)" );
-			#endif
 			return;
 		}
 		if (dimvalue==0) {
-			CurrentLightState[message.sensor] = 0;
+			CurrentLightState[targetId] = 0;
 		}
 		else {
-			CurrentLightState[message.sensor] = 1;
-			TargetDimValue[message.sensor]	  = dimvalue;
+			CurrentLightState[targetId] = 1;
+			TargetDimValue[targetId]	  = dimvalue;
 		}
 	}
 	else if (message.type == V_CUSTOM){
-
 		int customAction = atoi( message.data );
 		switch(customAction){
 			case 0:
 				// Toggle the light :
-				if (CurrentLightState[message.sensor] ){
-					CurrentLightState[message.sensor] = 0;
+				if (CurrentLightState[targetId] ){
+					CurrentLightState[targetId] = 0;
 				}else{
-					CurrentLightState[message.sensor] = 1;
+					CurrentLightState[targetId] = 1;
 				}
 				break;
 			case 1:
 				// Set light ON with timer
-				TimerValue[message.sensor] = TimerSetting[message.sensor];
+				TimerValue[targetId] = TimerSetting[targetId];
 				break;
 			case 2:
 				// Begin swipe cycle :
-				SwipeCycleOn[message.sensor] = 1;
+				SwipeCycleOn[targetId] = 1;
 				break;
 			case 3:
 				// End swipe cycle :
-				SwipeCycleOn[message.sensor] = 0;
+				SwipeCycleOn[targetId] = 0;
 				// TODO : restore the dimmer Delay.
 				break;
+			case 4:
+					if (DimmerTimeOut[targetId] == 0){
+						// Toggle the light :
+						if (CurrentLightState[targetId] ){
+							// If the light is ON , then switch it off
+							CurrentLightState[targetId] = 0;
+						}else{
+							// if the light is OFF then switch it ON at the first level and set a timeout
+							DimmerTimeOut[targetId] = DimmerTimeOut_DefaultValue;
+							CurrentLightState[targetId] = 1;
+							TargetDimValue[targetId] = 1;
+						}
+					}else{
+						// Cycle thru DIM values :
+						if (TargetDimValue[targetId] == 1){
+							TargetDimValue[targetId] = 2;
+						}else if (TargetDimValue[targetId] == 2){
+							TargetDimValue[targetId] = 5;
+						}else if (TargetDimValue[targetId] == 5){
+							TargetDimValue[targetId] = 10;
+						}else if (TargetDimValue[targetId] == 10){
+							TargetDimValue[targetId] = 20;
+						}else if (TargetDimValue[targetId] == 20){
+							TargetDimValue[targetId] = 50;
+						}else if (TargetDimValue[targetId] == 50){
+							TargetDimValue[targetId] = 100;
+						}
+					}
+					break;
 		}
 	}
 	else if (message.type == V_VAR1){
 		// Set the timer value
 		int timerValue = atoi( message.data );
 		// Apply the new Timer setting
-		TimerSetting[message.sensor] = timerValue;
+		TimerSetting[targetId] = timerValue;
 		// and save it to EEPROM
 		saveState(EEPROM_TIMER_SETTING + i, timerValue);
 	}
@@ -192,15 +212,12 @@ void receive(const MyMessage &message){
 		// Set the delay between two variations when changing dim value
 		int delayValue = atoi( message.data );
 		// Apply the new Timer setting
-		delayValue[message.sensor] = delayValue;
+		delayValue[targetId] = delayValue;
 		// and save it to EEPROM
 		saveState(EEPROM_DIMMER_DELAY + i, delayValue);
 	}
 	else {
-		#ifdef MY_DEBUG
-	    	Serial.println( "Invalid command received..." );
-		#endif
-
+		// Invalid command received...
 		return;
 	}
 

@@ -12,18 +12,17 @@
  * 		- V_UP					Set the blind all way up/opened
  * 		- V_DOWN				Set the blind all way down/closed
  * 		- V_STOP				Stop the blinds to its actual position when moving.
- * 		- V_PERCENTAGE <0-100> 	Set the blind to the following position, according to calibration delay
- * 		- V_CUSTOM				Cycle thru following actions : UP/STOP/DOWN/STOP/UP/...
- *		- V_VAR1   <0-255>		Set the calibration delay for the blind
+ * 		- V_PERCENTAGE	<0-100>	Set the blind to the following position, according to calibration delay
+ * 		- V_STATUS				Cycle thru following actions : UP/STOP/DOWN/STOP/UP/...
+ *		- V_VAR1 		<0-255>	Set the calibration delay for the blind
  */
 
-
-// Enable debug prints
-#define MY_DEBUG
 
 // Enable and select radio type attached
 //#define MY_RADIO_NRF24
 #define MY_RADIO_RFM69
+#define MY_IS_RFM69HW
+#define MY_RFM69_FREQUENCY RF69_868MHZ
 
 #include <SPI.h>
 #include <MySensors.h>
@@ -45,7 +44,7 @@ enum blindMovement{ movingUp, movingDown, movingUnknown};
 int CurrentBlindPos[NB_BLINDS];				// Current position in percent
 int TargetBlindPos[NB_BLINDS];				// Target position in percent
 blindMovement LastBlindMovement[NB_BLINDS];	// Last movement (used for ACTION messages)
-boolean BlindIsMoving[NB_BLINDS];			// Is blind moving ? 
+boolean BlindIsMoving[NB_BLINDS];			// Is blind moving ?
 long BlindStartMoveTime[NB_BLINDS];			// start moving time of blind, according to millis()
 int neededMoveTime[NB_BLINDS];				// time needed for complete operation.
 int BlindCalibDelay[NB_BLINDS];				// time needed for complete operation.
@@ -97,7 +96,7 @@ void SetNewPos(int i, int pos){
 
 
 void setup(){
-	//Retreive our last light state from the eprom
+	//Retreive our calibration parameters from the eprom
 	for (int i=0; i< NB_BLINDS; i++){
 		CurrentBlindPos[i]		= 0;
 		TargetBlindPos[i]		= 0;
@@ -111,9 +110,6 @@ void setup(){
 	pinMode( OUTPUT_RCLK, OUTPUT);
 	pinMode( OUTPUT_SRCLK, OUTPUT);
 
-	#ifdef MY_DEBUG
-		Serial.println( "Node ready to receive messages..." );
-	#endif
 }
 
 void presentation() {
@@ -123,6 +119,7 @@ void presentation() {
 	// Present all the dimmers :
 	for (int i=0; i< NB_BLINDS; i++){
 		present(i, S_COVER );
+		present(20 + i, S_DIMMER );
 	}
 }
 
@@ -130,7 +127,7 @@ void loop(){
 
 	// Wait 1 second between each check.
 	if (millis() > lastRefreshTime+1000){
-		
+
 		lastRefreshTime = millis();
 
 		for(int i=0; i<NB_BLINDS; i++){
@@ -153,40 +150,38 @@ void loop(){
 }
 
 void receive(const MyMessage &message){
+	int pctValue;
+	int blindNum;
 
 	if (message.type == V_UP) {
-		#ifdef MY_DEBUG
-			Serial.println( "V_UP command received..." );
-		#endif
-
 		// Set the new position :
 		SetNewPos([message.sensor], 100);
-
 	}
 	else if (message.type == V_DOWN) {
-		#ifdef MY_DEBUG
-			Serial.println( "V_DOWN command received..." );
-		#endif
-
 		// Set the new position :
 		SetNewPos([message.sensor], 0);
 	}
 	else if (message.type == V_PERCENTAGE) {
+		pctValue = atoi( message.data );
 
-		int pctValue = atoi( message.data );
-		
 		if ((pctValue<0)||(pctValue>100)) {
 			// Invalid pct  value
-			#ifdef MY_DEBUG
-				Serial.println( "Invalid V_PERCENTAGE data received (should be 0-100)" );
-			#endif
 			return;
 		}
 
-		SetNewPos([message.sensor], pctValue);
-
+		if (message.sensor>=20){
+			blindNum = message.sensor-20;
+			// Set the delay value
+			pctValue = atoi( message.data );
+			// Apply the new Timer setting
+			BlindCalibDelay[blindNum] = pctValue;
+			// and save it to EEPROM
+			saveState(EEPROM_CALIB_DELAY + blindNum, pctValue);
+		}else{
+			SetNewPos([message.sensor], pctValue);
+		}
 	}
-	else if (message.type == V_CUSTOM){
+	else if (message.type == V_STATUS){
 		// If blind is moving, stop it. Otherwise, if it was going down before being stopped, pull it up, else down.
 		if (BlindIsMoving[message.sensor]){
 			StopBlind[message.sensor];
@@ -194,23 +189,12 @@ void receive(const MyMessage &message){
 			if (LastBlindMovement[message.sensor]==movingDown){
 				SetNewPos([message.sensor],100);
 			}else{
-				SetNewPos([message.sensor],0);				
+				SetNewPos([message.sensor],0);
 			}
 		}
 	}
-	else if (message.type == V_VAR1){
-		// Set the delay value
-		int timerValue = atoi( message.data );
-		// Apply the new Timer setting
-		BlindCalibDelay[message.sensor] = timerValue;
-		// and save it to EEPROM
-		saveState(EEPROM_CALIB_DELAY + i, timerValue);
-	}
 	else {
-		#ifdef MY_DEBUG
-	    	Serial.println( "Invalid command received..." );
-		#endif
-
+		// Invalid message type !
 		return;
 	}
 
