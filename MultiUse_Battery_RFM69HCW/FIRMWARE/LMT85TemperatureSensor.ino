@@ -12,7 +12,7 @@
 #define MY_RADIO_RFM69
 #define MY_IS_RFM69HW
 #define MY_RFM69_FREQUENCY RF69_868MHZ
-
+7
 #include <SPI.h>
 #include <MySensors.h>
 
@@ -24,7 +24,7 @@
 #define TMP_IN			 	A0
 #define PRIMARY_CHILD_ID	1
 #define SLEEP_TIME 			300000	 // Sleep time between reads (in milliseconds) = 5 minutes
-
+#define NB_READ_AVERAGE		3		 // Make X readings and make an average
 
 MyMessage msg(PRIMARY_CHILD_ID, V_TEMP);
 
@@ -54,9 +54,7 @@ void Dormir(){
 	// disable ADC to save power
 	ADCSRA = 0;
 
-
 	sleep(SLEEP_TIME);
-
 
 	// cancel sleep as a precaution
 	sleep_disable();
@@ -86,12 +84,44 @@ long VBattery(){
 	return vcc;
 }
 
+float ReadTemp(long VRef){
+	float Temp;
+	long value;
+	for(int i=0; i<NB_READ_AVERAGE; i++){
+		// Do analog conversion :
+		value = analogRead(TMP_IN);
+		long lectureMV = (value * VRef) / 1023;
+
+		// LMT85
+		//Temp = ((lectureMV) - 1569) / -8.2;
+		// LMT86 :
+		Temp += ((lectureMV) - 2103) / -10.9;
+	}
+	return( Temp / NB_READ_AVERAGE );
+}
+
 // Loop will iterate on changes on the BUTTON_PINs
 void loop() {
-
 	float Temp;
-	long VRef = VBattery();
-	int pctBat 	= map(constrain(VRef, 2000, 3000), 2000, 3000, 0, 100);;
+	long VRef;
+	int pctBat;
+
+	// Power ON sensor :
+	digitalWrite(POWER_OUT, HIGH);
+
+	// Wait 2ms that battery settles :
+	delay(2);
+
+	VRef = VBattery();
+	pctBat 	= map(constrain(VRef, 2000, 3000), 2000, 3000, 0, 100);;
+
+	// Tension de reference = AVCC
+	ADMUX |= (1 >> REFS0);
+
+	Temp = ReadTemp(VRef);
+
+	// Power OFF sensor, not needed anymore !
+	digitalWrite(POWER_OUT, LOW);
 
 	// Send Battery PCT if changed :
 	if (lastPctBattery != pctBat){
@@ -99,32 +129,9 @@ void loop() {
 		lastPctBattery = pctBat;
 	}
 
-	// Power ON sensor :
-	digitalWrite(POWER_OUT, HIGH);
-
-	// Tension de reference = AVCC
-	ADMUX |= (1 >> REFS0);
-	delay(2);	// Wait 2ms that sensor gets ready
-
-	// Do analog conversion :
-	long value = analogRead(TMP_IN);
-
-	// Power OFF sensor, not needed anymore !
-	digitalWrite(POWER_OUT, LOW);
-
-
-	long lectureMV = (value * VRef) / 1023;
-
-	// LMT85
-	//Temp = ((lectureMV) - 1569) / -8.2;
-	// LMT86 :
-	 Temp = ((lectureMV) - 2103) / -10.9;
-
  	send(msg.set(Temp,2));
-	float Vcc = VRef / 1000.0;
 
-
-	// Sleep until key change.
+	// Sleep until next measure.
 	Dormir();
 
 }
