@@ -34,9 +34,10 @@
 #define MY_RADIO_RFM69
 #define MY_IS_RFM69HW
 #define MY_RFM69_FREQUENCY RF69_868MHZ
-#define RFM69_ENABLE_ENCRYPTION
+
+//#define RFM69_ENABLE_ENCRYPTION
 // La cle de cryptage doit faire exactement 16 octets
-#define RFM69_ENCRYPTKEY    "Crypt_My_Home_17"
+//#define RFM69_ENCRYPTKEY    "Crypt_My_Home_17"
 
 
 #include <SPI.h>
