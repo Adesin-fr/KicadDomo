@@ -30,8 +30,11 @@ byte outputStates;
 void changeOutputState(int i, boolean newState){
 	bitWrite(outputStates, i, newState);
 
+	// Lock latch
 	digitalWrite(OUTPUT_RCLK, LOW);
+	// Write bits
 	shiftOut(OUTPUT_SER, OUTPUT_SRCLK, MSBFIRST, outputStates);
+	// Unlock latch
 	digitalWrite(OUTPUT_RCLK, HIGH);
 }
 
