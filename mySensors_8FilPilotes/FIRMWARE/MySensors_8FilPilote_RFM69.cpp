@@ -12,6 +12,12 @@
  *		31 to 40 : COMFORT - 2°C
  *		41 to 50 : COMFORT - 1°C
  *		51 to 100: COMFORT
+
+MSB FIRST :
+   High Byte - Low Byte
+ 1  2  3  4  5  6  7  8
+NP NP NP NP NP NP NP NP
+
  */
 
 #define MY_DEBUG
@@ -26,16 +32,20 @@
 #include <SPI.h>
 #include <MySensors.h>
 
-#define SN "Fil Pilote"
-#define SV "1.0"
+#define SN 			"8 Fil Pilote"
+#define SV 			"1.0"
 
-#define OUTPUT_P	4	// Alternance Positive - Signal OPT1
-#define OUTPUT_N	3	// Alternance Negative - Signal OPT2
+#define NB_OUTS		8
 
-byte currentMode=0;
-byte currentPercent=0;
-long nextUpdateTime=0;
-byte nextUpdateStatus=0;
+#define SER_OUT		1
+#define CLK_OUT		2
+#define LAT_OUT		1
+
+
+byte currentMode[NB_OUTS]=0;
+byte currentPercent[NB_OUTS]=0;
+long nextUpdateTime[NB_OUTS]=0;
+byte nextUpdateStatus[NB_OUTS]=0;
 
 void setup(){
 

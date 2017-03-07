@@ -1,4 +1,4 @@
-update=mer. 11 janv. 2017 17:11:40 CET
+update=mar 07 mar 2017 09:07:36 CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -61,3 +61,13 @@ LibName29=valves
 LibName30=/home/ulle0009/ownCloud/electronique/kicad/libs/mysensors_symbols-master/mysensors_radios
 LibName31=/home/ulle0009/ownCloud/electronique/kicad/libs/mysensors_symbols-master/mysensors_regulators
 LibName32=/home/ulle0009/ownCloud/electronique/kicad/libs/myLibrary
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60

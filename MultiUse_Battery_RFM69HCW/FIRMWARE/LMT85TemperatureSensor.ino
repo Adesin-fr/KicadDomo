@@ -12,7 +12,7 @@
 #define MY_RADIO_RFM69
 #define MY_IS_RFM69HW
 #define MY_RFM69_FREQUENCY RF69_868MHZ
-7
+
 #include <SPI.h>
 #include <MySensors.h>
 
