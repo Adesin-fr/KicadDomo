@@ -37,23 +37,33 @@ NP NP NP NP NP NP NP NP
 
 #define NB_OUTS		8
 
-#define SER_OUT		1
-#define CLK_OUT		2
-#define LAT_OUT		1
+#define SER_OUT		PC0
+#define LAT_OUT		PC1 // RCLK
+#define CLK_OUT		PC2	// SRCLK
 
 
-byte currentMode[NB_OUTS]=0;
-byte currentPercent[NB_OUTS]=0;
-long nextUpdateTime[NB_OUTS]=0;
-byte nextUpdateStatus[NB_OUTS]=0;
+byte currentMode[NB_OUTS];
+byte currentPercent[NB_OUTS];
+long nextUpdateTime[NB_OUTS];
+byte nextUpdateStatus[NB_OUTS];
 
 void setup(){
 
-	pinMode( OUTPUT_P, OUTPUT);
-	pinMode( OUTPUT_N, OUTPUT);
+	pinMode( SER_OUT, OUTPUT);
+	pinMode( LAT_OUT, OUTPUT);
+	pinMode( CLK_OUT, OUTPUT);
 
-	//Retreive our last state from the eprom
-	currentPercent = loadState(1);
+	// Empty arrays :
+	for (int i=0; i<NB_OUTS; i++){
+		currentMode[i]=0;
+		currentPercent[i]=0;
+		nextUpdateTime[i]=0;
+		nextUpdateStatus[i]=0;
+
+		//Retreive our last state from the eprom
+		currentPercent[i] = loadState(i);
+	}
+
 
 	applyState();
 
@@ -74,74 +84,86 @@ void presentation() {
 
 void applyState(){
 
-	// Disable next update for 4 and 5
-	nextUpdateTime=millis()-1;
-	if (currentPercent <=10){
-		// Signal ARRET TOTAL = Positif seulement
-		digitalWrite(OUTPUT_P, HIGH);
-		digitalWrite(OUTPUT_N, LOW);
-		currentMode=1;
-	}else if (currentPercent >10 and currentPercent<=20){
-		// Signal HORS GEL = Negatif seulement
-		digitalWrite(OUTPUT_P, LOW);
-		digitalWrite(OUTPUT_N, HIGH);
-		currentMode=2;
-	}else if (currentPercent >20 and currentPercent<=30){
-		// Signal ECO : double alternance :
-		digitalWrite(OUTPUT_P, HIGH);
-		digitalWrite(OUTPUT_N, HIGH);
-		currentMode=3;
-	}else if (currentPercent >30 and currentPercent<=40){
-		// Confort - 2 : 293 + 7
-		digitalWrite(OUTPUT_P, LOW);
-		digitalWrite(OUTPUT_N, LOW);
-		nextUpdateTime=millis() + 293000;
-		nextUpdateStatus = 1;
-		currentMode=4;
-	}else if (currentPercent >40 and currentPercent<=50){
-		// Confort - 2 : 297 + 3
-		digitalWrite(OUTPUT_P, LOW);
-		digitalWrite(OUTPUT_N, LOW);
-		nextUpdateTime=millis() + 297000;
-		nextUpdateStatus = 1;
-		currentMode=5;
-	}else {
-		// Supérieur à 51% : confort = pas de signal, 2 opto coupés
-		digitalWrite(OUTPUT_P, LOW);
-		digitalWrite(OUTPUT_N, LOW);
-		currentMode=6;
+	int tempInt=0;
+	byte currentMSB;
+	byte currentLSB;
+
+	for (int i=0; i<NB_OUTS; i++){
+		tempInt = tempInt << 2;
+		switch (currentMode[i]){
+			case 1:
+				tempInt |= B00000010;
+				break;
+			case 2:
+				tempInt |= B00000001;
+				break;
+			case 3:
+				tempInt |= B00000011;
+				break;
+			case 4:
+				if (nextUpdateStatus[i] == 0){
+					tempInt |= B00000011;
+				}
+				break;
+			case 5:
+				if (nextUpdateStatus[i] == 0){
+					tempInt |= B00000011;
+				}
+				break;
+			case 6:
+				// Do nothing, we just should let it to 00 :
+				// tempInt |= B00000000;
+				break;
+		}
+
 	}
+
+	currentMSB= tempInt >> 8;	// Get MSB
+	currentLSB= tempInt & 0xFF; // Get LSB
+
+	// Lock latch
+	digitalWrite(LAT_OUT, LOW);
+	// Write bits :
+	shiftOut(SER_OUT, CLK_OUT, MSBFIRST, currentMSB);
+	shiftOut(SER_OUT, CLK_OUT, MSBFIRST, currentLSB);
+	// Unlock latch
+	digitalWrite(LAT_OUT, HIGH);
+
 }
 
 void loop(){
 
-	// Handle event type CONFORT-1 and CONFORT-2
-	if (millis() >= nextUpdateTime && (currentMode ==4 || currentMode==5)){
-		// We need to change our output status:
-		if (nextUpdateStatus==1){
-			// We just done 29X seconds of CONFORT, we now need to make X seconds
-			if (currentMode == 4){
-				nextUpdateTime=millis()+7000;
+	// check for each output to see if change is needed
+	for (int i=0; i<NB_OUTS; i++){
+
+		// Handle event type CONFORT-1 and CONFORT-2
+		if (millis() >= nextUpdateTime[i] && (currentMode[i] == 4 || currentMode[i] == 5)){
+			// We need to change our output status:
+			if (nextUpdateStatus[i] == 1){
+				// We just done 29X seconds of CONFORT, we now need to make X seconds
+				if (currentMode[i] == 4){
+					nextUpdateTime[i] = millis()+7000;
+				}else{
+					nextUpdateTime[i] = millis()+3000;
+				}
+				nextUpdateStatus[i] = 0;
 			}else{
-				nextUpdateTime=millis()+3000;
+				if (currentMode[i] == 4){
+					nextUpdateTime[i]=millis()+293000;
+				}else{
+					nextUpdateTime[i]=millis()+297000;
+				}
+				nextUpdateStatus[i]=1;
 			}
-			nextUpdateStatus=0;
-			digitalWrite(OUTPUT_P, HIGH);
-			digitalWrite(OUTPUT_N, HIGH);
-		}else{
-			if (currentMode == 4){
-				nextUpdateTime=millis()+293000;
-			}else{
-				nextUpdateTime=millis()+297000;
-			}
-			nextUpdateStatus=1;
-			digitalWrite(OUTPUT_P, LOW);
-			digitalWrite(OUTPUT_N, LOW);
+			// We just changed the delays, update output :
+			applyState();
 		}
 	}
 }
 
 void receive(const MyMessage &message){
+
+	byte sensId = message.sensor;
 
 	if (message.type == V_LIGHT || message.type == V_DIMMER) {
 		int requestedLevel = atoi( message.data );
@@ -156,12 +178,34 @@ void receive(const MyMessage &message){
 		requestedLevel = requestedLevel < 0   ? 0   : requestedLevel;
 
 		// Store current level.
-		if (currentPercent == requestedLevel){
+		if (currentPercent[sensId] == requestedLevel){
 			// Do nothing, requested level is the same that current one.
 			return;
 		}else{
-			currentPercent = requestedLevel;
-			saveState(1,currentPercent);
+			currentPercent[sensId] = requestedLevel;
+			saveState(sensId, requestedLevel);
+
+			if (currentPercent[sensId] <= 10){
+				currentMode[sensId] = 1;
+			}else if (currentPercent[sensId] > 10 and currentPercent[sensId] <= 20){
+				currentMode[sensId] = 2;
+			}else if (currentPercent[sensId] > 20 and currentPercent[sensId] <= 30){
+				currentMode[sensId] = 3;
+			}else if (currentPercent[sensId] > 30 and currentPercent[sensId] <= 40){
+				// Confort - 2 : 293 + 7
+				nextUpdateTime[sensId] = millis() + 293000;
+				nextUpdateStatus[sensId] = 1;
+				currentMode[sensId]=4;
+			}else if (currentPercent[sensId] > 40 and currentPercent[sensId] <= 50){
+				// Confort - 2 : 297 + 3
+				nextUpdateTime[sensId] = millis() + 297000;
+				nextUpdateStatus[sensId] = 1;
+				currentMode[sensId] = 5;
+			}else {
+				// Supérieur à 51% : confort = pas de signal, 2 opto coupés
+				currentMode[sensId] = 6;
+			}
+
 
 			applyState();
 		}
