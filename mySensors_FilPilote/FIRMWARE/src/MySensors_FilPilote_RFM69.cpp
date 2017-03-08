@@ -1,3 +1,4 @@
+
 /**
  *
  * REVISION HISTORY
@@ -20,9 +21,10 @@
 //#define MY_RADIO_NRF24
 #define MY_RADIO_RFM69
 #define MY_IS_RFM69HW
-#define MY_RFM69_FREQUENCY RF69_868MHZ
+#define MY_RFM69_FREQUENCY RFM69_868MHZ
 
 
+#include <Arduino.h>
 #include <SPI.h>
 #include <MySensors.h>
 
@@ -34,8 +36,11 @@
 
 byte currentMode=0;
 byte currentPercent=0;
-long nextUpdateTime=0;
+unsigned long nextUpdateTime=0;
 byte nextUpdateStatus=0;
+
+// Functions prototypes :
+void applyState();
 
 void setup(){
 
@@ -106,7 +111,7 @@ void applyState(){
 void loop(){
 
 	// Handle event type CONFORT-1 and CONFORT-2
-	if (millis() >= nextUpdateTime && (currentMode ==4 || currentMode==5)){
+	if (millis() >= nextUpdateTime 	&& (currentMode ==4 || currentMode==5)){
 		// We need to change our output status:
 		if (nextUpdateStatus==1){
 			// We just done 29X seconds of CONFORT, we now need to make X seconds
