@@ -13,8 +13,8 @@
  * 		- V_DOWN				Set the blind all way down/closed
  * 		- V_STOP				Stop the blinds to its actual position when moving.
  * 		- V_PERCENTAGE	<0-100>	Set the blind to the following position, according to calibration delay
- * 		- V_STATUS				Cycle thru following actions : UP/STOP/DOWN/STOP/UP/...
- *		- V_VAR1 		<0-255>	Set the calibration delay for the blind
+ * 		- V_CUSTOM				Cycle thru following actions : UP/STOP/DOWN/STOP/UP/...
+ * 		- V_VAR1 		<0-255>	Set calibration delay for blind.
  */
 
 
@@ -31,7 +31,7 @@
 #define SV "1.0"
 
 
-#define NB_BLINDS 4
+#define NB_BLINDS		4
 #define OUTPUT_SER		PC0	// Serial data comes on this pin
 #define OUTPUT_RCLK		PC1	// This is the LATCH pin. Data is released when the pin goes HI
 #define OUTPUT_SRCLK	PC2	// Clock pin
@@ -122,7 +122,6 @@ void presentation() {
 	// Present all the dimmers :
 	for (int i=0; i< NB_BLINDS; i++){
 		present(i, S_COVER );
-		present(20 + i, S_DIMMER );
 	}
 }
 
@@ -172,19 +171,9 @@ void receive(const MyMessage &message){
 			return;
 		}
 
-		if (message.sensor>=20){
-			blindNum = message.sensor-20;
-			// Set the delay value
-			pctValue = atoi( message.data );
-			// Apply the new Timer setting
-			BlindCalibDelay[blindNum] = pctValue;
-			// and save it to EEPROM
-			saveState(EEPROM_CALIB_DELAY + blindNum, pctValue);
-		}else{
-			SetNewPos(message.sensor, pctValue);
-		}
+		SetNewPos(message.sensor, pctValue);
 	}
-	else if (message.type == V_STATUS){
+	else if (message.type == V_CUSTOM){
 		// If blind is moving, stop it. Otherwise, if it was going down before being stopped, pull it up, else down.
 		if (BlindIsMoving[message.sensor]){
 			StopBlind(message.sensor);
@@ -195,6 +184,15 @@ void receive(const MyMessage &message){
 				SetNewPos(message.sensor,0);
 			}
 		}
+	}
+	else  if (message.type == V_VAR1){
+		blindNum = message.sensor;
+		// Set the delay value
+		pctValue = atoi( message.data );
+		// Apply the new Timer setting
+		BlindCalibDelay[blindNum] = pctValue;
+		// and save it to EEPROM
+		saveState(EEPROM_CALIB_DELAY + blindNum, pctValue);
 	}
 	else {
 		// Invalid message type !
