@@ -7,7 +7,7 @@
 
 #define MY_RADIO_RFM69
 #define MY_IS_RFM69HW
-#define MY_RFM69_NEW_DRIVER
+#define MY_RFM69_NEW_DRIVER				// Use new RFM69 Driver (include ATC)
 #define MY_RFM69_FREQUENCY RFM69_868MHZ
 
 #include <SPI.h>
