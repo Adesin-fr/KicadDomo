@@ -4,7 +4,7 @@
  * Version 1.0 - 26/02/2017 L. Lemarinel
  *
  * DESCRIPTION
- * This sketch is used to drive 8 outputs.
+ * This sketch is used to drive 2 relay outputs.
  * V_STATUS set explicitly the output state
  * V_CUSTOM toggles the specified output.
 */
@@ -18,14 +18,13 @@
 #include <SPI.h>
 #include <MySensors.h>
 
-#define SN "8 Reed Relays"
+#define SN "2 Reed Relays"
 #define SV "1.0"
 
 
-#define NB_OUTPUTS 8
-#define OUTPUT_SER		PC0	// Serial data comes on this pin
-#define OUTPUT_RCLK		PC1	// This is the LATCH pin. Data is released when the pin goes HI
-#define OUTPUT_SRCLK	PC2	// Clock pin
+#define NB_OUTPUTS 		2
+#define OUTPUT_A		PD0	// Serial data comes on this pin
+#define OUTPUT_B		PD1	// Serial data comes on this pin
 #define HEARTBEAT_DELAY 3600000
 
 byte outputStates;
@@ -35,20 +34,16 @@ unsigned long lastHeartBeat=0;
 void changeOutputState(int i, boolean newState){
 	bitWrite(outputStates, i, newState);
 
-	// Lock latch
-	digitalWrite(OUTPUT_RCLK, LOW);
-	// Write bits
-	shiftOut(OUTPUT_SER, OUTPUT_SRCLK, MSBFIRST, outputStates);
-	// Unlock latch
-	digitalWrite(OUTPUT_RCLK, HIGH);
+	digitalWrite(OUTPUT_A, bitRead(outputStates, 0));
+	digitalWrite(OUTPUT_B, bitRead(outputStates, 1));
 }
+
 
 
 void setup(){
 
-	pinMode( OUTPUT_SER, OUTPUT);
-	pinMode( OUTPUT_RCLK, OUTPUT);
-	pinMode( OUTPUT_SRCLK, OUTPUT);
+	pinMode( OUTPUT_A, OUTPUT);
+	pinMode( OUTPUT_B, OUTPUT);
 
 }
 

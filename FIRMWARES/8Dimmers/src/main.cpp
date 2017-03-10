@@ -45,6 +45,7 @@
 #define EEPROM_TIMER_SETTING 1
 #define EEPROM_DIMMER_DELAY 10
 #define EEPROM_DIMMERTIMEOUT_VALUE 20
+#define HEARTBEAT_DELAY 3600000
 
 
 int CurrentLightState[NB_LIGHT_OUTPUTS];
@@ -57,6 +58,7 @@ int SwipeCycleOn[NB_LIGHT_OUTPUTS];
 unsigned long lastDimValueChangedTime[NB_LIGHT_OUTPUTS];
 int DimmerTimeOut[NB_LIGHT_OUTPUTS];
 byte DimmerTimeOut_DefaultValue;
+unsigned long lastHeartBeat=0;
 
 void setup(){
 	//Retreive our last light state from the eprom
@@ -86,6 +88,13 @@ void presentation() {
 }
 
 void loop(){
+
+	// Send a HeartBeat frequently so Domoticz see us as alive.
+	if (millis() > lastHeartBeat + HEARTBEAT_DELAY){
+		lastHeartBeat = millis();
+		sendHeartbeat();
+	}
+
 	for(int i=0; i<NB_LIGHT_OUTPUTS; i++){
 		// Should we change the current Dimmer Values ?
 		if (CurrentLightState[i]==1 && CurrentDimValue[i] != TargetDimValue[i]){

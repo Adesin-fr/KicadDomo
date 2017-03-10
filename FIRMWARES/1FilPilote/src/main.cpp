@@ -23,6 +23,7 @@
 #define MY_IS_RFM69HW
 #define MY_RFM69_NEW_DRIVER				// Use new RFM69 Driver (include ATC)
 #define MY_RFM69_FREQUENCY RFM69_868MHZ
+#define HEARTBEAT_DELAY 3600000
 
 
 #include <Arduino.h>
@@ -39,6 +40,7 @@ byte currentMode=0;
 byte currentPercent=0;
 unsigned long nextUpdateTime=0;
 byte nextUpdateStatus=0;
+unsigned long lastHeartBeat=0;
 
 // Functions prototypes :
 void applyState();
@@ -110,6 +112,13 @@ void applyState(){
 }
 
 void loop(){
+
+	// Send a HeartBeat frequently so Domoticz see us as alive.
+	if (millis() > lastHeartBeat + HEARTBEAT_DELAY){
+		lastHeartBeat = millis();
+		sendHeartbeat();
+	}
+
 
 	// Handle event type CONFORT-1 and CONFORT-2
 	if (millis() >= nextUpdateTime 	&& (currentMode ==4 || currentMode==5)){

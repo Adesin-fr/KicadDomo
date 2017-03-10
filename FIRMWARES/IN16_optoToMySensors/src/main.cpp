@@ -65,7 +65,10 @@
 
 // La macro suivante nous donne le nombre de valeurs dans le tableau !
 #define NUMBUTTONS 16
+#define HEARTBEAT_DELAY 3600000
 
+
+unsigned long lastHeartBeat=0;
 unsigned long pushTime[NUMBUTTONS];
 byte pushState[NUMBUTTONS];
 byte justPushed[NUMBUTTONS];
@@ -210,6 +213,13 @@ void SendSensorStatus(byte numpin, byte actionType){
 }
 
 void loop(){
+
+	// Send a HeartBeat frequently so Domoticz see us as alive.
+	if (millis() > lastHeartBeat + HEARTBEAT_DELAY){
+		lastHeartBeat = millis();
+		sendHeartbeat();
+	}
+
 
 	checkPushes();
 

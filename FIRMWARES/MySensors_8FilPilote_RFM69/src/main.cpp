@@ -20,7 +20,7 @@ NP NP NP NP NP NP NP NP
 
  */
 
-#define MY_DEBUG
+//#define MY_DEBUG
 
 // Enable and select radio type attached
 //#define MY_RADIO_NRF24
@@ -28,6 +28,7 @@ NP NP NP NP NP NP NP NP
 #define MY_IS_RFM69HW
 #define MY_RFM69_NEW_DRIVER				// Use new RFM69 Driver (include ATC)
 #define MY_RFM69_FREQUENCY RFM69_868MHZ
+#define HEARTBEAT_DELAY 3600000
 
 
 #include <SPI.h>
@@ -47,6 +48,7 @@ byte currentMode[NB_OUTS];
 byte currentPercent[NB_OUTS];
 unsigned long nextUpdateTime[NB_OUTS];
 byte nextUpdateStatus[NB_OUTS];
+unsigned long lastHeartBeat=0;
 
 
 
@@ -138,6 +140,12 @@ void applyState(){
 }
 
 void loop(){
+
+	// Send a HeartBeat frequently so Domoticz see us as alive.
+	if (millis() > lastHeartBeat + HEARTBEAT_DELAY){
+		lastHeartBeat = millis();
+		sendHeartbeat();
+	}
 
 	// check for each output to see if change is needed
 	for (int i=0; i<NB_OUTS; i++){

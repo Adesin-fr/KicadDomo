@@ -38,7 +38,7 @@
 #define OUTPUT_SRCLK	PC2	// Clock pin
 
 #define EEPROM_CALIB_DELAY 1
-
+#define HEARTBEAT_DELAY 3600000
 
 enum blindMovement{ movingUp, movingDown, movingUnknown};
 
@@ -51,6 +51,7 @@ int neededMoveTime[NB_BLINDS];				// time needed for complete operation.
 int BlindCalibDelay[NB_BLINDS];				// time needed for complete operation.
 unsigned long lastRefreshTime = 0;
 byte outputStates = 0;
+unsigned long lastHeartBeat=0;
 
 // Functions prototypes :
 void SendBlindPosition(int i);
@@ -128,6 +129,12 @@ void presentation() {
 
 void loop(){
 
+	// Send a HeartBeat frequently so Domoticz see us as alive.
+	if (millis() > lastHeartBeat + HEARTBEAT_DELAY){
+		lastHeartBeat = millis();
+		sendHeartbeat();
+	}
+
 	// Wait 1 second between each check.
 	if (millis() > lastRefreshTime+1000){
 
@@ -156,48 +163,46 @@ void receive(const MyMessage &message){
 	int pctValue;
 	int blindNum;
 
-	if (message.type == V_UP) {
-		// Set the new position :
-		SetNewPos(message.sensor, 100);
-	}
-	else if (message.type == V_DOWN) {
-		// Set the new position :
-		SetNewPos(message.sensor, 0);
-	}
-	else if (message.type == V_PERCENTAGE) {
-		pctValue = atoi( message.data );
+	switch(message.type){
+		case V_UP:
+			// Set the new position :
+			SetNewPos(message.sensor, 100);
+			break;
+		case V_DOWN:
+			// Set the new position :
+			SetNewPos(message.sensor, 0);
+			break;
+		case V_PERCENTAGE:
+			pctValue = atoi( message.data );
 
-		if ((pctValue<0)||(pctValue>100)) {
-			// Invalid pct  value
-			return;
-		}
-
-		SetNewPos(message.sensor, pctValue);
-	}
-	else if (message.type == V_CUSTOM){
-		// If blind is moving, stop it. Otherwise, if it was going down before being stopped, pull it up, else down.
-		if (BlindIsMoving[message.sensor]){
-			StopBlind(message.sensor);
-		}else{
-			if (LastBlindMovement[message.sensor]==movingDown){
-				SetNewPos(message.sensor,100);
-			}else{
-				SetNewPos(message.sensor,0);
+			if ((pctValue<0)||(pctValue>100)) {
+				// Invalid pct  value
+				return;
 			}
-		}
-	}
-	else  if (message.type == V_VAR1){
-		blindNum = message.sensor;
-		// Set the delay value
-		pctValue = atoi( message.data );
-		// Apply the new Timer setting
-		BlindCalibDelay[blindNum] = pctValue;
-		// and save it to EEPROM
-		saveState(EEPROM_CALIB_DELAY + blindNum, pctValue);
-	}
-	else {
-		// Invalid message type !
-		return;
+
+			SetNewPos(message.sensor, pctValue);
+			break;
+		case V_CUSTOM:
+			// If blind is moving, stop it. Otherwise, if it was going down before being stopped, pull it up, else down.
+			if (BlindIsMoving[message.sensor]){
+				StopBlind(message.sensor);
+			}else{
+				if (LastBlindMovement[message.sensor]==movingDown){
+					SetNewPos(message.sensor,100);
+				}else{
+					SetNewPos(message.sensor,0);
+				}
+			}
+			break;
+		case V_VAR1:
+			blindNum = message.sensor;
+			// Set the delay value
+			pctValue = atoi( message.data );
+			// Apply the new Timer setting
+			BlindCalibDelay[blindNum] = pctValue;
+			// and save it to EEPROM
+			saveState(EEPROM_CALIB_DELAY + blindNum, pctValue);
+			break;
 	}
 
 }
