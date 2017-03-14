@@ -100,8 +100,8 @@ void setup() {
 	Serial.println(" boutons ");
 #endif
 	// Set pins mode :
-	pinMode( PIN_MUX1, INPUT);
-	pinMode( PIN_MUX2, INPUT);
+	pinMode( PIN_MUX1, INPUT_PULLUP);
+	pinMode( PIN_MUX2, INPUT_PULLUP);
 	pinMode( MUXA, OUTPUT);
 	pinMode( MUXB, OUTPUT);
 	pinMode( MUXC, OUTPUT);

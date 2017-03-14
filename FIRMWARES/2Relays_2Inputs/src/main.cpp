@@ -18,16 +18,20 @@
 #include <SPI.h>
 #include <MySensors.h>
 
-#define SN "2 Relays"
+#define SN "2 Relays w. inputs"
 #define SV "1.0"
 
 
 #define NB_OUTPUTS 		2
-#define OUTPUT_A		PD0	// Serial data comes on this pin
-#define OUTPUT_B		PD1	// Serial data comes on this pin
+#define OUTPUT_A		PD0
+#define OUTPUT_B		PD1
+#define INPUT_A			PD6
+#define INPUT_B			PD7
 #define HEARTBEAT_DELAY 3600000
 
 byte outputStates;
+boolean lastState_A;
+boolean lastState_B;
 unsigned long lastHeartBeat=0;
 
 
@@ -45,6 +49,12 @@ void setup(){
 	pinMode( OUTPUT_A, OUTPUT);
 	pinMode( OUTPUT_B, OUTPUT);
 
+	pinMode( INPUT_A, INPUT_PULLUP);
+	pinMode( INPUT_B, INPUT_PULLUP);
+
+	lastState_A = digitalRead(INPUT_A);
+	lastState_B = digitalRead(INPUT_B);
+
 }
 
 
@@ -52,10 +62,13 @@ void presentation() {
 	// Send the Sketch Version Information to the Gateway
 	sendSketchInfo(SN, SV);
 
-	// Present all the dimmers :
-	for (int i=0; i< NB_OUTPUTS; i++){
-		present(i, S_BINARY );
-	}
+	present(0, S_BINARY );
+	present(1, S_BINARY );
+
+	present(10, S_BINARY );
+	present(11, S_BINARY );
+
+
 }
 
 
@@ -66,6 +79,23 @@ void loop(){
 		lastHeartBeat = millis();
 		sendHeartbeat();
 	}
+
+	if (digitalRead(INPUT_A) != lastState_A){
+		delay(50);
+		lastState_A = digitalRead(INPUT_A);
+		MyMessage msg(10, V_STATUS);
+		msg.set(lastState_A);
+		send(msg);
+	}
+
+	if (digitalRead(INPUT_B) != lastState_B){
+		delay(50);
+		lastState_B = digitalRead(INPUT_B);
+		MyMessage msg(11, V_STATUS);
+		msg.set(lastState_B);
+		send(msg);
+	}
+
 
 }
 
