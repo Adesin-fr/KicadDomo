@@ -22,7 +22,7 @@
 #define POWER_OUT			A1
 #define TMP_IN			 	A0
 #define PRIMARY_CHILD_ID	1
-#define SLEEP_TIME 			300000	 // Sleep time between reads (in milliseconds) = 5 minutes
+#define SLEEP_TIME 			60000	 // Sleep time between reads (in milliseconds) = 5 minutes
 #define MAX_ATTACHED_DS18B20 16
 
 
@@ -37,7 +37,7 @@ int lastPctBattery=0;
 void before(){
 	// Startup up the OneWire library
 	sensors.begin();
-	sensors.setResolution(9);		// 9 bit is faster than 12
+	sensors.setResolution(12);		// 9 bit is faster than 12
 }
 
 
@@ -133,7 +133,7 @@ void loop() {
 		lastPctBattery = pctBat;
 	}
 
- 	send(msg.set(Temp,2));
+ 	send(msg.set(Temp,3));
 
 	// Sleep until key change.
 	Dormir();

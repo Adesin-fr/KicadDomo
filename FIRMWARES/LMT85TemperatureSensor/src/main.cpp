@@ -24,7 +24,7 @@
 #define POWER_OUT			A1
 #define TMP_IN			 	A0
 #define PRIMARY_CHILD_ID	1
-#define SLEEP_TIME 			300000	 // Sleep time between reads (in milliseconds) = 5 minutes
+#define SLEEP_TIME 			60000	 // Sleep time between reads (in milliseconds) = 5 minutes
 #define NB_READ_AVERAGE		3		 // Make X readings and make an average
 
 MyMessage msg(PRIMARY_CHILD_ID, V_TEMP);
