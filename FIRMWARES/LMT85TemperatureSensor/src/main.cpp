@@ -1,4 +1,6 @@
 /**
+* Board Used : MultiUse_Battery
+*
  *  LMT85 sensor on S0 (AD1 input)
  *  LMT85 power supply on S1 (AD0 output)
  *  Pins : PC0 /PC1

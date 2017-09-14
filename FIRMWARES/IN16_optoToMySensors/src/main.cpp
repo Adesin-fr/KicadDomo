@@ -1,3 +1,42 @@
+/*
+* Board Used : IN16_optoToMySensors ( + IN16_optocoupleurs )
+*
+Message types :
+	V_VAR1 Set Target Number
+	V_VAR2 Set Destination ID
+	V_VAR3 Set Child ID
+	V_VAR4 Set Action Type (0 = Pulse / 1 = Hold / 2 = Release)
+	V_VAR5 Set Payload Byte	(triggers EEPROM write)
+	V_TEXT Get a child's configuration.
+
+Programming is done as follow :
+	i.e. to assign to input 1 target 0, node 3.8 with payload 1:
+			(Input number is set via child ID of message sent.)
+		Send V_VAR1 0	-- Target
+		Send V_VAR2 3	-- Destination ID
+		Send V_VAR3 8	-- Child ID
+		Send V_VAR4 0	-- Action Type (0=Pulse)
+		Send V_VAR5 1	-- Here is triggered the EEPROM write
+
+EEPROM memory map :
+	0	Input 0 /target 0 / Pulse :	Destination ID
+	1								Child ID
+	2								Action Payload byte
+	3	Input 0 /target 0 / Hold :	Destination ID
+	4								Child ID
+	5								Action Payload byte
+	6	Input 0 /target 0 / Relea.:	Destination ID
+	7								Child ID
+	8								Action Payload byte
+	9	Input 0 /target 1 / Pulse :	Destination ID
+	10						Child ID
+	11						Action Payload byte
+	...
+	18	Input 1 /target 0 / Pulse :	Destination ID
+
+
+*/
+
 // Enable and select radio type attached
 #define MY_RADIO_RFM69
 #define MY_IS_RFM69HW
@@ -7,42 +46,6 @@
 // #define MY_DEBUG
 
 
-/*
-	Message types :
-		V_VAR1 Set Target Number
-		V_VAR2 Set Destination ID
-		V_VAR3 Set Child ID
-		V_VAR4 Set Action Type (0 = Pulse / 1 = Hold / 2 = Release)
-		V_VAR5 Set Payload Byte	(triggers EEPROM write)
-		V_TEXT Get a child's configuration.
-
-	Programming is done as follow :
-		i.e. to assign to input 1 target 0, node 3.8 with payload 1:
-				(Input number is set via child ID of message sent.)
-			Send V_VAR1 0	-- Target
-			Send V_VAR2 3	-- Destination ID
-			Send V_VAR3 8	-- Child ID
-			Send V_VAR4 0	-- Action Type (0=Pulse)
-			Send V_VAR5 1	-- Here is triggered the EEPROM write
-
-	EEPROM memory map :
-		0	Input 0 /target 0 / Pulse :	Destination ID
-		1								Child ID
-		2								Action Payload byte
-		3	Input 0 /target 0 / Hold :	Destination ID
-		4								Child ID
-		5								Action Payload byte
-		6	Input 0 /target 0 / Relea.:	Destination ID
-		7								Child ID
-		8								Action Payload byte
-		9	Input 0 /target 1 / Pulse :	Destination ID
-		10						Child ID
-		11						Action Payload byte
-		...
-		18	Input 1 /target 0 / Pulse :	Destination ID
-
-
-*/
 
 #include <Arduino.h>
 #include <SPI.h>

@@ -1,4 +1,6 @@
 /**
+* Board Used : MultiUse_Battery
+*
  *  TODO : Handle short press / Long press / long press release (3 child per button ?)
  *		 : Handle direct actions to other node (reading config. in EEPROM)
  *	http://www.gammon.com.au/forum/?id=11497

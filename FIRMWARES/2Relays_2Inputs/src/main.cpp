@@ -3,6 +3,8 @@
  * REVISION HISTORY
  * Version 1.0 - 26/02/2017 L. Lemarinel
  *
+ * Board Used : mySensors_2Relais
+ *
  * DESCRIPTION
  * This sketch is used to drive 2 relay outputs.
  * V_STATUS set explicitly the output state

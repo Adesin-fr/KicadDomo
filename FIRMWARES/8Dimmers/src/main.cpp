@@ -3,6 +3,8 @@
  * REVISION HISTORY
  * Version 1.0 - 24/02/2017 L. Lemarinel
  *
+ * Board Used : MySensors_8Dimmers
+ *
  * DESCRIPTION
  * This sketch is used to dim 8 Lights.
  * Each light is dimmed with a Triac.

@@ -1,3 +1,15 @@
+
+/**
+ *
+ * REVISION HISTORY
+ * Version 1.0 - 04/03/2017 L. Lemarinel
+ *
+ * Board Used : MySensors_Gateway
+ *
+ * DESCRIPTION
+ * Gateway
+ */
+
 #define MY_RADIO_RFM69
 #define MY_IS_RFM69HW
 #define MY_RFM69_NEW_DRIVER				// Use new RFM69 Driver (include ATC)

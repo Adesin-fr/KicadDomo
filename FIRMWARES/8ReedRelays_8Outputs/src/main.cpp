@@ -3,6 +3,8 @@
  * REVISION HISTORY
  * Version 1.0 - 26/02/2017 L. Lemarinel
  *
+ * Board Used : mySensors_8RelaisReed or mySensors_8Relais
+ *
  * DESCRIPTION
  * This sketch is used to drive 8 outputs.
  * V_STATUS set explicitly the output state

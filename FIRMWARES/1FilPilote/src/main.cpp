@@ -4,6 +4,8 @@
  * REVISION HISTORY
  * Version 1.0 - 04/03/2017 L. Lemarinel
  *
+ * Board Used : mySensors_FilPilote
+ *
  * DESCRIPTION
  * Fil pilote : 6 orders with 2 optocouplers.
  *  	each order is set with a level between 0 and 100

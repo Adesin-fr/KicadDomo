@@ -1,7 +1,9 @@
 /**
- *  DS18B20 sensor on S0 (AD1 input)
- *  DS18B20 power supply on S1 (AD0 output)
- *  Pins : PC0 /PC1
+* Board Used : MultiUse_Battery
+*
+*  DS18B20 sensor on S0 (AD1 input)
+*  DS18B20 power supply on S1 (AD0 output)
+*  Pins : PC0 /PC1
 
 */
 
