@@ -2,7 +2,7 @@
 * Board Used : MultiUse_Battery
 *
  *  TODO : Handle short press / Long press / long press release (3 child per button ?)
- *		 : Handle direct actions to other node (reading config. in EEPROM)
+ *		 : Handle direct actions to other node (reading config. in EEPROM) as in IN16_optoToMySensors firmware
  *	http://www.gammon.com.au/forum/?id=11497
  *  Pins : PC0 /PC1
 
@@ -14,9 +14,9 @@
 #define MY_RFM69_NEW_DRIVER				// Use new RFM69 Driver (include ATC)
 #define MY_RFM69_FREQUENCY RFM69_868MHZ
 
-//#define RFM69_ENABLE_ENCRYPTION
+#define RFM69_ENABLE_ENCRYPTION
 // La cle de cryptage doit faire exactement 16 octets
-//#define RFM69_ENCRYPTKEY    "Crypt_My_Home_17"
+#define RFM69_ENCRYPTKEY    "Crypt_My_Home_17"
 
 
 #include <SPI.h>
@@ -51,6 +51,10 @@ void setup(){
 	pinMode(PRIMARY_BUTTON_PIN, INPUT_PULLUP);
 	pinMode(SECONDARY_BUTTON_PIN, INPUT_PULLUP);
 
+	// pin change interrupt masks
+	PCMSK1 |= bit (PCINT8);		// pin PC0
+	PCMSK1 |= bit (PCINT9);		// pin PC1
+
 }
 
 void presentation() {
@@ -76,9 +80,6 @@ void Dormir(){
 
 	power_all_disable ();  // turn off various modules
 
-	// pin change interrupt masks (see above list)
-	PCMSK1 |= bit (PCINT8);		// pin PC0
-	PCMSK1 |= bit (PCINT9);		// pin PC1
 
 	PCIFR  |= bit (PCIF1);   // clear any outstanding interrupts (Need only PCIF1)
 	PCICR  |= bit (PCIE1);   // enable pin change interrupts (Need only PICE1)

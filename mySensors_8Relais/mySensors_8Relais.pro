@@ -1,4 +1,4 @@
-update=ven. 20 janv. 2017 16:52:50 CET
+update=jeu. 21 sept. 2017 10:17:26 CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -58,8 +58,8 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=/home/ulle0009/ownCloud/electronique/kicad/libs/mysensors_symbols-master/mysensors_radios
-LibName31=/home/ulle0009/ownCloud/electronique/kicad/libs/mysensors_symbols-master/mysensors_regulators
-LibName32=/home/ulle0009/ownCloud/electronique/kicad/libs/myLibrary
-LibName33=/home/ulle0009/Documents/PERSO/KicadDomo/Librairies/relay_spdt
-LibName34=uln-udn
+LibName30=/home/ulle0009/Documents/PERSO/KicadDomo/Librairies/relay_spdt
+LibName31=uln-udn
+LibName32=/home/ulle0009/ownCloud/electronique/PROJETS/kicad/libs/myLibrary
+LibName33=/home/ulle0009/ownCloud/electronique/PROJETS/kicad/libs/mysensors_symbols-master/mysensors_radios
+LibName34=/home/ulle0009/ownCloud/electronique/PROJETS/kicad/libs/mysensors_symbols-master/mysensors_regulators

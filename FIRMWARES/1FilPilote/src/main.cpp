@@ -28,6 +28,11 @@
 #define HEARTBEAT_DELAY 3600000
 
 
+#define RFM69_ENABLE_ENCRYPTION
+// La cle de cryptage doit faire exactement 16 octets
+#define RFM69_ENCRYPTKEY    "Crypt_My_Home_17"
+
+
 #include <Arduino.h>
 #include <SPI.h>
 #include <MySensors.h>

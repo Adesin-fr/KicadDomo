@@ -1,5 +1,7 @@
 /**
  *
+ * TODO : Add dimming things with interrupts...
+ *
  * REVISION HISTORY
  * Version 1.0 - 24/02/2017 L. Lemarinel
  *

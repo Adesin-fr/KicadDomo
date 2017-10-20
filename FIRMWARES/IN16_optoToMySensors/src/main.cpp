@@ -1,8 +1,17 @@
 /*
+* TODO : While checking for actions in main loop, store them in an array and then process them.
+*			Doing the current way could lead to missed pulses ?
 * Board Used : IN16_optoToMySensors ( + IN16_optocoupleurs )
 *
+* Description : Board with 16 inputs.
+		Each input can be used as a classical button (sends a frame to gateway)
+		or can send a message to another node (ie : toggle a light)
+		Each input has 3 type of actions  :
+			- short press
+			- start of Long press
+			- release of long press
 Message types :
-	V_VAR1 Set Target Number
+	V_VAR1 Set Target Number	(two targets are possinble : 0 or 1)
 	V_VAR2 Set Destination ID
 	V_VAR3 Set Child ID
 	V_VAR4 Set Action Type (0 = Pulse / 1 = Hold / 2 = Release)
@@ -13,10 +22,12 @@ Programming is done as follow :
 	i.e. to assign to input 1 target 0, node 3.8 with payload 1:
 			(Input number is set via child ID of message sent.)
 		Send V_VAR1 0	-- Target
-		Send V_VAR2 3	-- Destination ID
-		Send V_VAR3 8	-- Child ID
-		Send V_VAR4 0	-- Action Type (0=Pulse)
-		Send V_VAR5 1	-- Here is triggered the EEPROM write
+		, then Send V_VAR2 3	-- Destination ID
+		, then Send V_VAR3 8	-- Child ID
+		, then Send V_VAR4 0	-- Action Type (0=Pulse)
+		, then Send V_VAR5 1	-- Here is triggered the EEPROM write
+
+	to reset a saved action, just set destination and child to 255.
 
 EEPROM memory map :
 	0	Input 0 /target 0 / Pulse :	Destination ID
@@ -29,10 +40,16 @@ EEPROM memory map :
 	7								Child ID
 	8								Action Payload byte
 	9	Input 0 /target 1 / Pulse :	Destination ID
-	10						Child ID
-	11						Action Payload byte
-	...
+	10								Child ID
+	11								Action Payload byte
+	12	Input 0 /target 1 / Hold :	Destination ID
+	13								Child ID
+	14								Action Payload byte
+	15	Input 0 /target 1 / Relea.:	Destination ID
+	16								Child ID
+	17								Action Payload byte
 	18	Input 1 /target 0 / Pulse :	Destination ID
+	18	... and so on....
 
 
 */
@@ -42,6 +59,9 @@ EEPROM memory map :
 #define MY_IS_RFM69HW
 #define MY_RFM69_NEW_DRIVER				// Use new RFM69 Driver (include ATC)
 #define MY_RFM69_FREQUENCY RFM69_868MHZ
+#define RFM69_ENABLE_ENCRYPTION
+// La cle de cryptage doit faire exactement 16 octets
+#define RFM69_ENCRYPTKEY    "Crypt_My_Home_17"
 
 // #define MY_DEBUG
 
@@ -226,22 +246,22 @@ void loop(){
 
 	checkPushes();
 
-	// Vérifier l'état de chaque broche et déclencher les evenements :
+	// Check each pin and send events :
 	for (int numpin=0; numpin<NUMBUTTONS; numpin++){
 		if (justReleasedShortPush[numpin]==1){
-			// Effacer l'evenement :
+			// Clear event :
 			justReleasedShortPush[numpin]=0;
 			SendSensorStatus(numpin, 0);	// Handle Pulse Event type
 		}
 
 		if (justLongPushed[numpin]==1){
-			// Effacer l'evenement :
+			// Clear event :
 			justLongPushed[numpin]=0;
 			SendSensorStatus(numpin, 1);	// Handle Hold Event type
 		}
 
 		if (justReleasedLongPushed[numpin]==1){
-			// Effacer l'evenement :
+			// Clear event :
 			justReleasedLongPushed[numpin]=0;
 			SendSensorStatus(numpin, 2);	// Handle Release Event type
 		}
@@ -253,12 +273,12 @@ void loop(){
 
 boolean lirePin(byte numPin){
 
-	// Définir les broches MUXA/B/C
+	// set MUXer pins MUXA/B/C
 	digitalWrite(MUXA, bitRead(numPin,0));
 	digitalWrite(MUXB, bitRead(numPin,1));
 	digitalWrite(MUXC, bitRead(numPin,2));
 
-	// Attendre un peu que le mux change de broche :
+	// Wait a few microseconds for the MUXer to actually change :
 	delayMicroseconds(1);
 
 	// Lire l'entrée
@@ -281,7 +301,7 @@ void receive(const MyMessage &message){
 
 	switch(message.type){
 		case V_TEXT:
-			// Gateway ask us to send parameters for input...
+			// Gateway ask us to send parameters for this input...
 			// Send complete parameters of targets, if set. If nothing set, send "Nothing set"
 			boolean paramSet;
 			byte destinationID;
@@ -318,7 +338,7 @@ void receive(const MyMessage &message){
 			}
 
 			if (paramSet == false){
-				msg.set("Nothing Set");
+				msg.set("Nothing Set for this input.");
 				send(msg);
 			}
 			break;
@@ -350,7 +370,7 @@ void receive(const MyMessage &message){
 			// Write to eeprom :
 			saveState(eepAddress, pgm_destinationId);	// Save Destination ID
 			saveState(eepAddress+1, pgm_childId);		// Save Child ID
-			saveState(eepAddress+2, byteValue);		// Save Payload
+			saveState(eepAddress+2, byteValue);			// Save Payload
 
 			break;
 	}
